@@ -1,0 +1,13 @@
+aws ecr list-images --repository-name policypulse-custom-sagemaker-image --region us-east-1
+aws ecr batch-delete-image \
+    --repository-name policypulse-custom-sagemaker-image \
+    --image-ids imageTag=latest \
+    --region us-east-1
+
+aws ecr batch-delete-image \
+    --repository-name policypulse-custom-sagemaker-image \
+    --image-ids imageDigest=your-image-digest \
+    --region us-east-1
+
+
+
