@@ -4,4 +4,4 @@ docker buildx create --use
 docker buildx build --platform linux/amd64 -t $REPOSITORY_NAME .
 docker tag $REPOSITORY_NAME:latest $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$REPOSITORY_NAME:$IMAGE_TAG
 docker push $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$REPOSITORY_NAME:$IMAGE_TAG
-
+aws s3 cp model.tar.gz s3://capstoneragmodel/inference/model.tar.gz
