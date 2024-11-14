@@ -8,9 +8,9 @@ import json
 import numpy as np
 import time
 import transformers
-import locale
-import nltk
-
+#import locale
+#import nltk
+from dotenv import load_dotenv
 #from pprint import pprint
 
 #nltk.download('punkt')
@@ -58,7 +58,7 @@ from io import BytesIO
 import fitz  # PyMuPDF
 import pytesseract
 from PIL import Image
-
+import json
 import boto3
 
 # Set up logging
@@ -67,6 +67,8 @@ logger = logging.getLogger(__name__)
 
 # Load the OpenAI API key from an environment variable
 #openai.api_key = os.getenv("OPENAI_API_KEY")
+
+load_dotenv()
 
 def model_fn(model_dir):
     """
@@ -99,7 +101,7 @@ def predict_fn(input_data, model):
 
     # Parse the input payload
     #input_data = json.loads(event["body"])
-    print("Sreeram: predict input data we got is ")
+    print("Sreeram: predict input data we got is: ")
     print(input_data)
     file_name = input_data.get("file_name", None)
     if file_name is None:
@@ -108,7 +110,7 @@ def predict_fn(input_data, model):
 
     
     print("Sreeram: predict filename we got is "+ file_name)
-    file_key = "pdf_uploads/" + file_name   
+    file_key = "train_datasets/" + file_name   
     print("Sreeram: predict pdf we got is "+file_key)
     logger.info("pdf we got is : %s", file_key)
     
@@ -158,7 +160,7 @@ def predict_fn(input_data, model):
 
     openAIApiKey = os.environ.get("OPENAI_API_KEY")
     if not openAIApiKey:
-        raise ValueError("OpenAI API key not found in environment variables.")
+        raise ValueError("API key not found in environment variables.")
 
     print(f"Your API key is: {openAIApiKey}")
     logger.info(f"Your API key is: {openAIApiKey}")
@@ -211,7 +213,7 @@ def predict_fn(input_data, model):
 
     mapPrompt = PromptTemplate(
         template = """Write a concise summary of the following. The summary should be a list of bullet points. The summary cannot be more than 5 bullet points. The text is:
-            {text}
+                    {text}
             CONCISE SUMMARY:""",
             input_variables=["text"]
         )
@@ -258,8 +260,8 @@ def predict_fn(input_data, model):
                             chain_type="stuff",
                             prompt=reducePrompt)
     output_text = reduce_chain.run([summaries])
-        
-    
+
+
     #output_text = "I got the file " + file_name
     logger.info("Writing output: %s", output_text)
 
@@ -271,9 +273,6 @@ def predict_fn(input_data, model):
     # Initialize the S3 client
     s3 = boto3.client("s3")
     s3.put_object(Bucket=bucket_name, Key=file_key, Body=output_text)
-
-    # Extract the text result from the OpenAI API response
-    #output_text = response["choices"][0]["text"].strip()
 
     print("Sreeram: predict exit")
     return ("Success Summarization")  # Extract response text
@@ -290,3 +289,13 @@ def output_fn(prediction, content_type):
     else:
         raise ValueError(f"Unsupported content type: {content_type}")
     print("Sreeram: output exit")
+
+def main():
+    """Main function to read JSON from file and call process_data."""
+    with open('test.json', 'r') as f:
+        data = json.load(f)
+
+    predict_fn(data, None)
+
+if __name__ == '__main__':
+    main()

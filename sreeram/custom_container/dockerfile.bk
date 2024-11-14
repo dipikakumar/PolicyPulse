@@ -64,16 +64,16 @@ RUN pip3 install \
     PyPDF2
 
 # Copy entrypoint script to the image
-COPY dockerd-entrypoint.py /usr/local/bin/dockerd-entrypoint.py
-RUN chmod +x /usr/local/bin/dockerd-entrypoint.py
+#COPY dockerd-entrypoint.py /usr/local/bin/dockerd-entrypoint.py
+#RUN chmod +x /usr/local/bin/dockerd-entrypoint.py
 
 # Set up directories for SageMaker
-RUN mkdir -p /opt/ml/code /opt/ml/input /opt/ml/model /opt/ml/output
+#RUN mkdir -p /opt/ml/code /opt/ml/input /opt/ml/model /opt/ml/output
 
 # Set the entry point to start running inference
-COPY inference.py /opt/ml/code/inference.py
-RUN chmod +x /opt/ml/code/inference.py
+#COPY inference.py /opt/ml/code/inference.py
+#RUN chmod +x /opt/ml/code/inference.py
 
 # Set the default command to use inference.py when the container is started
-ENTRYPOINT ["python3", "/opt/ml/code/inference.py"]
+#ENTRYPOINT ["python3", "/opt/ml/code/inference.py"]
 

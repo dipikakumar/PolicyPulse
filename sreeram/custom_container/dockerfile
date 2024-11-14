@@ -33,6 +33,7 @@ RUN pip3 install \
     pdfminer.six \
     multi-model-server \
     sagemaker-inference \
+    pytesseract \
     'unstructured[local-inference]' \
     boto3 \
     langchain_openai \
