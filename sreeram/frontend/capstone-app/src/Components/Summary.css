@@ -1,0 +1,77 @@
+/* Container for the summary section */
+.summary-container {
+    width: flex; /* Increase maximum width for a more spacious layout */
+    margin: 10px auto; /* Center the container with more top margin */
+    padding: 10px; /* Increased padding for a more spacious feel */
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f7ff 100%); /* Light gradient background */
+    border: 1px solid #b0d0e0; /* Softer border color */
+    border-radius: 15px; /* Slightly more rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+    text-align: center; /* Center text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+.summary-container:hover {
+    transform: translateY(-8px); /* More noticeable lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to create a 3D popping effect */
+}
+
+/* Heading styles */
+.summary-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #4a4a4a;
+}
+
+/* Button styles */
+.summary-container button {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+}
+
+.summary-container button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+/* Error message styling */
+.summary-container p {
+    margin: 15px 0;
+    font-size: 10px;
+}
+
+/* Summary text styles */
+.summary-container h3 {
+    font-size: 20px;
+    color: black;
+}
+
+.summary-container div {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .summary-container {
+        padding: 15px;
+    }
+
+    .summary-container h2 {
+        font-size: 20px;
+    }
+
+    .summary-container button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
