@@ -6,11 +6,6 @@ import './PdfUpload.css'
 const S3_BUCKET = 'capstoneragmodel';
 const REGION = 'us-east-1';
 
-AWS.config.update({
-  accessKeyId: 'AKIAZ7SAKUX4I5RFWYGB',
-  secretAccessKey: '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',
-  region: REGION,
-});
 
 const s3 = new AWS.S3();
 
