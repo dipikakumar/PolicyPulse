@@ -824,10 +824,6 @@ def predict_fn(input_data, model):
         else:
             raise ValueError(f"Unsupported document type: {question_type}")
             
-        if question_type == "Policy":
-            result = process_policy(policy_paths, openai_api_key)
-        else:
-            print("[INFO] Document type is not 'Policy'; skipping policy processing.")
             
         refined_chunks = []
         gdpr_sentence_chunks = []
