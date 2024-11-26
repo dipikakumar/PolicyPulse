@@ -948,11 +948,6 @@ def main():
         print(f"[ERROR] Failed to load input data from test.json: {e}")
         return
 
-    sample_question = input_data.get("question", "").strip()
-    if not sample_question:
-        print("[ERROR] No 'question' field found in test.json. Ensure the file has valid data.")
-        return
-
     content_type = "application/json"
 
     prediction = predict_fn(input_data, model)
