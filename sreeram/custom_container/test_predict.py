@@ -94,44 +94,37 @@ def input_fn(request_body, request_content_type):
         print("Sreeram: input_fn cerror")
         raise ValueError(f"Unsupported content type: {request_content_type}")
 
-def extract_formatted_text(pdf_path: str) -> List[Dict]:
+def format_text(pdf_path: str) -> List[Dict]:
     """
     Extract text with its formatting information from PDF.
     Returns list of dictionaries containing text and its formatting properties.
     """
     formatted_blocks = []
-    try:
-        doc = fitz.open(pdf_path)
-        position = 0
+    for page_num, page in enumerate(doc):
+        blocks = page.get_text("dict")["blocks"]
+        prev_y1 = None
 
-        for page_num, page in enumerate(doc):
-            blocks = page.get_text("dict")["blocks"]
-            prev_y1 = None
+        for block in blocks:
+            if "lines" in block:
+                for line in block["lines"]:
+                    y0 = line["bbox"][1]
+                    line_spacing = y0 - prev_y1 if prev_y1 is not None else 0
+                    prev_y1 = line["bbox"][3]
 
-            for block in blocks:
-                if "lines" in block:
-                    for line in block["lines"]:
-                        y0 = line["bbox"][1]
-                        line_spacing = y0 - prev_y1 if prev_y1 is not None else 0
-                        prev_y1 = line["bbox"][3]
+                    for span in line["spans"]:
+                        text = span["text"].strip()
+                        if text:
+                            formatted_blocks.append({
+                                "text": text,
+                                "font_name": span["font"],
+                                "font_size": span["size"],
+                                "is_bold": "bold" in span["font"].lower() or span["flags"] & 2**4 != 0,
+                                "line_spacing": line_spacing,
+                                "position": position,                                                                                                               "page_num": page_num + 1
+                            })
+                        position += len(text) + 1
 
-                        for span in line["spans"]:
-                            text = span["text"].strip()
-                            if text:
-                                formatted_blocks.append({
-                                    "text": text,
-                                    "font_name": span["font"],
-                                    "font_size": span["size"],
-                                    "is_bold": "bold" in span["font"].lower() or span["flags"] & 2**4 != 0,
-                                    "line_spacing": line_spacing,
-                                    "position": position,                                                                                                               "page_num": page_num + 1
-                                })
-                            position += len(text) + 1
-
-        return formatted_blocks
-    except Exception as e:
-        print(f"Error extracting formatted text: {e}")
-        return []
+    return formatted_blocks
 
 def analyze_document_formatting(blocks: List[Dict]) -> Dict:
     """
@@ -195,7 +188,7 @@ def identify_potential_headers(blocks: List[Dict], format_stats: Dict) -> List[D
 
     return potential_headers
 
-def confirm_headers_with_gpt(potential_headers: List[Dict], api_key: str) -> List[Dict]:
+def confirm_headers_with_gpt(potential_headers: List[Dict], client: str) -> List[Dict]:
     """
     Use GPT to confirm which potential headers are actual privacy policy section headers.
 
@@ -206,7 +199,7 @@ def confirm_headers_with_gpt(potential_headers: List[Dict], api_key: str) -> Lis
     Returns:
         List[Dict]: Confirmed headers with their text and positions
     """
-    client = OpenAI(api_key=api_key)
+    #client = OpenAI(api_key=api_key)
     confirmed_headers = []
 
     for header in potential_headers:
@@ -269,7 +262,7 @@ def chunk_policy_by_headers(headers: List[Dict], blocks: List[Dict]) -> List[Dic
 
     return chunks
 
-def further_chunk_policy(company_name: str, uuid: str, policy: Dict, chunk_size: int = 1000, chunk_overlap: int = 50) -> List[Dict]:    """
+def further_chunk_policy(policy: Dict, chunk_size: int = 1000, chunk_overlap: int = 500) -> List[Dict]:    """
     Further split each chunk's content for a single company policy using a Recursive Text Splitter.
 
     Args:
@@ -297,13 +290,9 @@ def further_chunk_policy(company_name: str, uuid: str, policy: Dict, chunk_size:
                 refined_chunks.append({
                     "page_content": sub_chunk,
                     "metadata": {
-                        "company_name": company_name,
-                        "uuid": uuid,
-                        "pdf_path": policy["pdf_path"],
                         "header": chunk["header"],
                         "chunk_index": i,
                         "total_sub_chunks": len(sub_chunks),
-                        "document_type": "Policy"
                     }
                 })
         except Exception as e:
@@ -313,42 +302,75 @@ def further_chunk_policy(company_name: str, uuid: str, policy: Dict, chunk_size:
     return refined_chunks
 
 
-def process_policy(openai_api_key: str ) -> Dict:
+def process_policy(formatted_blocks: str, llm: str ) -> Dict:
     """
     Process a single PDF policy document and extract sections.
     """
     try:
-        formatted_blocks = extract_formatted_text(pdf_path)
-        if not formatted_blocks:
-            return {"status": "error", "pdf_path": pdf_path, "message": "Failed to extract formatted text"}
+        #formatted_blocks = extract_formatted_text(pdf_path)
+        #if not formatted_blocks:
+        #    return {"status": "error", "pdf_path": pdf_path, "message": "Failed to extract formatted text"}
 
         format_stats = analyze_document_formatting(formatted_blocks)
         potential_headers = identify_potential_headers(formatted_blocks, format_stats)
 
 
-        confirmed_headers = confirm_headers_with_gpt(potential_headers, openai_api_key)
+        confirmed_headers = confirm_headers_with_gpt(potential_headers, llm)
 
         if not confirmed_headers:
-            return {"status": "error", "pdf_path": pdf_path, "message": "No headers found in the document"}
+            return {"status": "error", "message": "No headers found in the document"}
 
         chunks = chunk_policy_by_headers(confirmed_headers, formatted_blocks)
 
         return {
             "status": "success",
-            "pdf_path": pdf_path,
             "total_chunks": len(chunks),
             "chunks": chunks
         }
 
     except Exception as e:
-        return {"status": "error", "pdf_path": pdf_path, "message": str(e)}
+        return {"status": "error", "message": str(e)}
+
+def split_text_to_docs(pdf_path, llm):
+    # Variable to accumulate extracted text
+    text = ""
+
+    # Open the PDF using PyMuPDF (fitz)
+    doc = fitz.open(pdf_path)
+    for page_num in range(doc.page_count):
+        page = doc[page_num]
+
+        # Try to extract actual text from the page
+        page_text = page.get_text("text")
+
+        if page_text.strip():
+            #text += page_text
+            fromatted_text += format_text(page_text)
+        else:
+            # Render the page as an image
+            pix = page.get_pixmap()
+            image = Image.open(io.BytesIO(pix.tobytes()))
+
+            # Use OCR on the page image to extract text
+            ocr_text = pytesseract.image_to_string(image)
+
+            # Accumulate extracted text if OCR detected any text
+            if ocr_text.strip():  # Only add if text was found
+                #extracted_text += f"\n--- Page {page_num + 1} ---\n"
+                #text += ocr_text
+                fromatted_text += format_text(ocr_text)
 
 
-def split_text_to_docs(text)
+    #text = text.replace('\t', ' ')
+    text = fromatted_text["text"].replace('\t', ' ')
+
+    # Close the document
+    doc.close()
+        
 	refined_chunks = []
 
-	result = process_policy(policy_paths, openai_api_key)
-	refined_chunks = further_chunk_policy(company_name, uuid, result)
+	result = process_policy(text, llm)
+	refined_chunks = further_chunk_policy(result)
 
 	docs = prepare_documents_for_vectorstore(refined_chunks)
 
@@ -385,39 +407,6 @@ def predict_fn(input_data, model):
     s3_client.download_file(bucket_name, file_key, pdf_path)
     print("Sreeram bucket: " + bucket_name + " filekey: "+file_key+ " pdf_path: "+pdf_path)
         
-    # Variable to accumulate extracted text
-    text = ""
-
-    # Open the PDF using PyMuPDF (fitz)
-    doc = fitz.open(pdf_path)
-    for page_num in range(doc.page_count):
-        page = doc[page_num]
-
-        # Try to extract actual text from the page
-        page_text = page.get_text("text")
-
-        if page_text.strip():
-            text += page_text
-        else:
-            # Render the page as an image
-            pix = page.get_pixmap()
-            image = Image.open(io.BytesIO(pix.tobytes()))
-
-            # Use OCR on the page image to extract text
-            ocr_text = pytesseract.image_to_string(image)
-
-            # Accumulate extracted text if OCR detected any text
-            if ocr_text.strip():  # Only add if text was found
-                #extracted_text += f"\n--- Page {page_num + 1} ---\n"
-                text += ocr_text
-
-    text = text.replace('\t', ' ')
-
-    # Close the document
-    doc.close()
-        
-    # Combine the pages, and replace the tabs with spaces
-
     openAIApiKey = os.environ.get("OPENAI_API_KEY")
     if not openAIApiKey:
         raise ValueError("API key not found in environment variables.")
@@ -429,7 +418,9 @@ def predict_fn(input_data, model):
 
     llm = OpenAI(temperature=0, openai_api_key=openAIApiKey)
 
-    docs = split_text_to_docs(text)
+    # Combine the pages, and replace the tabs with spaces
+
+    docs = split_text_to_docs(pdf_path, llm)
 
     #text_splitter = RecursiveCharacterTextSplitter(separators=["\n\n", "\n", "\t"], chunk_size=1000, chunk_overlap=500)
     #splits = text_splitter.create_documents([text])
