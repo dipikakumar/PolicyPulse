@@ -43,11 +43,14 @@ from langchain_community.utils.math import cosine_similarity
 from langchain.schema import Document
 from qdrant_client import QdrantClient
 import boto3
+import sqlite3
+
 
 import warnings
 
 warnings.filterwarnings("ignore")
 
+DB_FILE = "header_cache.db"
 
 
 logging.basicConfig(level=logging.INFO)
@@ -67,6 +70,36 @@ def get_secret(secret_name):
     except Exception as e:
         print(f"Error retrieving secret {secret_name}: {e}")
         return None
+    
+def init_cache_db():
+    conn = sqlite3.connect(DB_FILE)
+    cursor = conn.cursor()
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS header_cache (
+            company_name TEXT PRIMARY KEY,
+            headers TEXT
+        )
+    """)
+    conn.commit()
+    conn.close()
+
+def save_cache_to_db(company_name, headers):
+    conn = sqlite3.connect(DB_FILE)
+    cursor = conn.cursor()
+    cursor.execute("""
+        INSERT OR REPLACE INTO header_cache (company_name, headers)
+        VALUES (?, ?)
+    """, (company_name, json.dumps(headers)))
+    conn.commit()
+    conn.close()
+    
+def load_cache_from_db():
+    conn = sqlite3.connect(DB_FILE)
+    cursor = conn.cursor()
+    cursor.execute("SELECT company_name, headers FROM header_cache")
+    rows = cursor.fetchall()
+    conn.close()
+    return {row[0]: json.loads(row[1]) for row in rows}
 
 def model_fn(model_dir):
     """
@@ -479,35 +512,128 @@ def chunk_policy_by_headers(headers: List[Dict], blocks: List[Dict]) -> List[Dic
 
     return chunks
 
-def process_policy(pdf_path: str, openai_api_key: str ) -> Dict:
-    """
-    Process a single PDF policy document and extract sections.
-    """
-    try:
-        formatted_blocks = extract_formatted_text(pdf_path)
-        if not formatted_blocks:
-            return {"status": "error", "pdf_path": pdf_path, "message": "Failed to extract formatted text"}
+# def process_policy(pdf_path: str, openai_api_key: str ) -> Dict:
+#     """
+#     Process a single PDF policy document and extract sections.
+#     """
+#     try:
+#         formatted_blocks = extract_formatted_text(pdf_path)
+#         if not formatted_blocks:
+#             return {"status": "error", "pdf_path": pdf_path, "message": "Failed to extract formatted text"}
 
-        format_stats = analyze_document_formatting(formatted_blocks)
-        potential_headers = identify_potential_headers(formatted_blocks, format_stats)
+#         format_stats = analyze_document_formatting(formatted_blocks)
+#         potential_headers = identify_potential_headers(formatted_blocks, format_stats)
     
         
-        confirmed_headers = confirm_headers_with_gpt(potential_headers, openai_api_key)
+#         confirmed_headers = confirm_headers_with_gpt(potential_headers, openai_api_key)
 
-        if not confirmed_headers:
-            return {"status": "error", "pdf_path": pdf_path, "message": "No headers found in the document"}
+#         if not confirmed_headers:
+#             return {"status": "error", "pdf_path": pdf_path, "message": "No headers found in the document"}
 
-        chunks = chunk_policy_by_headers(confirmed_headers, formatted_blocks)
+#         chunks = chunk_policy_by_headers(confirmed_headers, formatted_blocks)
 
-        return {
-            "status": "success",
-            "pdf_path": pdf_path,
-            "total_chunks": len(chunks),
-            "chunks": chunks
-        }
+#         return {
+#             "status": "success",
+#             "pdf_path": pdf_path,
+#             "total_chunks": len(chunks),
+#             "chunks": chunks
+#         }
 
-    except Exception as e:
-        return {"status": "error", "pdf_path": pdf_path, "message": str(e)}
+#     except Exception as e:
+#         return {"status": "error", "pdf_path": pdf_path, "message": str(e)}
+    
+#HEADER_CACHE = {}
+init_cache_db()
+HEADER_CACHE = load_cache_from_db()
+
+
+# def process_policy_with_cache(pdf_path: str, company_name: str, openai_api_key: str) -> Dict:
+#     """
+#     Process a single PDF policy document and cache headers for reuse.
+
+#     Args:
+#         pdf_path (str): Path to the policy PDF.
+#         company_name (str): Name of the company.
+#         openai_api_key (str): OpenAI API key for GPT confirmation.
+
+#     Returns:
+#         Dict: Processed policy with chunks.
+#     """
+#     if company_name in HEADER_CACHE:
+#         print(f"[INFO] Using cached headers for company: {company_name}")
+#         cached_headers = HEADER_CACHE[company_name]
+#     else:
+#         try:
+#             # Extract formatted text from the PDF
+#             formatted_blocks = extract_formatted_text(pdf_path)
+#             if not formatted_blocks:
+#                 return {"status": "error", "pdf_path": pdf_path, "message": "Failed to extract formatted text"}
+
+#             # Analyze document formatting
+#             format_stats = analyze_document_formatting(formatted_blocks)
+
+#             # Identify potential headers
+#             potential_headers = identify_potential_headers(formatted_blocks, format_stats)
+
+#             # Confirm headers with GPT
+#             confirmed_headers = confirm_headers_with_gpt(potential_headers, openai_api_key)
+#             if not confirmed_headers:
+#                 return {"status": "error", "pdf_path": pdf_path, "message": "No headers found in the document"}
+
+#             # Cache the confirmed headers
+#             HEADER_CACHE[company_name] = confirmed_headers
+#             cached_headers = confirmed_headers
+
+#         except Exception as e:
+#             return {"status": "error", "pdf_path": pdf_path, "message": str(e)}
+
+#     # Chunk the policy by headers
+#     formatted_blocks = extract_formatted_text(pdf_path)
+#     chunks = chunk_policy_by_headers(cached_headers, formatted_blocks)
+
+#     return {
+#         "status": "success",
+#         "pdf_path": pdf_path,
+#         "total_chunks": len(chunks),
+#         "chunks": chunks
+#     }
+
+def process_policy_with_cache(pdf_path: str, company_name: str, openai_api_key: str) -> Dict:
+    if company_name in HEADER_CACHE:
+        print(f"[INFO] Using cached headers for company: {company_name}")
+        cached_headers = HEADER_CACHE[company_name]
+    else:
+        try:
+            formatted_blocks = extract_formatted_text(pdf_path)
+            if not formatted_blocks:
+                return {"status": "error", "pdf_path": pdf_path, "message": "Failed to extract formatted text"}
+
+            format_stats = analyze_document_formatting(formatted_blocks)
+
+            potential_headers = identify_potential_headers(formatted_blocks, format_stats)
+
+            confirmed_headers = confirm_headers_with_gpt(potential_headers, openai_api_key)
+            if not confirmed_headers:
+                return {"status": "error", "pdf_path": pdf_path, "message": "No headers found in the document"}
+
+            HEADER_CACHE[company_name] = confirmed_headers
+            save_cache_to_db(company_name, confirmed_headers)
+            cached_headers = confirmed_headers
+
+        except Exception as e:
+            return {"status": "error", "pdf_path": pdf_path, "message": str(e)}
+
+    formatted_blocks = extract_formatted_text(pdf_path)
+    chunks = chunk_policy_by_headers(cached_headers, formatted_blocks)
+
+    return {
+        "status": "success",
+        "pdf_path": pdf_path,
+        "total_chunks": len(chunks),
+        "chunks": chunks
+    }
+
+
     
 def further_chunk_policy(company_name: str, uuid: str, policy: Dict, chunk_size: int = 1000, chunk_overlap: int = 50) -> List[Dict]:
     """
@@ -880,7 +1006,7 @@ def predict_fn(input_data, model):
         refined_chunks = []
         gdpr_sentence_chunks = []
         if question_type == "Policy":
-            result = process_policy(policy_paths, openai_api_key)
+            result = process_policy_with_cache(policy_paths, company_name, openai_api_key)
 
             refined_chunks = further_chunk_policy(company_name, uuid, result)
         elif question_type == "GDPR":
