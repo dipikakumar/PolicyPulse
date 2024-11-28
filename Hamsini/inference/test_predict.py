@@ -774,6 +774,58 @@ def clean_generated_response(response: str) -> str:
 
     return cleaned_response
 
+def chunk_gdpr_by_section(gdpr_contents: List[str]) -> List[Document]:
+    """
+    Chunk GDPR text into sections based on articles and recitals, without mapping to policy categories.
+
+    Parameters:
+    - gdpr_contents (List[str]): List containing GDPR text.
+
+    Returns:
+    - List[Document]: List of Document objects, each representing a chunk of a GDPR section.
+    """
+    try:
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1500, chunk_overlap=50)
+        documents = []
+        full_text = "\n".join(gdpr_contents)
+
+        recital_pattern = re.compile(r"\((\d+)\)\s", re.MULTILINE)
+        article_pattern = re.compile(r"(Article\s(\d+))\b", re.IGNORECASE)
+
+        all_matches = [(match.start(), match.group(1), 'recital') for match in re.finditer(recital_pattern, full_text)]
+        all_matches += [(match.start(), match.group(1), 'article', match.group(2)) for match in re.finditer(article_pattern, full_text)]
+        all_matches.sort()
+
+        for i, (start, header, section_type, *article_number) in enumerate(all_matches):
+            end = all_matches[i + 1][0] if i + 1 < len(all_matches) else len(full_text)
+            section_text = full_text[start:end].strip()
+
+            section_header = None
+
+            if section_type == 'article' and article_number:
+                article_number = article_number[0].strip()
+                section_header = f"Article {article_number}"
+
+            elif section_type == 'recital':
+                section_header = f"Recital {header}"
+
+            chunks = text_splitter.split_text(section_text)
+
+            for chunk in chunks:
+                documents.append(Document(
+                    page_content=chunk,
+                    metadata={
+                        "header": section_header
+                    }
+                ))
+
+        print(f"\nTotal documents created: {len(documents)}")
+        return documents
+
+    except Exception as e:
+        print(f"Error processing GDPR contents: {e}")
+        return []
+
 #*************************************************************************************************************************************#****************############## End of Helper Function   ######**********************************************************************************************************#
 #******************************************************************************************************************************************************#
 
