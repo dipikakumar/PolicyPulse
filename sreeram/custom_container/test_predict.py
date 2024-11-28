@@ -94,39 +94,39 @@ def input_fn(request_body, request_content_type):
         print("Sreeram: input_fn cerror")
         raise ValueError(f"Unsupported content type: {request_content_type}")
 
-def format_text(pdf_path: str) -> List[Dict]:
+def format_text(page, page_num, text):
     """
     Extract text with its formatting information from PDF.
     Returns list of dictionaries containing text and its formatting properties.
     """
     formatted_blocks = []
-    for page_num, page in enumerate(doc):
-        blocks = page.get_text("dict")["blocks"]
-        prev_y1 = None
+    blocks = page.get_text("dict")["blocks"]
+    prev_y1 = None
 
-        for block in blocks:
-            if "lines" in block:
-                for line in block["lines"]:
-                    y0 = line["bbox"][1]
-                    line_spacing = y0 - prev_y1 if prev_y1 is not None else 0
-                    prev_y1 = line["bbox"][3]
+    for block in blocks:
+        if "lines" in block:
+            for line in block["lines"]:
+                y0 = line["bbox"][1]
+                line_spacing = y0 - prev_y1 if prev_y1 is not None else 0
+                prev_y1 = line["bbox"][3]
 
-                    for span in line["spans"]:
-                        text = span["text"].strip()
-                        if text:
-                            formatted_blocks.append({
-                                "text": text,
-                                "font_name": span["font"],
-                                "font_size": span["size"],
-                                "is_bold": "bold" in span["font"].lower() or span["flags"] & 2**4 != 0,
-                                "line_spacing": line_spacing,
-                                "position": position,                                                                                                               "page_num": page_num + 1
-                            })
-                        position += len(text) + 1
+                for span in line["spans"]:
+                    text = span["text"].strip()
+                    if text:
+                        formatted_blocks.append({
+                            "text": text,
+                            "font_name": span["font"],
+                            "font_size": span["size"],
+                            "is_bold": "bold" in span["font"].lower() or span["flags"] & 2**4 != 0,
+                            "line_spacing": line_spacing,
+                            "position": position,                                                                                                               
+                            "page_num": page_num + 1
+                        })
+                    position += len(text) + 1
 
     return formatted_blocks
 
-def analyze_document_formatting(blocks: List[Dict]) -> Dict:
+def analyze_document_formatting(blocks):
     """
     Analyze document formatting to establish baseline metrics.
     """
@@ -142,7 +142,7 @@ def analyze_document_formatting(blocks: List[Dict]) -> Dict:
         "avg_line_spacing": sum(stats["line_spacings"]) / len(stats["line_spacings"]) if stats["line_spacings"] else 0
     }
 
-def identify_potential_headers(blocks: List[Dict], format_stats: Dict) -> List[Dict]:
+def identify_potential_headers(blocks, format_stats):
     """
     Identify potential headers based on formatting characteristics.
     """
@@ -188,7 +188,7 @@ def identify_potential_headers(blocks: List[Dict], format_stats: Dict) -> List[D
 
     return potential_headers
 
-def confirm_headers_with_gpt(potential_headers: List[Dict], client: str) -> List[Dict]:
+def confirm_headers_with_gpt(potential_headers, client):
     """
     Use GPT to confirm which potential headers are actual privacy policy section headers.
 
@@ -239,7 +239,7 @@ Is this a main section header? Answer only 'yes' or 'no'."""
 
     return confirmed_headers
 
-def chunk_policy_by_headers(headers: List[Dict], blocks: List[Dict]) -> List[Dict]:
+def chunk_policy_by_headers(headers, blocks):
     """
     Chunk the policy text based on section headers using the original formatted blocks.
     """
@@ -262,7 +262,8 @@ def chunk_policy_by_headers(headers: List[Dict], blocks: List[Dict]) -> List[Dic
 
     return chunks
 
-def further_chunk_policy(policy: Dict, chunk_size: int = 1000, chunk_overlap: int = 500) -> List[Dict]:    """
+def further_chunk_policy(policy, chunk_size: int = 1000, chunk_overlap: int = 500):    
+    """
     Further split each chunk's content for a single company policy using a Recursive Text Splitter.
 
     Args:
@@ -273,6 +274,7 @@ def further_chunk_policy(policy: Dict, chunk_size: int = 1000, chunk_overlap: in
     Returns:
         List[Dict]: A list of refined sub-chunks with metadata.
     """
+
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=chunk_size,
         chunk_overlap=chunk_overlap,
@@ -280,7 +282,6 @@ def further_chunk_policy(policy: Dict, chunk_size: int = 1000, chunk_overlap: in
         is_separator_regex=False
     )
     refined_chunks = []
-
 
     for chunk in policy["chunks"]:
         try:
@@ -302,7 +303,7 @@ def further_chunk_policy(policy: Dict, chunk_size: int = 1000, chunk_overlap: in
     return refined_chunks
 
 
-def process_policy(formatted_blocks: str, llm: str ) -> Dict:
+def process_policy(formatted_blocks, llm):
     """
     Process a single PDF policy document and extract sections.
     """
@@ -331,13 +332,37 @@ def process_policy(formatted_blocks: str, llm: str ) -> Dict:
     except Exception as e:
         return {"status": "error", "message": str(e)}
 
+def prep_docs(chunks):
+    """Prepare documents for vector store with consistent metadata handling."""
+    documents = []
+
+    for idx, chunk in enumerate(chunks):
+        if isinstance(chunk, dict):
+            chunk = Document(page_content=chunk['page_content'], metadata=chunk['metadata'])
+
+        metadata = {
+            "chunk_number": idx + 1,
+            "header": chunk.metadata.get("header", ""),
+        }
+
+        documents.append(Document(
+            page_content=chunk.page_content,
+            metadata=metadata
+        ))
+        print(f"[DEBUG] Prepared document {idx + 1} with metadata: {metadata}")
+
+    return documents
+
 def split_text_to_docs(pdf_path, llm):
     # Variable to accumulate extracted text
-    text = ""
+    formatted_text = ""
+    docs = ""
+    refined_chunks = []
 
     # Open the PDF using PyMuPDF (fitz)
     doc = fitz.open(pdf_path)
-    for page_num in range(doc.page_count):
+    #for page_num in range(doc.page_count):
+    for page_num, page in enumerate(doc):
         page = doc[page_num]
 
         # Try to extract actual text from the page
@@ -345,7 +370,7 @@ def split_text_to_docs(pdf_path, llm):
 
         if page_text.strip():
             #text += page_text
-            fromatted_text += format_text(page_text)
+            formatted_text += format_text(page, page_num, page_text)
         else:
             # Render the page as an image
             pix = page.get_pixmap()
@@ -358,23 +383,27 @@ def split_text_to_docs(pdf_path, llm):
             if ocr_text.strip():  # Only add if text was found
                 #extracted_text += f"\n--- Page {page_num + 1} ---\n"
                 #text += ocr_text
-                fromatted_text += format_text(ocr_text)
-
+                formatted_text += format_text(page, page_num, ocr_text)
 
     #text = text.replace('\t', ' ')
-    text = fromatted_text["text"].replace('\t', ' ')
+    if(formatted_text != ""):
+        text = formatted_text["text"].replace('\t', ' ')
+
+        result = process_policy(text, llm)
+        refined_chunks = further_chunk_policy(result)
+
+        docs = prep_docs(refined_chunks)
 
     # Close the document
     doc.close()
         
-	refined_chunks = []
-
-	result = process_policy(text, llm)
-	refined_chunks = further_chunk_policy(result)
-
-	docs = prepare_documents_for_vectorstore(refined_chunks)
-
     return docs
+
+def debug_this(docs):
+
+    for doc in docs:
+        print(f"Header: {doc.header}")
+        print(f"content: {doc.metadata.page_content}")
 
 def predict_fn(input_data, model):
     """
@@ -392,7 +421,7 @@ def predict_fn(input_data, model):
 
     
     print("Sreeram: predict filename we got is "+ file_name)
-    file_key = "train_datasets/" + file_name   
+    file_key = "pdf_uploads/" + file_name   
     print("Sreeram: predict pdf we got is "+file_key)
     logger.info("pdf we got is : %s", file_key)
     
@@ -429,12 +458,7 @@ def predict_fn(input_data, model):
 
     vectors = np.array(embeddings.embed_documents([x.page_content for x in docs]))
 
-	qdrant_vectorstore = setup_vectorstore(
-	documents=docs,
-	embeddings=embeddings,
-	qdrant_url=qdrant_url,
-	qdrant_api_key=qdrant_key
-	)
+    debug_this(docs)
 
     # Assuming 'embeddings' is a list or array of 1536-dimensional embeddings
     # Choose the number of clusters, this can be adjusted based on the doc's content.
