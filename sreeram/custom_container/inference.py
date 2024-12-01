@@ -78,6 +78,36 @@ logger = logging.getLogger(__name__)
 # Load the OpenAI API key from an environment variable
 #openai.api_key = os.getenv("OPENAI_API_KEY")
 
+from botocore.exceptions import ClientError
+
+
+def get_secret():
+
+    secret_name = "open_ai_api_key"
+    region_name = "us-east-1"
+
+    # Create a Secrets Manager client
+    session = boto3.session.Session()
+    client = session.client(
+        service_name='secretsmanager',
+        region_name=region_name
+    )
+
+    try:
+        get_secret_value_response = client.get_secret_value(
+            SecretId=secret_name
+        )
+    except ClientError as e:
+        # For a list of exceptions thrown, see
+        # https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html
+        print(f"Error retrieving secret {secret_name}: {e}")
+        raise e
+        return None
+
+    secret = get_secret_value_response['SecretString']
+    return json.loads(secret)
+
+'''
 def get_secret(secret_name):
     region_name = "us-east-1"
     client = boto3.client("secretsmanager", region_name=region_name)
@@ -88,6 +118,7 @@ def get_secret(secret_name):
     except Exception as e:
         print(f"Error retrieving secret {secret_name}: {e}")
         return None
+'''
 
 def model_fn(model_dir):
     """
@@ -95,13 +126,16 @@ def model_fn(model_dir):
     """
     logger.info("model_fn called %s", model_dir)
     print("Sreeram: model_fn called/exit")
-    secret = get_secret("arn:aws:secretsmanager:us-east-1:686255941112:secret:HuggingfaceQdrantOpenAPI-UKUXlz")
+    #secret = get_secret("arn:aws:secretsmanager:us-east-1:686255941112:secret:HuggingfaceQdrantOpenAPI-UKUXlz")
+    secret = get_secret()
     if not secret:
         raise ValueError("Failed to retrieve secrets from AWS Secrets Manager")
 
     openai_api_key = secret.get("OPENAI_API_KEY", "Key not found")
-    #openai.api_key = os.getenv("OPENAI_API_KEY")  # Load API key from environment variable
-    return None  # No specific model to load as we're using an external API
+    model_components = {"openai_api_key" : openai_api_key}
+
+    print(f"Sreeram: model_fn exit ")
+    return model_components 
 
 def input_fn(request_body, request_content_type):
     """
@@ -472,16 +506,15 @@ def predict_fn(input_data, model):
     s3_client.download_file(bucket_name, file_key, pdf_path)
     print("Sreeram bucket: " + bucket_name + " filekey: "+file_key+ " pdf_path: "+pdf_path)
         
-    openAIApiKey = os.environ.get("OPENAI_API_KEY")
+    #openAIApiKey = os.environ.get("OPENAI_API_KEY")
+    openAIApiKey = model["openai_api_key"]
     if not openAIApiKey:
         raise ValueError("API key not found in environment variables.")
 
-    print(f"Your API key is: {openAIApiKey}")
+    #print(f"Your API key is: {openAIApiKey}")
     logger.info(f"Your API key is: {openAIApiKey}")
 
-    #openAIApiKey = "skproj_d8BxU8_XoEjNa7XSa7MYfyWSPwLsMsTDsU9BAoI5B6NpJxv1U9WOfdVVxDVfzPm1uIWvdOVT3BlbkFJhVc6z6W6TNC_Sa4TeniWGFRVyv4a327s71gTCaeH7HSIRk6wROaD0W0g-qjGcFrLJDS9ACmZgA"
-
-    llm = OpenAI(api_key=openai_api_key)
+    llm = OpenAI(api_key=openAIApiKey)
 
     # Combine the pages, and replace the tabs with spaces
 
@@ -490,7 +523,7 @@ def predict_fn(input_data, model):
     #text_splitter = RecursiveCharacterTextSplitter(separators=["\n\n", "\n", "\t"], chunk_size=1000, chunk_overlap=500)
     #splits = text_splitter.create_documents([text])
     #return docs
-    embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
+    embeddings = OpenAIEmbeddings(openai_api_key=openAIApiKey)
 
     vectors = np.array(embeddings.embed_documents([x.page_content for x in docs]))
 
@@ -524,7 +557,7 @@ def predict_fn(input_data, model):
     selected_indices = sorted(closest_indices)
 
     llm3 = ChatOpenAI(temperature=0,
-                openai_api_key=openai_api_key,
+                openai_api_key=openAIApiKey,
                 max_tokens=1000,
                 model='gpt-3.5-turbo'
             )
@@ -568,7 +601,7 @@ def predict_fn(input_data, model):
     summaries = Document(page_content=summaries)
 
     llm4 = ChatOpenAI(temperature=0,
-                openai_api_key=openai_api_key,
+                openai_api_key=openAIApiKey,
                 max_tokens=3000,
                 model='gpt-4',
                 request_timeout=120
