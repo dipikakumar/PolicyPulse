@@ -636,6 +636,7 @@ def create_policy_prompt_template() -> ChatPromptTemplate:
 
     {prompt_instruction} [/INST]"""
 
+
     return ChatPromptTemplate.from_template(policy_pulse_template)
 
 
