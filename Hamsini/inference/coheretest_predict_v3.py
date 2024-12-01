@@ -103,37 +103,6 @@ def load_cache_from_db():
     conn.close()
     return {row[0]: json.loads(row[1]) for row in rows}
 
-def verify_reset() -> Tuple[bool, str]:
-    """
-    Verify that the cache and database were properly reset.
-    
-    Returns:
-        Tuple[bool, str]: A tuple containing:
-            - bool: Verification status (True if verified, False otherwise)
-            - str: Status message describing the verification results
-    """
-    try:
-        # Verify cache is empty
-        if len(HEADER_CACHE) > 0:
-            return False, "Cache is not empty after reset"
-        
-        # Verify database exists and is empty
-        if not os.path.exists(DB_FILE):
-            return False, "Database file does not exist after reset"
-            
-        conn = sqlite3.connect(DB_FILE)
-        cursor = conn.cursor()
-        cursor.execute("SELECT COUNT(*) FROM header_cache")
-        count = cursor.fetchone()[0]
-        conn.close()
-        
-        if count > 0:
-            return False, f"Database contains {count} records after reset"
-            
-        return True, "Cache and database verified empty"
-        
-    except Exception as e:
-        return False, f"Error during verification: {str(e)}"
 
 
 def patched_get_generation_info(self, response):
@@ -641,7 +610,6 @@ def process_single_question(uuid, company_name, question_type,  question, qdrant
             "question": question,
             "contexts": "No relevant context found for answering the question.",
             "answer": "No answer generated."
-            #"doc_source": "N/A"
         }
 
     rag_input = {"context": context_snippets_str, "question": question}
@@ -657,7 +625,6 @@ def process_single_question(uuid, company_name, question_type,  question, qdrant
         "question": question,
         "contexts": context_snippets_str,
         "answer": generated_answer
-        #"doc_source": document_sources_str
     }
 
 def clean_generated_response(response: str) -> str:
@@ -677,15 +644,17 @@ def clean_generated_response(response: str) -> str:
 
 def chunk_gdpr_by_section(gdpr_contents: List[str]) -> List[Document]:
     """
-    Chunk GDPR text into sections based on articles and recitals, without mapping to policy categories.
-
-    Parameters:
-    - gdpr_contents (List[str]): List containing GDPR text.
-
-    Returns:
-    - List[Document]: List of Document objects, each representing a chunk of a GDPR section.
+    Chunk GDPR text into sections with caching.
+    Uses a constant key for caching since GDPR content is the same for all companies.
     """
     try:
+        gdpr_cache_key = "GDPR_GLOBAL"  
+        
+        if gdpr_cache_key in HEADER_CACHE:
+            print("[INFO] Using cached GDPR sections")
+            return HEADER_CACHE[gdpr_cache_key]
+
+        print("[INFO] Processing GDPR document and creating new cache")
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=1500, chunk_overlap=50)
         documents = []
         full_text = "\n".join(gdpr_contents)
@@ -702,25 +671,23 @@ def chunk_gdpr_by_section(gdpr_contents: List[str]) -> List[Document]:
             section_text = full_text[start:end].strip()
 
             section_header = None
-
             if section_type == 'article' and article_number:
                 article_number = article_number[0].strip()
                 section_header = f"Article {article_number}"
-
             elif section_type == 'recital':
                 section_header = f"Recital {header}"
 
             chunks = text_splitter.split_text(section_text)
-
             for chunk in chunks:
                 documents.append(Document(
                     page_content=chunk,
-                    metadata={
-                        "header": section_header
-                    }
+                    metadata={"header": section_header}
                 ))
 
-        print(f"\nTotal documents created: {len(documents)}")
+        HEADER_CACHE[gdpr_cache_key] = documents
+        save_cache_to_db(gdpr_cache_key, documents)
+        
+        print(f"\nTotal documents created and cached: {len(documents)}")
         return documents
 
     except Exception as e:
@@ -885,7 +852,7 @@ def output_fn(prediction, content_type):
 def main():
     """
     Main function to test the pipeline loading and processing with input data.
-    """    
+    """     
     start_time = time.time()
 
     model = model_fn()
