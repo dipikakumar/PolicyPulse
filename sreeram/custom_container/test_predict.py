@@ -60,6 +60,7 @@ import pytesseract
 from PIL import Image
 import json
 import boto3
+from collections import defaultdict
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
@@ -70,6 +71,13 @@ logger = logging.getLogger(__name__)
 
 load_dotenv()
 
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# Load the OpenAI API key from an environment variable
+#openai.api_key = os.getenv("OPENAI_API_KEY")
+
 def model_fn(model_dir):
     """
     Load any necessary configurations or resources.
@@ -77,6 +85,7 @@ def model_fn(model_dir):
     logger.info("model_fn called %s", model_dir)
     print("Sreeram: model_fn called/exit")
     #openai.api_key = os.getenv("OPENAI_API_KEY")  # Load API key from environment variable
+    os.environ["OPENAI_API_KEY"] = "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"
     return None  # No specific model to load as we're using an external API
 
 def input_fn(request_body, request_content_type):
@@ -99,6 +108,7 @@ def format_text(page, page_num, text):
     Extract text with its formatting information from PDF.
     Returns list of dictionaries containing text and its formatting properties.
     """
+    position = 0
     formatted_blocks = []
     blocks = page.get_text("dict")["blocks"]
     prev_y1 = None
@@ -119,10 +129,11 @@ def format_text(page, page_num, text):
                             "font_size": span["size"],
                             "is_bold": "bold" in span["font"].lower() or span["flags"] & 2**4 != 0,
                             "line_spacing": line_spacing,
-                            "position": position,                                                                                                               
+                            "position": position,
                             "page_num": page_num + 1
                         })
                     position += len(text) + 1
+                    #print(f"span is {span} text is {text}")
 
     return formatted_blocks
 
@@ -185,7 +196,7 @@ def identify_potential_headers(blocks, format_stats):
                 "characteristics": characteristics,
                 "formatting_score": formatting_score
             })
-
+    #print(f"Sreeram potential headers: {potential_headers}")
     return potential_headers
 
 def confirm_headers_with_gpt(potential_headers, client):
@@ -236,7 +247,7 @@ Is this a main section header? Answer only 'yes' or 'no'."""
         except Exception as e:
             print(f"Error in GPT confirmation: {e}")
             continue
-
+    print(f"Sreeram confirmed headers: {confirmed_headers}")
     return confirmed_headers
 
 def chunk_policy_by_headers(headers, blocks):
@@ -249,17 +260,19 @@ def chunk_policy_by_headers(headers, blocks):
 
     for block in blocks:
         full_text += block["text"] + "\n"
+    print(f"chunk: {full_text}")
 
     for i, header_data in enumerate(headers):
         start_pos = header_data["position"]
         end_pos = headers[i + 1]["position"] if i + 1 < len(headers) else len(full_text)
         chunk_text = full_text[start_pos:end_pos].strip()
-
+        #print(f"chunk by header {i}: {header_data}")
         chunks.append({
-            "header": header_data["header"],
+            #"header": header_data["header"],
+            "header": header_data["text"],
             "content": chunk_text
         })
-
+    print(f"Sreeram chunks: {chunks}")
     return chunks
 
 def further_chunk_policy(policy, chunk_size: int = 1000, chunk_overlap: int = 500):    
@@ -299,7 +312,7 @@ def further_chunk_policy(policy, chunk_size: int = 1000, chunk_overlap: int = 50
         except Exception as e:
             print(f"Error processing chunk for company {company_name} with header '{chunk['header']}': {str(e)}")
             continue
-
+    print(f"Sreeram refined chunks: {refined_chunks}")
     return refined_chunks
 
 
@@ -311,22 +324,25 @@ def process_policy(formatted_blocks, llm):
         #formatted_blocks = extract_formatted_text(pdf_path)
         #if not formatted_blocks:
         #    return {"status": "error", "pdf_path": pdf_path, "message": "Failed to extract formatted text"}
-
+        print("Sreeram calling analyze")
         format_stats = analyze_document_formatting(formatted_blocks)
+        print("Sreeram calling identify")
         potential_headers = identify_potential_headers(formatted_blocks, format_stats)
+        print("Sreeram calling confirm with gpt")
+        #confirmed_headers = confirm_headers_with_gpt(potential_headers, llm)
 
+        #if not confirmed_headers:
+            #return {"status": "error", "message": "No headers found in the document"}
 
-        confirmed_headers = confirm_headers_with_gpt(potential_headers, llm)
-
-        if not confirmed_headers:
-            return {"status": "error", "message": "No headers found in the document"}
-
-        chunks = chunk_policy_by_headers(confirmed_headers, formatted_blocks)
+        print("Sreeram chunking by headers")
+        #chunks = chunk_policy_by_headers(confirmed_headers, formatted_blocks)
+        chunks = chunk_policy_by_headers(potential_headers, formatted_blocks)
 
         return {
             "status": "success",
             "total_chunks": len(chunks),
-            "chunks": chunks
+            "chunks": chunks,
+            "message": "Successful in chunking"
         }
 
     except Exception as e:
@@ -349,13 +365,13 @@ def prep_docs(chunks):
             page_content=chunk.page_content,
             metadata=metadata
         ))
-        print(f"[DEBUG] Prepared document {idx + 1} with metadata: {metadata}")
+        #print(f"[DEBUG] Prepared document {idx + 1} with metadata: {metadata}")
 
     return documents
 
 def split_text_to_docs(pdf_path, llm):
     # Variable to accumulate extracted text
-    formatted_text = ""
+    formatted_blocks = []
     docs = ""
     refined_chunks = []
 
@@ -370,7 +386,8 @@ def split_text_to_docs(pdf_path, llm):
 
         if page_text.strip():
             #text += page_text
-            formatted_text += format_text(page, page_num, page_text)
+            formatted_blocks.extend(format_text(page, page_num, page_text))
+            #print(f"PDF: {page_text}")
         else:
             # Render the page as an image
             pix = page.get_pixmap()
@@ -378,21 +395,23 @@ def split_text_to_docs(pdf_path, llm):
 
             # Use OCR on the page image to extract text
             ocr_text = pytesseract.image_to_string(image)
-
+            print(f"OCR: {ocr_text}")
             # Accumulate extracted text if OCR detected any text
             if ocr_text.strip():  # Only add if text was found
                 #extracted_text += f"\n--- Page {page_num + 1} ---\n"
                 #text += ocr_text
-                formatted_text += format_text(page, page_num, ocr_text)
+                formatted_blocks.extend(format_text(page, page_num, ocr_text))
 
     #text = text.replace('\t', ' ')
-    if(formatted_text != ""):
-        text = formatted_text["text"].replace('\t', ' ')
+    #print(f"Sreeram formatted blocks: {formatted_blocks}")
+    if(formatted_blocks) :
+        result = process_policy(formatted_blocks, llm)
 
-        result = process_policy(text, llm)
-        refined_chunks = further_chunk_policy(result)
-
-        docs = prep_docs(refined_chunks)
+        if (result.get("status")) == "success":
+            refined_chunks = further_chunk_policy(result)
+            docs = prep_docs(refined_chunks)
+        else:
+            print(f"Sreeram process_policy conked {result.get('message')}")
 
     # Close the document
     doc.close()
@@ -400,10 +419,12 @@ def split_text_to_docs(pdf_path, llm):
     return docs
 
 def debug_this(docs):
-
+    print("Inside debug this")
     for doc in docs:
-        print(f"Header: {doc.header}")
-        print(f"content: {doc.metadata.page_content}")
+        print(f"doc is: {doc}")
+        #print(f"Header: {doc.metadata.get('header', '')}")
+        #print(f"content: {doc['page_content']}")
+
 
 def predict_fn(input_data, model):
     """
@@ -445,7 +466,7 @@ def predict_fn(input_data, model):
 
     #openAIApiKey = "skproj_d8BxU8_XoEjNa7XSa7MYfyWSPwLsMsTDsU9BAoI5B6NpJxv1U9WOfdVVxDVfzPm1uIWvdOVT3BlbkFJhVc6z6W6TNC_Sa4TeniWGFRVyv4a327s71gTCaeH7HSIRk6wROaD0W0g-qjGcFrLJDS9ACmZgA"
 
-    llm = OpenAI(temperature=0, openai_api_key=openAIApiKey)
+    llm = OpenAI(api_key=openAIApiKey)
 
     # Combine the pages, and replace the tabs with spaces
 
@@ -453,12 +474,10 @@ def predict_fn(input_data, model):
 
     #text_splitter = RecursiveCharacterTextSplitter(separators=["\n\n", "\n", "\t"], chunk_size=1000, chunk_overlap=500)
     #splits = text_splitter.create_documents([text])
-
+    #return docs
     embeddings = OpenAIEmbeddings(openai_api_key=openAIApiKey)
 
     vectors = np.array(embeddings.embed_documents([x.page_content for x in docs]))
-
-    debug_this(docs)
 
     # Assuming 'embeddings' is a list or array of 1536-dimensional embeddings
     # Choose the number of clusters, this can be adjusted based on the doc's content.
@@ -514,7 +533,7 @@ def predict_fn(input_data, model):
                             chain_type="stuff",
                             prompt=mapPrompt)
 
-    selected_docs = [splits[doc] for doc in selected_indices]
+    selected_docs = [docs[doc] for doc in selected_indices]
 
     # Make an empty list to hold your summaries
     summary_list = []
@@ -559,6 +578,7 @@ def predict_fn(input_data, model):
     s3.put_object(Bucket=bucket_name, Key=file_key, Body=output_text)
 
     print("Sreeram: predict exit")
+    print(output_text)
     return ("Success Summarization")  # Extract response text
 
 def output_fn(prediction, content_type):
@@ -573,6 +593,7 @@ def output_fn(prediction, content_type):
     else:
         raise ValueError(f"Unsupported content type: {content_type}")
     print("Sreeram: output exit")
+
 
 def main():
     """Main function to read JSON from file and call process_data."""

@@ -10,6 +10,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install system dependencies for Python packages and Tesseract OCR
 RUN apt-get update -y && \
     apt-get install -y --no-install-recommends \
+    sqlite3 \
     build-essential \
     libtesseract-dev \
     tesseract-ocr \
@@ -21,6 +22,7 @@ RUN pip3 install \
     transformers==4.41.2 \
     bitsandbytes \
     scikit-learn \
+    cohere \
     accelerate \
     langchain \
     unstructured \
@@ -37,6 +39,7 @@ RUN pip3 install \
     'unstructured[local-inference]' \
     boto3 \
     langchain_openai \
+    sentence-transformers \
     pymupdf \
     pyMuPDF \
     PyPDF2
