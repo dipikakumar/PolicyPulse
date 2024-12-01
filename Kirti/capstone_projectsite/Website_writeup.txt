@@ -1,0 +1,22 @@
+Problem & Motivation
+
+Companies are under increasing pressure to comply with complex regulations, such as GDPR, to ensure the privacy and security of their users’ data. However, privacy policies and terms of service documents are often long, legally complex, and may fail to comply with regulations due to either oversight or lack of knowledge. This can expose companies to fines, lawsuits, and reputational damage. By using Natural Language Processing (NLP) and other data science techniques to analyze these documents, we can detect areas of potential non-compliance with regulations like GDPR or CCPA, providing companies with early warnings to address these issues before they become liabilities.
+
+Regulatory non-compliance, especially regarding data privacy, can result in significant fines and loss of customer trust. Early detection of non-compliance can save fin-techs both time and money, as well as protect their reputation in an industry where consumer trust is crucial. Automating compliance checks with AI helps companies avoid costly legal reviews and reduces the need for human resources in this area.
+
+
+
+Minimum Viable Product (MVP)
+
+Privacy Pulse was created using latest Gen AI technologies in our mission to empowering companies with AI-driven tools to simplify data privacy compliance, identify risks early, and safeguard user data.
+
+This involved using NLP models (e.g., BERT) for classifying text segments into relevant categories, and use a RAG (Retrieval-Augmented Generation) pipeline to retrieve and compare regulatory clauses from GDPR to the classified text for compliance checking.
+
+Generated ground truth Q&A were generated using Claude and Legal GPT. Integrated Policy Category Classifier was setup into RAG pipeline to tag chunks for targeted retrieval, adding GDPR references. Initial policy document summaries using GPT and BART. Consultation with privacy expert for feedback on Q&A approach and sample generation.
+
+
+
+Acknowledgments
+
+A substantial amount effort was put into developing our Privacy Pulse MVP. We deeply appreciate the unwavering support and contributions of our families, friends, colleagues, and classmates in helping us achieve success. We appreciate everyone who tested our MVP. We would also like to extend our gratitude and acknowledge appreciation to the following individuals: Jared Maslin, faculty of the MIDS 231 Privacy class; Mark Butler, faculty of the MIDS 266/267 NLP and Gen AI classes; Dipika and her colleague in compliance, Timothy Cradle; Tim Tung, MIDS student; Samantha, a former MIDS student; Kevin Kuc, MIDS student; Nayank, MIDS student; Sauarbh, MIDS student; and Billy Fong, MIDS student.
+
