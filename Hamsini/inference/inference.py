@@ -566,7 +566,6 @@ def prepare_documents_for_vectorstore(chunks: List[Document]) -> List[Document]:
             page_content=chunk.page_content,
             metadata=metadata
         ))
-        print(f"[DEBUG] Prepared document {idx + 1} with metadata: {metadata}")
 
     return documents
 
