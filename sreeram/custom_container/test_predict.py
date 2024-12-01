@@ -600,6 +600,7 @@ def main():
     with open('test.json', 'r') as f:
         data = json.load(f)
 
+    model_fn(None)
     predict_fn(data, None)
 
 if __name__ == '__main__':
