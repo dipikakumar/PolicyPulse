@@ -78,6 +78,37 @@ logger = logging.getLogger(__name__)
 # Load the OpenAI API key from an environment variable
 #openai.api_key = os.getenv("OPENAI_API_KEY")
 
+from botocore.exceptions import ClientError
+
+
+def get_secret():
+
+    secret_name = "open_ai_api_key"
+    region_name = "us-east-1"
+
+    # Create a Secrets Manager client
+    session = boto3.session.Session()
+    client = session.client(
+        service_name='secretsmanager',
+        region_name=region_name
+    )
+
+    try:
+        get_secret_value_response = client.get_secret_value(
+            SecretId=secret_name
+        )
+    except ClientError as e:
+        # For a list of exceptions thrown, see
+        # https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html
+        print(f"Error retrieving secret {secret_name}: {e}")
+        raise e
+        return None
+
+    secret = get_secret_value_response['SecretString']
+    #print(f"get_secret api key found {secret}")
+    return json.loads(secret)
+
+'''
 def get_secret(secret_name):
     region_name = "us-east-1"
     client = boto3.client("secretsmanager", region_name=region_name)
@@ -88,21 +119,27 @@ def get_secret(secret_name):
     except Exception as e:
         print(f"Error retrieving secret {secret_name}: {e}")
         return None
+'''
 
 def model_fn(model_dir):
     """
     Load any necessary configurations or resources.
     """
     logger.info("model_fn called %s", model_dir)
-    print("Sreeram: model_fn called/exit")
+    print("Sreeram: model_fn called")
     #openai.api_key = os.getenv("OPENAI_API_KEY")  # Load API key from environment variable
-    print("Sreeram: model_fn called/exit")
-    secret = get_secret("arn:aws:secretsmanager:us-east-1:686255941112:secret:HuggingfaceQdrantOpenAPI-UKUXlz")
+    #secret = get_secret("arn:aws:secretsmanager:us-east-1:686255941112:secret:HuggingfaceQdrantOpenAPI-UKUXlz")
+    secret = get_secret()
     if not secret:
         raise ValueError("Failed to retrieve secrets from AWS Secrets Manager")
+        return None  # No specific model to load as we're using an external API
 
     openai_api_key = secret.get("OPENAI_API_KEY", "Key not found")
-    return None  # No specific model to load as we're using an external API
+    model_components = {"openai_api_key" : openai_api_key}
+
+    print(f"model_fn Your API key is: {model_components['openai_api_key']}")
+    print(f"Sreeram: model_fn exit secret is {secret}")
+    return model_components 
 
 def input_fn(request_body, request_content_type):
     """
@@ -473,14 +510,14 @@ def predict_fn(input_data, model):
     s3_client.download_file(bucket_name, file_key, pdf_path)
     print("Sreeram bucket: " + bucket_name + " filekey: "+file_key+ " pdf_path: "+pdf_path)
         
-    openAIApiKey = os.environ.get("OPENAI_API_KEY")
+    #openAIApiKey = os.environ.get("OPENAI_API_KEY")
+    openAIApiKey = model["openai_api_key"]
     if not openAIApiKey:
+        print(f"Your API key is not found!!!")
         raise ValueError("API key not found in environment variables.")
 
-    print(f"Your API key is: {openAIApiKey}")
+    print(f"predict_fn Your API key is: {openAIApiKey}")
     logger.info(f"Your API key is: {openAIApiKey}")
-
-    #openAIApiKey = "skproj_d8BxU8_XoEjNa7XSa7MYfyWSPwLsMsTDsU9BAoI5B6NpJxv1U9WOfdVVxDVfzPm1uIWvdOVT3BlbkFJhVc6z6W6TNC_Sa4TeniWGFRVyv4a327s71gTCaeH7HSIRk6wROaD0W0g-qjGcFrLJDS9ACmZgA"
 
     llm = OpenAI(api_key=openAIApiKey)
 
@@ -616,8 +653,8 @@ def main():
     with open('test.json', 'r') as f:
         data = json.load(f)
 
-    model_fn(None)
-    predict_fn(data, None)
+    model = model_fn(None)
+    predict_fn(data, model)
 
 if __name__ == '__main__':
     main()
