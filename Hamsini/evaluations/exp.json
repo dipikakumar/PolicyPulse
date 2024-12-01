@@ -1,0 +1,39 @@
+[
+    {
+        "company_name": "bitpay",
+        "uuid": "1529ad89-656b-4450-d860-984a7ea58376",
+        "question_type": "Policy", 
+        "question": "Where can BitPay users exercise their data rights, and why?"
+    },
+    {
+        "company_name": "bitpay",
+        "uuid": "1529ad89-656b-4450-d860-984a7ea58376",
+        "question_type": "Policy", 
+        "question": "When does BitPay require informed consent for marketing?"
+    }, 
+    {
+        "company_name": "bitpay",
+        "uuid": "1529ad89-656b-4450-d860-984a7ea58376",
+        "question_type": "Policy", 
+        "question": "How does BitPay address its dual role as controller and processor under GDPR?"
+    }, 
+    {
+        "company_name": "bitpay",
+        "uuid": "1529ad89-656b-4450-d860-984a7ea58376",
+        "question_type": "Policy", 
+        "question": "What technical and organizational security measures does BitPay implement?"
+    }, 
+    {
+        "company_name": "bitpay",
+        "uuid": "1529ad89-656b-4450-d860-984a7ea58376",
+        "question_type": "Policy", 
+        "question": "When does BitPay apply automated fraud prevention?"
+    }, 
+    {
+        "company_name": "bitpay",
+        "uuid": "1529ad89-656b-4450-d860-984a7ea58376",
+        "question_type": "Policy", 
+        "question": "Where does BitPay conduct merchant due diligence?"
+    }
+]
+
