@@ -610,14 +610,14 @@ def create_policy_prompt_template() -> ChatPromptTemplate:
     """
     prompt_role = "You are a GDPR compliance expert tasked with providing accurate, structured answers."
     prompt_task = "Using only the provided context, generate a comprehensive response that includes all required sections."
-    prompt_guidance = "Think carefully and ensure that your answer is well-structured and solid for law firms and startups."
+    prompt_guidance = "Think carefully and ensure that your answer is well-structured and solid enough for law firms and startups."
     prompt_context = "Context:\n{context}"
     prompt_question = "Question:\n{question}"
     prompt_instruction = """Answer the question by referring specifically to the context.
     Structure your response exactly as follows:
 
     Main Answer:
-    [Provide a concise yet comprehensive answer using the context information.]
+    [Provide a comprehensive yet concise answer using the context information.]
 
     Key Points:
     • [List key points as bullet points]
@@ -629,7 +629,7 @@ def create_policy_prompt_template() -> ChatPromptTemplate:
 
     policy_pulse_template = f"""<s>[INST] {prompt_role}
     {prompt_task}
-
+    {prompt_guidance}
     {prompt_context}
 
     {prompt_question}
