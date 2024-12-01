@@ -51,7 +51,7 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-DB_FILE = "/tmp/header_cache.db"
+DB_FILE = "header_cache.db"
 
 
 logging.basicConfig(level=logging.INFO)
@@ -102,18 +102,19 @@ def load_cache_from_db():
     conn.close()
     return {row[0]: json.loads(row[1]) for row in rows}
 
+
 def patched_get_generation_info(self, response):
     return {
         "documents": getattr(response, "documents", None),
         "citations": getattr(response, "citations", None),
         "search_results": getattr(response, "search_results", None),
         "search_queries": getattr(response, "search_queries", None),
-        "token_count": getattr(response, "token_count", None),  
+        "token_count": getattr(response, "token_count", None),  # Gracefully handle missing token_count
     }
 
 ChatCohere._get_generation_info = patched_get_generation_info
 
-def model_fn(model_dir: str):
+def model_fn():
     """
     Initialize and return the RAG pipeline components: vector store, LLM, and embeddings.
     Load required components or resources from the provided model directory.
@@ -955,4 +956,35 @@ def output_fn(prediction, content_type):
             raise ValueError(f"Failed to serialize prediction to JSON: {e}")
     else:
         raise ValueError(f"Unsupported content type: {content_type}")
+
+def main():
+    """
+    Main function to test the pipeline loading and processing with input data.
+    """
+    
+    start_time = time.time()
+
+    model = model_fn()
+
+    try:
+        with open("test.json", "r") as f:
+            input_data = json.load(f)
+    except Exception as e:
+        print(f"[ERROR] Failed to load input data from test.json: {e}")
+        return
+
+    content_type = "application/json"
+
+    prediction = predict_fn(input_data, model)
+
+    formatted_response = output_fn(prediction, content_type)
+    
+    print("formatted_response:", formatted_response)
+    end_time = time.time()
+    duration = end_time - start_time
+    print(f"Execution duration: {duration:.2f} seconds")
+
+
+if __name__ == "__main__":
+    main()
 
