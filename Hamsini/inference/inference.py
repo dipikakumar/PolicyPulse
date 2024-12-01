@@ -45,14 +45,13 @@ from langchain.schema import Document
 from qdrant_client import QdrantClient
 import boto3
 import sqlite3
-import pdfplumber
 
 
 import warnings
 
 warnings.filterwarnings("ignore")
 
-DB_FILE = "/tmp/header_cache.db"  
+DB_FILE = "/tmp/header_cache.db"
 
 
 logging.basicConfig(level=logging.INFO)
@@ -102,8 +101,6 @@ def load_cache_from_db():
     rows = cursor.fetchall()
     conn.close()
     return {row[0]: json.loads(row[1]) for row in rows}
-
-
 
 def patched_get_generation_info(self, response):
     return {
@@ -304,31 +301,121 @@ def load_pdf_content_with_page_count(pdf_path: str) -> Tuple[List[str], int]:
         print(f"[ERROR] Failed to load PDF content from {pdf_path}: {e}")
         return [], 0
 
-def extract_headers_with_pdfplumber(pdf_path):
-    headers = []
-    position = 0  
-    print("function extract_headers_with_pdfplumber initiated:")
-    with pdfplumber.open(pdf_path) as pdf:
-        for page_num, page in enumerate(pdf.pages, start=1):
-            text = page.extract_text()
-            if text:  
-                for line in text.split("\n"):
-                    if line.isupper() or len(line.split()) < 15:
-                        headers.append({
-                            "header": line.strip(),
-                            "position": position,
-                            "page": page_num
-                        })
-                    position += len(line) + 1  
-    return headers
 
-def chunk_policy_by_headers(headers: List[Dict], pdf_path: str) -> List[Dict]:
+def extract_formatted_text(pdf_path: str) -> List[Dict]:
     """
-    Chunk the policy text based on section headers using headers from pdfplumber.
+    Extract text with its formatting information from PDF.
+    Returns list of dictionaries containing text and its formatting properties.
+    """
+    formatted_blocks = []
+    try:
+        doc = fitz.open(pdf_path)
+        position = 0
+
+        for page_num, page in enumerate(doc):
+            blocks = page.get_text("dict")["blocks"]
+            prev_y1 = None
+
+            for block in blocks:
+                if "lines" in block:
+                    for line in block["lines"]:
+                        y0 = line["bbox"][1]
+                        line_spacing = y0 - prev_y1 if prev_y1 is not None else 0
+                        prev_y1 = line["bbox"][3]
+
+                        for span in line["spans"]:
+                            text = span["text"].strip()
+                            if text:
+                                formatted_blocks.append({
+                                    "text": text,
+                                    "font_name": span["font"],
+                                    "font_size": span["size"],
+                                    "is_bold": "bold" in span["font"].lower() or span["flags"] & 2**4 != 0,
+                                    "line_spacing": line_spacing,
+                                    "position": position,
+                                    "page_num": page_num + 1
+                                })
+                            position += len(text) + 1
+
+        return formatted_blocks
+    except Exception as e:
+        print(f"Error extracting formatted text: {e}")
+        return []
+
+def analyze_document_formatting(blocks: List[Dict]) -> Dict:
+    """
+    Analyze document formatting to establish baseline metrics.
+    """
+    stats = defaultdict(list)
+
+    for block in blocks:
+        stats["font_sizes"].append(block["font_size"])
+        stats["line_spacings"].append(block["line_spacing"])
+
+    return {
+        "avg_font_size": sum(stats["font_sizes"]) / len(stats["font_sizes"]),
+        "max_font_size": max(stats["font_sizes"]),
+        "avg_line_spacing": sum(stats["line_spacings"]) / len(stats["line_spacings"]) if stats["line_spacings"] else 0
+    }
+
+def identify_potential_headers(blocks: List[Dict], format_stats: Dict) -> List[Dict]:
+    """
+    Identify potential headers based on formatting characteristics and convert them into confirmed_headers format.
+    """
+    potential_headers = []
+    print("calculating potential headers")
+
+    for block in blocks:
+        formatting_score = 0
+        characteristics = []
+
+        # Check font size
+        if block["font_size"] > format_stats["avg_font_size"]:
+            formatting_score += 2
+            characteristics.append("larger_font")
+
+        # Check if bold
+        if block["is_bold"]:
+            formatting_score += 2
+            characteristics.append("bold")
+
+        # Check line spacing
+        if block["line_spacing"] > format_stats["avg_line_spacing"] * 1.5:
+            formatting_score += 1
+            characteristics.append("increased_spacing")
+
+        # Check text length
+        word_count = len(block["text"].split())
+        if word_count <= 10:
+            formatting_score += 1
+            characteristics.append("short_text")
+
+        # Check for title case or all caps
+        if block["text"].istitle() or block["text"].isupper():
+            formatting_score += 1
+            characteristics.append("title_case_or_caps")
+
+        # If the formatting score is high enough, treat as a confirmed header
+        if formatting_score >= 3:
+            potential_headers.append({
+                "header": block["text"],
+                "position": block["position"]
+            })
+
+    return potential_headers
+
+
+
+def chunk_policy_by_headers(headers: List[Dict], blocks: List[Dict]) -> List[Dict]:
+    """
+    Chunk the policy text based on section headers using the original formatted blocks.
     """
     chunks = []
-    with pdfplumber.open(pdf_path) as pdf:
-        full_text = "\n".join([page.extract_text() or "" for page in pdf.pages])
+    full_text = ""
+    current_position = 0
+
+    for block in blocks:
+        full_text += block["text"] + "\n"
 
     for i, header_data in enumerate(headers):
         start_pos = header_data["position"]
@@ -346,16 +433,21 @@ init_cache_db()
 HEADER_CACHE = load_cache_from_db()
 
 
+
 def process_policy_with_cache(pdf_path: str, company_name: str, openai_api_key: str) -> Dict:
-    """
-    Process a PDF policy document and cache headers for reuse.
-    """
     if company_name in HEADER_CACHE:
         print(f"[INFO] Using cached headers for company: {company_name}")
         cached_headers = HEADER_CACHE[company_name]
     else:
         try:
-            confirmed_headers = extract_headers_with_pdfplumber(pdf_path)
+            formatted_blocks = extract_formatted_text(pdf_path)
+            if not formatted_blocks:
+                return {"status": "error", "pdf_path": pdf_path, "message": "Failed to extract formatted text"}
+
+            format_stats = analyze_document_formatting(formatted_blocks)
+
+            confirmed_headers = identify_potential_headers(formatted_blocks, format_stats)
+
             HEADER_CACHE[company_name] = confirmed_headers
             save_cache_to_db(company_name, confirmed_headers)
             cached_headers = confirmed_headers
@@ -363,7 +455,10 @@ def process_policy_with_cache(pdf_path: str, company_name: str, openai_api_key: 
         except Exception as e:
             return {"status": "error", "pdf_path": pdf_path, "message": str(e)}
 
-    chunks = chunk_policy_by_headers(cached_headers, pdf_path)
+    if 'formatted_blocks' not in locals():
+        print("entering here formatted_blocks:")
+        formatted_blocks = extract_formatted_text(pdf_path)
+    chunks = chunk_policy_by_headers(cached_headers, formatted_blocks)
 
     return {
         "status": "success",
@@ -371,7 +466,6 @@ def process_policy_with_cache(pdf_path: str, company_name: str, openai_api_key: 
         "total_chunks": len(chunks),
         "chunks": chunks
     }
-
 
 def further_chunk_policy(company_name: str, uuid: str, policy: Dict, chunk_size: int = 1000, chunk_overlap: int = 50) -> List[Dict]:
     """
@@ -418,7 +512,7 @@ def further_chunk_policy(company_name: str, uuid: str, policy: Dict, chunk_size:
     return refined_chunks
 
 
-def further_chunk_gdpr_content(company_name: str, initial_documents: List[Document]) -> List[Document]:
+def further_chunk_gdpr_content(company_name: str, uuid: str, initial_documents: List[Document]) -> List[Document]:
     """Further split GDPR content into smaller chunks while preserving metadata."""
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1200, chunk_overlap=50)
     gdpr_chunks = []
@@ -430,6 +524,7 @@ def further_chunk_gdpr_content(company_name: str, initial_documents: List[Docume
                 page_content=sub_chunk,
                 metadata={
                     "header": document.metadata.get("header"),
+                    "uuid": uuid, 
                     "document_type": "GDPR"
                 }
             ))
@@ -471,7 +566,6 @@ def prepare_documents_for_vectorstore(chunks: List[Document]) -> List[Document]:
             page_content=chunk.page_content,
             metadata=metadata
         ))
-        print(f"[DEBUG] Prepared document {idx + 1} with metadata: {metadata}")
 
     return documents
 
@@ -523,7 +617,7 @@ def create_policy_prompt_template() -> ChatPromptTemplate:
     Structure your response exactly as follows:
 
     Main Answer:
-    [Provide a concise yet comprehensive answer using the context information]
+    [Provide a concise yet comprehensive answer using the context information.]
 
     Key Points:
     • [List key points as bullet points]
@@ -561,6 +655,7 @@ def process_single_question(uuid, company_name, question_type,  question, qdrant
     print(f"[PROCESSING] Question: {question}")
 
     dynamic_company_name = company_name
+    #question_type = classify_question_type(dynamic_company_name, question)
     print(f"extracted company name: {dynamic_company_name}")
     print(f"extracted question_type: {question_type}")
 
@@ -591,18 +686,11 @@ def process_single_question(uuid, company_name, question_type,  question, qdrant
             "question": question,
             "contexts": "No relevant context found.",
             "answer": "Unable to classify question type."
-            #"doc_source": "N/A"
         }
 
     context_snippets = [doc.page_content[:500] for doc in policy_results + gdpr_results if doc.page_content]
     context_snippets_str = " ".join(context_snippets)
     
-
-    # document_sources = [doc.metadata.get('doc_link', 'N/A') for doc in policy_results + gdpr_results]
-    # document_sources_str = ", ".join(document_sources)
-    document_sources = [doc.page_content[:500] for doc in policy_results + gdpr_results if doc.page_content]
-    document_sources_str = "\n\n".join(document_sources)
-
     if not context_snippets_str:
         print(f"[ERROR] No context retrieved for question: {question}.")
         return {
@@ -651,7 +739,10 @@ def chunk_gdpr_by_section(gdpr_contents: List[str]) -> List[Document]:
         
         if gdpr_cache_key in HEADER_CACHE:
             print("[INFO] Using cached GDPR sections")
-            return HEADER_CACHE[gdpr_cache_key]
+            cached_docs = HEADER_CACHE[gdpr_cache_key]
+            if isinstance(cached_docs[0], dict):  # If cached as dict, convert back
+                return [Document(**doc) for doc in cached_docs]
+            return cached_doc
 
         print("[INFO] Processing GDPR document and creating new cache")
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=1500, chunk_overlap=50)
@@ -683,16 +774,15 @@ def chunk_gdpr_by_section(gdpr_contents: List[str]) -> List[Document]:
                     metadata={"header": section_header}
                 ))
 
-        HEADER_CACHE[gdpr_cache_key] = documents
-        save_cache_to_db(gdpr_cache_key, documents)
-        
+        HEADER_CACHE[gdpr_cache_key] = documents  # Store as `Document` objects
+        save_cache_to_db(gdpr_cache_key, [doc.dict() for doc in documents])  #
+         
         print(f"\nTotal documents created and cached: {len(documents)}")
         return documents
 
     except Exception as e:
         print(f"Error processing GDPR contents: {e}")
         return []
-
 #*************************************************************************************************************************************#****************############## End of Helper Function   ######**********************************************************************************************************#
 #******************************************************************************************************************************************************#
 
@@ -722,7 +812,9 @@ def predict_fn(input_data, model):
     sample_question = input_data.get("question", "").strip()
     if not sample_question:
         raise ValueError("No 'question' field found in input data.")
-     
+
+        
+        
     try:
         logger.info("Calling fn_local_with_paths...")
         policy_paths, gdpr_path, company_name, uuid, question_type = fn_local_with_paths(input_data, bucket_name)
@@ -754,7 +846,7 @@ def predict_fn(input_data, model):
             print("[ERROR] Invalid document type provided.")
             
         if question_type == "GDPR":
-            gdpr_final_chunks = further_chunk_gdpr_content(company_name, gdpr_sentence_chunks)
+            gdpr_final_chunks = further_chunk_gdpr_content(company_name, uuid, gdpr_sentence_chunks)
         else:
             gdpr_final_chunks = []
             
@@ -845,4 +937,5 @@ def output_fn(prediction, content_type):
             raise ValueError(f"Failed to serialize prediction to JSON: {e}")
     else:
         raise ValueError(f"Unsupported content type: {content_type}")
+
 
