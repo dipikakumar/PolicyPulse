@@ -130,6 +130,8 @@ def model_fn():
     qdrant_key = secret.get("QDRANT_API_KEY", "Key not found")
     qdrant_url = "https://5ccc316a-ba45-4910-b5f9-15eb181ae895.us-east4-0.gcp.cloud.qdrant.io:6333"
     cohere_key = secret.get("COHERE_API_KEY", "Key not found")
+    #cohere_key = 'n7OYjtvEIrpQ1q03WGhuypIktuhhHgfoKAvjWGgX'
+    print("cohere_key", cohere_key)
     bucket_name = "capstoneragmodel"
 
     openai.api_key = openai_api_key
@@ -184,8 +186,7 @@ def model_fn():
     logger.info("Loading cohere pipeline from the provided model directory")
     
     logger.info("Initializing Cohere Chat Model")
-    cohere_chat_model = ChatCohere(cohere_api_key=cohere_key)
-
+    cohere_chat_model = ChatCohere(cohere_api_key=cohere_key, model="command-r-plus")
     pipeline_components = {
         "llm": cohere_chat_model,              
         "embeddings": embeddings,            

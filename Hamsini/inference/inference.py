@@ -183,7 +183,7 @@ def model_fn(model_dir: str):
     logger.info("Loading cohere pipeline from the provided model directory")
     
     logger.info("Initializing Cohere Chat Model")
-    cohere_chat_model = ChatCohere(cohere_api_key=cohere_key)
+    cohere_chat_model = ChatCohere(cohere_api_key=cohere_key, model="command-r-plus")
 
     pipeline_components = {
         "llm": cohere_chat_model,              
