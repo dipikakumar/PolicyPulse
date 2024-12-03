@@ -7,7 +7,6 @@ import torch
 import bs4
 import json
 import numpy as np
-import time
 import pandas as pd
 import openai
 from openai import OpenAI
@@ -15,7 +14,6 @@ import uuid
 import fitz
 import requests
 from pprint import pprint
-from langchain_community.embeddings import HuggingFaceEmbeddings
 from typing import Tuple, List, Optional, Dict
 from pathlib import Path
 import tempfile
@@ -192,7 +190,6 @@ def model_fn():
         "embeddings": embeddings,            
         "vectorstore": vectorstore,          
         "huggingface_token": huggingface_token,  
-        "vectorstore": vectorstore, 
         "qdrant_url": qdrant_url, 
         "qdrant_key": qdrant_key, 
         "open_api_key": openai_api_key, 
@@ -760,9 +757,10 @@ def chunk_gdpr_by_section(gdpr_contents: List[str]) -> List[Document]:
         if gdpr_cache_key in HEADER_CACHE:
             print("[INFO] Using cached GDPR sections")
             cached_docs = HEADER_CACHE[gdpr_cache_key]
-            if isinstance(cached_docs[0], dict):  # If cached as dict, convert back
+            if isinstance(cached_docs[0], dict):  
                 return [Document(**doc) for doc in cached_docs]
-            return cached_doc
+            print("[INFO] Using cached Document objects directly")
+            return cached_docs
 
         print("[INFO] Processing GDPR document and creating new cache")
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=1500, chunk_overlap=50)
@@ -915,16 +913,111 @@ def predict_fn(input_data, model):
         logger.error(f"Error testing fn_local_with_paths: {str(e)}")
         return {"error": str(e)}
     
+# def output_fn(prediction, content_type):
+#     """
+#     Serialize the prediction output for the client.
+
+#     Args:
+#         prediction (str): The prediction result as a plain string.
+#         content_type (str): The desired content type for the response.
+
+#     Returns:
+#         str: Serialized prediction output in the specified format.
+#     """
+#     if content_type == "application/json":
+#         try:
+#             serialized_output = json.dumps({"answer": prediction})
+#             deserialized_response = json.loads(serialized_output)
+#             answer = deserialized_response.get("answer", "")
+#             if not answer:
+#                 return "Error: Response does not contain a valid 'answer' field."
+
+#             try:
+#                 main_answer, key_points, gdpr_references = "", "", ""
+
+#                 if "Main Answer:" in answer:
+#                     main_answer = answer.split("Main Answer:")[1].split("Key Points:")[0].strip()
+#                 if "Key Points:" in answer:
+#                     key_points = answer.split("Key Points:")[1].split("GDPR References:")[0].strip()
+#                 if "GDPR References:" in answer:
+#                     gdpr_references = answer.split("GDPR References:")[1].strip()
+
+#                 formatted_output = (
+#                     f"\nMain Answer:\n{main_answer}\n\n"
+#                     f"Key Points:\n{key_points}\n\n"
+#                     f"GDPR References:\n{gdpr_references}"
+#                     )
+#                 return formatted_output
+#             except Exception as e:
+#                 return f"Error in formatting: {e}"
+        
+#         except (TypeError, ValueError) as e:
+#             raise ValueError(f"Failed to serialize prediction to JSON: {e}")
+#     else:
+#         raise ValueError(f"Unsupported content type: {content_type}")
+
+# def output_fn(prediction, content_type):
+#     """
+#     Serialize the prediction output for the client with pretty formatting.
+#     """
+#     if content_type == "application/json":
+#         try:
+#             serialized_output = json.dumps({"answer": prediction})
+#             deserialized_response = json.loads(serialized_output)
+#             answer = deserialized_response.get("answer", "")
+#             if not answer:
+#                 return "Error: Response does not contain a valid 'answer' field."
+
+#             try:
+#                 main_answer, key_points, gdpr_references = "", "", ""
+                
+#                 if "Main Answer:" in answer:
+#                     main_answer = answer.split("Main Answer:")[1].split("Key Points:")[0].strip()
+#                 if "Key Points:" in answer:
+#                     key_points = answer.split("Key Points:")[1].split("GDPR References:")[0].strip()
+#                 if "GDPR References:" in answer:
+#                     gdpr_references = answer.split("GDPR References:")[1].strip()
+
+#                 # Create the formatted string directly in the desired structure
+#                 formatted_output = (
+#                     'answer: {\n'
+#                     f'    main: "{main_answer}",\n\n'
+#                     f'    key: "{key_points}",\n\n'
+#                     f'    GDPR: "{gdpr_references}",\n'
+#                     '}'
+#                 )
+                
+#                 return formatted_output
+                
+#             except Exception as e:
+#                 return (
+#                     'answer: {\n'
+#                     '    main: "Error in formatting",\n'
+#                     '    key: "",\n'
+#                     '    GDPR: "",\n'
+#                     '}'
+#                 )
+        
+#         except (TypeError, ValueError) as e:
+#             return (
+#                 'answer: {\n'
+#                 '    main: "Failed to serialize prediction",\n'
+#                 '    key: "",\n'
+#                 '    GDPR: "",\n'
+#                 '}'
+#             )
+#     else:
+#         return (
+#             'answer: {\n'
+#             f'    main: "Unsupported content type: {content_type}",\n'
+#             '    key: "",\n'
+#             '    GDPR: "",\n'
+#             '}'
+#         )
+
 def output_fn(prediction, content_type):
     """
-    Serialize the prediction output for the client.
-
-    Args:
-        prediction (str): The prediction result as a plain string.
-        content_type (str): The desired content type for the response.
-
-    Returns:
-        str: Serialized prediction output in the specified format.
+    Serialize the prediction output for the client with pretty formatting.
     """
     if content_type == "application/json":
         try:
@@ -936,28 +1029,56 @@ def output_fn(prediction, content_type):
 
             try:
                 main_answer, key_points, gdpr_references = "", "", ""
-
+                
                 if "Main Answer:" in answer:
                     main_answer = answer.split("Main Answer:")[1].split("Key Points:")[0].strip()
                 if "Key Points:" in answer:
                     key_points = answer.split("Key Points:")[1].split("GDPR References:")[0].strip()
                 if "GDPR References:" in answer:
                     gdpr_references = answer.split("GDPR References:")[1].strip()
+                    
+                gdpr_bullet_points = ""
+                if gdpr_references:
+                    references = [ref.strip() for ref in gdpr_references.split('Article') if ref.strip()]
+                    references = [f"Article {ref}" if not ref.startswith('Article') else ref for ref in references]
+                    gdpr_bullet_points = "• " + "\n• ".join(references)
 
                 formatted_output = (
-                    f"\nMain Answer:\n{main_answer}\n\n"
-                    f"Key Points:\n{key_points}\n\n"
-                    f"GDPR References:\n{gdpr_references}"
-                    )
+                    'answer: {\n'
+                    f'    main: "{main_answer}",\n\n'
+                    f'    key: "{key_points}",\n\n'
+                    f'    GDPR: "{gdpr_bullet_points}",\n'
+                    '}'
+                )
+                
                 return formatted_output
+                
             except Exception as e:
-                return f"Error in formatting: {e}"
+                return (
+                    'answer: {\n'
+                    '    main: "Error in formatting",\n'
+                    '    key: "",\n'
+                    '    GDPR: "",\n'
+                    '}'
+                )
         
         except (TypeError, ValueError) as e:
-            raise ValueError(f"Failed to serialize prediction to JSON: {e}")
+            return (
+                'answer: {\n'
+                '    main: "Failed to serialize prediction",\n'
+                '    key: "",\n'
+                '    GDPR: "",\n'
+                '}'
+            )
     else:
-        raise ValueError(f"Unsupported content type: {content_type}")
-
+        return (
+            'answer: {\n'
+            f'    main: "Unsupported content type: {content_type}",\n'
+            '    key: "",\n'
+            '    GDPR: "",\n'
+            '}'
+        )
+    
 def main():
     """
     Main function to test the pipeline loading and processing with input data.
@@ -981,6 +1102,7 @@ def main():
     formatted_response = output_fn(prediction, content_type)
     
     print("formatted_response:", formatted_response)
+    print(type(formatted_response))
     end_time = time.time()
     duration = end_time - start_time
     print(f"Execution duration: {duration:.2f} seconds")
