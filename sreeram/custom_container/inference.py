@@ -81,6 +81,7 @@ logger = logging.getLogger(__name__)
 from botocore.exceptions import ClientError
 
 
+'''
 def get_secret():
 
     secret_name = "open_ai_api_key"
@@ -118,7 +119,6 @@ def get_secret(secret_name):
     except Exception as e:
         print(f"Error retrieving secret {secret_name}: {e}")
         return None
-'''
 
 def model_fn(model_dir):
     """
@@ -126,8 +126,8 @@ def model_fn(model_dir):
     """
     logger.info("model_fn called %s", model_dir)
     print("Sreeram: model_fn called/exit")
-    #secret = get_secret("arn:aws:secretsmanager:us-east-1:686255941112:secret:HuggingfaceQdrantOpenAPI-UKUXlz")
-    secret = get_secret()
+    secret = get_secret("arn:aws:secretsmanager:us-east-1:686255941112:secret:open_ai_api_key-4VfR6I")
+    #secret = get_secret()
     if not secret:
         raise ValueError("Failed to retrieve secrets from AWS Secrets Manager")
 
@@ -640,5 +640,6 @@ def output_fn(prediction, content_type):
         return json.dumps({"generated_text": prediction})
     else:
         raise ValueError(f"Unsupported content type: {content_type}")
+        return "Error output"
     print("Sreeram: output exit")
 
