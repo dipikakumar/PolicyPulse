@@ -1,0 +1,406 @@
+question,contexts,answer,ground_truth,retrieved_contexts,user_input,retrieved_contexts,response,reference,faithfulness,answer_correctness,context_recall,context_precision,semantic_similarity,answer_relevancy,company
+When does Gemini share data with regulatory authorities?,"As relevant to the requests noted above, in the last 12 months, we have disclosed the following
+categories of Personal Information for a business purpose to support the purposes for which Gemini
+uses Personal Information described above under “California Notice at Collection of Personal
+Information” (such as with our service providers who are restricted from using your Personal security threat detection, payment processing, customer support, data analytics, Information
+11/26/24, 8:55 PM
+Privacy Policy | Gemini
+https://www.gemini.com/legal/privacy-policy
+5/15 Gemini is a global business. As a result, Personal Information may be stored and processed in any
+country where we have operations or where we engage service providers. We may transfer Personal
+Information that we maintain about you to recipients in countries other than the country in which the
+Personal Information was originally collected. Those other countries may have data protection or
+privacy rules that are different from those of your country. However, we will take measures to ensure
+that  as described in this Privacy Policy.
+11/26/24, 8:55 PM
+Privacy Policy | Gemini
+https://www.gemini.com/legal/privacy-policy
+4/15
+2. The Business and Commercial Purposes for Which We Collect and Use Your Personal","Main Answer:
+Gemini, as a global business, may disclose Personal Information to regulatory authorities for the following reasons:
+
+Key Points:
+- Compliance with Laws and Regulations: In order to comply with applicable laws and regulations, Gemini may disclose Personal Information to regulatory authorities (California Notice at Collection of Personal Information, Section 2).
+- Fraud Detection and Prevention: To protect against fraud, security threats, and other malicious activities, Gemini may share Personal Information with regulatory authorities (California Notice at Collection of Personal Information, Section 1).
+- Legal Proceedings: In response to lawful requests, court orders, or legal process, Gemini may disclose Personal Information to regulatory authorities for the purposes of investigations or resolving disputes (California Notice at Collection of Personal Information, Section 3).
+- International Transfers: As a global business, Gemini may transfer Personal Information to countries where they have operations or engage service providers, and these countries may have data protection rules that are different from those of the individual's country. In such cases, Gemini takes measures to ensure that the transfer and processing of Personal Information is in accordance with GDPR principles, including obtaining adequate data protection guarantees or Standard Contractual Clauses (Privacy Policy, Section 9).
+
+GDPR References:
+- Article 6 - Lawfulness of Processing: ""1(c) Processing is necessary for compliance with a legal obligation to which the controller is subject.""
+- Article 13 - Information to be Provided to the Data Subject: ""1. Information on the identity and the contact details of the controller and, where applicable, of the controller’s representative.""
+- Article 22 - Automated Individual Decision-Making, including Profiling: ""4. The data subject shall have the right to obtain human intervention on the part of the controller, to express his or her point of view, and to contest the decision.""
+- Article 46 - Data Transfers: ""2. The controller and processor shall ensure that the level of protection afforded to the data transferred is similar to that afforded to data protected by the GDPR.""","Main Answer:
+Gemini implements specific timing protocols for sharing data with regulatory authorities based on legal and compliance requirements. Their framework includes clear schedules for regulatory reporting, particularly for cryptocurrency transactions and suspicious activity monitoring. The system maintains specific timing requirements for different types of regulatory requests and reporting obligations. Their approach includes documented sharing protocols with enhanced procedures for urgent regulatory matters and investigations.
+
+Key Points:
+• Compliance-based sharing schedules
+• Clear regulatory reporting protocols
+• Specific timing for different requests
+• Enhanced urgent response procedures
+
+GDPR Reference: Article 6(1)(c) - Legal obligation","['As relevant to the requests noted above, in the last 12 months, we have disclosed the following\ncategories of Personal Information for a business purpose to support the purposes for which Gemini\nuses Personal Information described above under “California Notice at Collection of Personal\nInformation” (such as with our service providers who are restricted from using your Personal security threat detection, payment processing, customer support, data analytics, Information\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n5/15 Gemini is a global business. As a result, Personal Information may be stored and processed in any\ncountry where we have operations or where we engage service providers. We may transfer Personal\nInformation that we maintain about you to recipients in countries other than the country in which the\nPersonal Information was originally collected. Those other countries may have data protection or\nprivacy rules that are different from those of your country. However, we will take measures to ensure\nthat  as described in this Privacy Policy.\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n4/15\n2. The Business and Commercial Purposes for Which We Collect and Use Your Personal']",When does Gemini share data with regulatory authorities?,"['As relevant to the requests noted above, in the last 12 months, we have disclosed the following\ncategories of Personal Information for a business purpose to support the purposes for which Gemini\nuses Personal Information described above under “California Notice at Collection of Personal\nInformation” (such as with our service providers who are restricted from using your Personal security threat detection, payment processing, customer support, data analytics, Information\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n5/15 Gemini is a global business. As a result, Personal Information may be stored and processed in any\ncountry where we have operations or where we engage service providers. We may transfer Personal\nInformation that we maintain about you to recipients in countries other than the country in which the\nPersonal Information was originally collected. Those other countries may have data protection or\nprivacy rules that are different from those of your country. However, we will take measures to ensure\nthat  as described in this Privacy Policy.\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n4/15\n2. The Business and Commercial Purposes for Which We Collect and Use Your Personal']","Main Answer:
+Gemini, as a global business, may disclose Personal Information to regulatory authorities for the following reasons:
+
+Key Points:
+- Compliance with Laws and Regulations: In order to comply with applicable laws and regulations, Gemini may disclose Personal Information to regulatory authorities (California Notice at Collection of Personal Information, Section 2).
+- Fraud Detection and Prevention: To protect against fraud, security threats, and other malicious activities, Gemini may share Personal Information with regulatory authorities (California Notice at Collection of Personal Information, Section 1).
+- Legal Proceedings: In response to lawful requests, court orders, or legal process, Gemini may disclose Personal Information to regulatory authorities for the purposes of investigations or resolving disputes (California Notice at Collection of Personal Information, Section 3).
+- International Transfers: As a global business, Gemini may transfer Personal Information to countries where they have operations or engage service providers, and these countries may have data protection rules that are different from those of the individual's country. In such cases, Gemini takes measures to ensure that the transfer and processing of Personal Information is in accordance with GDPR principles, including obtaining adequate data protection guarantees or Standard Contractual Clauses (Privacy Policy, Section 9).
+
+GDPR References:
+- Article 6 - Lawfulness of Processing: ""1(c) Processing is necessary for compliance with a legal obligation to which the controller is subject.""
+- Article 13 - Information to be Provided to the Data Subject: ""1. Information on the identity and the contact details of the controller and, where applicable, of the controller’s representative.""
+- Article 22 - Automated Individual Decision-Making, including Profiling: ""4. The data subject shall have the right to obtain human intervention on the part of the controller, to express his or her point of view, and to contest the decision.""
+- Article 46 - Data Transfers: ""2. The controller and processor shall ensure that the level of protection afforded to the data transferred is similar to that afforded to data protected by the GDPR.""","Main Answer:
+Gemini implements specific timing protocols for sharing data with regulatory authorities based on legal and compliance requirements. Their framework includes clear schedules for regulatory reporting, particularly for cryptocurrency transactions and suspicious activity monitoring. The system maintains specific timing requirements for different types of regulatory requests and reporting obligations. Their approach includes documented sharing protocols with enhanced procedures for urgent regulatory matters and investigations.
+
+Key Points:
+• Compliance-based sharing schedules
+• Clear regulatory reporting protocols
+• Specific timing for different requests
+• Enhanced urgent response procedures
+
+GDPR Reference: Article 6(1)(c) - Legal obligation",0.2857142857142857,0.2195232238553544,0.0,0.9999999999,0.8780928954214176,0.9298958246615997,gemini
+Where does Gemini process customer trading data?,"security threat detection, payment processing, customer support, data analytics, Information
+11/26/24, 8:55 PM
+Privacy Policy | Gemini
+https://www.gemini.com/legal/privacy-policy
+5/15 your Gemini Consumer Privacy Notice here. United States
+-Digital Assets
+portfolio
+management
+services
+Bitria, Inc.
+600 Third Avenue,
+2nd Floor New York
+NY 10016
+Any Jurisdiction in
+which Gemini
+Derivatives is
+Available
+-Gemini Derivatives
+Gemini Artemis Pte. Ltd.
+18 Robinson #17-01
+18 Robinson Road,
+Singapore 048547
+11/26/24, 8:55 PM
+Privacy Policy | Gemini
+https://www.gemini.com/legal/privacy-policy
+2/15
+Depending on what Gemini products and services you use, we may provide you with an additional
+consumer privacy notice detailing how w Usage Data, such as system activity, internal and external information related to Gemini pages that","Main Answer:
+Gemini processes customer trading data in the United States and Singapore, specifically at Bitria, Inc. in New York, NY, and Gemini Artemis Pte. Ltd. in Singapore.
+
+Key Points:
+- Gemini has offices in New York, USA, and Singapore where they process customer trading data.
+- Bitria, Inc. is located in New York, USA, and is responsible for processing customer trading data in the United States.
+- Gemini Artemis Pte. Ltd. is located in Singapore and is responsible for processing customer trading data in any jurisdiction where Gemini Derivatives is available.
+- The context provides the Privacy Policy links for both Gemini entities, indicating their commitment to data privacy and compliance with applicable laws, including the GDPR.
+
+GDPR References:
+- Article 4 - Definition of Personal Data: ""any information relating to an identified or identifiable natural person""
+- Article 28 - Processing by the Data Processor: ""processing activities that a processor carries out on behalf of the controller""
+- Article 30 - Records of processing activities: ""maintain records of processing activities under the responsibility of a processor""
+
+[Please note that the specific GDPR articles may vary depending on the exact nature of the data processing and the roles of the parties involved. This response is intended to provide a general guidance based on the context provided and should not be considered as legal advice.]","Main Answer:
+Gemini maintains primary trading data processing facilities in New York, London, and Singapore, with specific security measures at each location. Their system routes processing based on customer location and regulatory requirements. The framework maintains clear documentation of data flows between processing sites. Their approach implements enhanced security measures for cross-border transfers.
+
+Key Points:
+• Primary processing locations
+• Location-based routing
+• Clear data flow documentation
+• Cross-border safeguards
+
+GDPR Reference: Article 44 - General principle for transfers","['security threat detection, payment processing, customer support, data analytics, Information\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n5/15 your Gemini Consumer Privacy Notice here. United States\n-Digital Assets\nportfolio\nmanagement\nservices\nBitria, Inc.\n600 Third Avenue,\n2nd Floor New York\nNY 10016\nAny Jurisdiction in\nwhich Gemini\nDerivatives is\nAvailable\n-Gemini Derivatives\nGemini Artemis Pte. Ltd.\n18 Robinson #17-01\n18 Robinson Road,\nSingapore 048547\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n2/15\nDepending on what Gemini products and services you use, we may provide you with an additional\nconsumer privacy notice detailing how w Usage Data, such as system activity, internal and external information related to Gemini pages that']",Where does Gemini process customer trading data?,"['security threat detection, payment processing, customer support, data analytics, Information\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n5/15 your Gemini Consumer Privacy Notice here. United States\n-Digital Assets\nportfolio\nmanagement\nservices\nBitria, Inc.\n600 Third Avenue,\n2nd Floor New York\nNY 10016\nAny Jurisdiction in\nwhich Gemini\nDerivatives is\nAvailable\n-Gemini Derivatives\nGemini Artemis Pte. Ltd.\n18 Robinson #17-01\n18 Robinson Road,\nSingapore 048547\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n2/15\nDepending on what Gemini products and services you use, we may provide you with an additional\nconsumer privacy notice detailing how w Usage Data, such as system activity, internal and external information related to Gemini pages that']","Main Answer:
+Gemini processes customer trading data in the United States and Singapore, specifically at Bitria, Inc. in New York, NY, and Gemini Artemis Pte. Ltd. in Singapore.
+
+Key Points:
+- Gemini has offices in New York, USA, and Singapore where they process customer trading data.
+- Bitria, Inc. is located in New York, USA, and is responsible for processing customer trading data in the United States.
+- Gemini Artemis Pte. Ltd. is located in Singapore and is responsible for processing customer trading data in any jurisdiction where Gemini Derivatives is available.
+- The context provides the Privacy Policy links for both Gemini entities, indicating their commitment to data privacy and compliance with applicable laws, including the GDPR.
+
+GDPR References:
+- Article 4 - Definition of Personal Data: ""any information relating to an identified or identifiable natural person""
+- Article 28 - Processing by the Data Processor: ""processing activities that a processor carries out on behalf of the controller""
+- Article 30 - Records of processing activities: ""maintain records of processing activities under the responsibility of a processor""
+
+[Please note that the specific GDPR articles may vary depending on the exact nature of the data processing and the roles of the parties involved. This response is intended to provide a general guidance based on the context provided and should not be considered as legal advice.]","Main Answer:
+Gemini maintains primary trading data processing facilities in New York, London, and Singapore, with specific security measures at each location. Their system routes processing based on customer location and regulatory requirements. The framework maintains clear documentation of data flows between processing sites. Their approach implements enhanced security measures for cross-border transfers.
+
+Key Points:
+• Primary processing locations
+• Location-based routing
+• Clear data flow documentation
+• Cross-border safeguards
+
+GDPR Reference: Article 44 - General principle for transfers",0.2857142857142857,0.6026666350580528,0.0,0.0,0.9106665402322115,1.0000000000000009,gemini
+What rights do Gemini customers have regarding their trading data?,"security threat detection, payment processing, customer support, data analytics, Information
+11/26/24, 8:55 PM
+Privacy Policy | Gemini
+https://www.gemini.com/legal/privacy-policy
+5/15 Rights to Access and Rectification. You may submit a request that Gemini disclose the personal
+data that we process about you and correct any inaccurate personal data. as described in this Privacy Policy.
+11/26/24, 8:55 PM
+Privacy Policy | Gemini
+https://www.gemini.com/legal/privacy-policy
+4/15
+2. The Business and Commercial Purposes for Which We Collect and Use Your Personal your Gemini Consumer Privacy Notice here.","Main Answer:
+Gemini customers have certain rights regarding their trading data under the General Data Protection Regulation (GDPR). According to the provided context from the Gemini Consumer Privacy Policy, customers have the right to access and rectify their personal data.
+
+Key Points:
+• Right to Access: Customers can request Gemini to disclose the personal data that the company processes about them. [Article 15 - Right of Access]
+• Right to Rectification: Customers can request Gemini to correct any inaccurate personal data. [Article 16 - Right to Rectification]
+• Data Portability: Although not explicitly mentioned in the context, GDPR also grants customers the right to data portability, which means they can obtain and reuse their personal data for their own purposes across different services. [Article 20 - Right to Data Portability]
+• Transparency: Gemini is required to provide clear and concise information about how they collect, use, and process customers' personal data. [Article 5 - Principle of Transparency]
+
+Additionally, the context mentions that Gemini collects and uses personal data for various business and commercial purposes, as outlined in their Consumer Privacy Notice. These purposes include, but are not limited to, security threat detection, payment processing, and data analytics. [Article 6 - Lawfulness of Processing]
+
+Therefore, under GDPR, Gemini customers have the right to access, rectify, and request portability of their personal data, as well as the right to be informed about how their data is being used.","Main Answer:
+Gemini provides comprehensive rights management for digital asset and trading data under privacy requirements. Their framework enables customers to access trading history, request data portability, and exercise deletion rights where applicable. The system maintains clear procedures for rights requests related to cryptocurrency services. Their approach includes specific mechanisms for handling rights requests while balancing regulatory obligations. The framework ensures effective rights exercise while maintaining compliance with financial regulations.
+
+Key Points:
+• Structured rights exercise procedures
+• Clear regulatory balancing protocols
+• Comprehensive access mechanisms
+• Specific deletion procedures
+
+GDPR Reference: Articles 15-21 - Data subject rights","['security threat detection, payment processing, customer support, data analytics, Information\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n5/15 Rights to Access and Rectification. You may submit a request that Gemini disclose the personal\ndata that we process about you and correct any inaccurate personal data. as described in this Privacy Policy.\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n4/15\n2. The Business and Commercial Purposes for Which We Collect and Use Your Personal your Gemini Consumer Privacy Notice here.']",What rights do Gemini customers have regarding their trading data?,"['security threat detection, payment processing, customer support, data analytics, Information\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n5/15 Rights to Access and Rectification. You may submit a request that Gemini disclose the personal\ndata that we process about you and correct any inaccurate personal data. as described in this Privacy Policy.\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n4/15\n2. The Business and Commercial Purposes for Which We Collect and Use Your Personal your Gemini Consumer Privacy Notice here.']","Main Answer:
+Gemini customers have certain rights regarding their trading data under the General Data Protection Regulation (GDPR). According to the provided context from the Gemini Consumer Privacy Policy, customers have the right to access and rectify their personal data.
+
+Key Points:
+• Right to Access: Customers can request Gemini to disclose the personal data that the company processes about them. [Article 15 - Right of Access]
+• Right to Rectification: Customers can request Gemini to correct any inaccurate personal data. [Article 16 - Right to Rectification]
+• Data Portability: Although not explicitly mentioned in the context, GDPR also grants customers the right to data portability, which means they can obtain and reuse their personal data for their own purposes across different services. [Article 20 - Right to Data Portability]
+• Transparency: Gemini is required to provide clear and concise information about how they collect, use, and process customers' personal data. [Article 5 - Principle of Transparency]
+
+Additionally, the context mentions that Gemini collects and uses personal data for various business and commercial purposes, as outlined in their Consumer Privacy Notice. These purposes include, but are not limited to, security threat detection, payment processing, and data analytics. [Article 6 - Lawfulness of Processing]
+
+Therefore, under GDPR, Gemini customers have the right to access, rectify, and request portability of their personal data, as well as the right to be informed about how their data is being used.","Main Answer:
+Gemini provides comprehensive rights management for digital asset and trading data under privacy requirements. Their framework enables customers to access trading history, request data portability, and exercise deletion rights where applicable. The system maintains clear procedures for rights requests related to cryptocurrency services. Their approach includes specific mechanisms for handling rights requests while balancing regulatory obligations. The framework ensures effective rights exercise while maintaining compliance with financial regulations.
+
+Key Points:
+• Structured rights exercise procedures
+• Clear regulatory balancing protocols
+• Comprehensive access mechanisms
+• Specific deletion procedures
+
+GDPR Reference: Articles 15-21 - Data subject rights",0.45454545454545453,0.8421487415115546,0.1,0.9999999999,0.9196153742094837,0.9753005220991603,gemini
+How does Gemini process data for market monitoring?,"Usage Data, such as system activity, internal and external information related to Gemini pages that security threat detection, payment processing, customer support, data analytics, Information
+11/26/24, 8:55 PM
+Privacy Policy | Gemini
+https://www.gemini.com/legal/privacy-policy
+5/15 Legitimate Interest: to monitor the usage of Gemini, conduct automated and manual security System Status
+Areas of Availability
+API Docs
+Marketplace and Fees
+11/26/24, 8:55 PM
+Privacy Policy | Gemini
+https://www.gemini.com/legal/privacy-policy
+14/15
+View All","Main Answer:
+Gemini processes data for market monitoring under the legitimate interest basis as stated in the context. This processing is done to ensure the security of their system, monitor usage, and provide services related to API docs, marketplace, and fees.
+
+Key Points:
+- Data processing for market monitoring is a legitimate interest activity for Gemini. [5/15 in the context]
+- This activity includes monitoring usage, conducting automated and manual security checks, and managing system status and areas of availability. [5/15 and 14/15 in the context]
+- The data used for market monitoring includes system activity and internal and external information related to Gemini pages. [First sentence in the context]
+
+GDPR References:
+- Article 6(1)(f) - Processing is necessary for the purposes of the legitimate interests pursued by the controller or by a third party, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject which require protection of personal data, in particular where the data subject is a child.
+- Article 32 - Security of processing - Implement appropriate technical and organizational measures to ensure a level of security appropriate to the risk.
+- Article 58(1) - Supervision by the supervisory authority - The supervisory authority shall be responsible for monitoring the application of this Regulation, including the monitoring and the enforcement of this Regulation, where it has designated the controller or processor as a controller or processor in respect of the processing of personal data.","Main Answer:
+Gemini implements specific protocols for processing trading data to support market monitoring and compliance. Their framework includes automated systems for transaction analysis and pattern detection. The system maintains enhanced monitoring capabilities for different types of digital asset trading. Their approach includes clear documentation of monitoring purposes and procedures, with specific safeguards for personal data protection during market surveillance activities.
+
+Key Points:
+• Automated monitoring protocols
+• Enhanced analysis capabilities
+• Clear purpose documentation
+• Specific protection measures
+
+GDPR Reference: Article 6(1)(f) - Legitimate interests","['Usage Data, such as system activity, internal and external information related to Gemini pages that security threat detection, payment processing, customer support, data analytics, Information\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n5/15 Legitimate Interest: to monitor the usage of Gemini, conduct automated and manual security System Status\nAreas of Availability\nAPI Docs\nMarketplace and Fees\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n14/15\nView All']",How does Gemini process data for market monitoring?,"['Usage Data, such as system activity, internal and external information related to Gemini pages that security threat detection, payment processing, customer support, data analytics, Information\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n5/15 Legitimate Interest: to monitor the usage of Gemini, conduct automated and manual security System Status\nAreas of Availability\nAPI Docs\nMarketplace and Fees\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n14/15\nView All']","Main Answer:
+Gemini processes data for market monitoring under the legitimate interest basis as stated in the context. This processing is done to ensure the security of their system, monitor usage, and provide services related to API docs, marketplace, and fees.
+
+Key Points:
+- Data processing for market monitoring is a legitimate interest activity for Gemini. [5/15 in the context]
+- This activity includes monitoring usage, conducting automated and manual security checks, and managing system status and areas of availability. [5/15 and 14/15 in the context]
+- The data used for market monitoring includes system activity and internal and external information related to Gemini pages. [First sentence in the context]
+
+GDPR References:
+- Article 6(1)(f) - Processing is necessary for the purposes of the legitimate interests pursued by the controller or by a third party, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject which require protection of personal data, in particular where the data subject is a child.
+- Article 32 - Security of processing - Implement appropriate technical and organizational measures to ensure a level of security appropriate to the risk.
+- Article 58(1) - Supervision by the supervisory authority - The supervisory authority shall be responsible for monitoring the application of this Regulation, including the monitoring and the enforcement of this Regulation, where it has designated the controller or processor as a controller or processor in respect of the processing of personal data.","Main Answer:
+Gemini implements specific protocols for processing trading data to support market monitoring and compliance. Their framework includes automated systems for transaction analysis and pattern detection. The system maintains enhanced monitoring capabilities for different types of digital asset trading. Their approach includes clear documentation of monitoring purposes and procedures, with specific safeguards for personal data protection during market surveillance activities.
+
+Key Points:
+• Automated monitoring protocols
+• Enhanced analysis capabilities
+• Clear purpose documentation
+• Specific protection measures
+
+GDPR Reference: Article 6(1)(f) - Legitimate interests",0.25,0.22852459268776426,0.3333333333333333,0.0,0.914098370751057,0.9623381747397616,gemini
+How does Gemini balance AML requirements with data protection?,"We take reasonable measures, including administrative, technical, and physical safeguards, to protect
+your Personal Information from loss, theft, or misuse, and from unauthorized access, disclosure,
+alteration, and destruction. Nevertheless, no security is foolproof, and the Internet is an insecure
+medium. We cannot guarantee absolute security, but we work hard to protect Gemini and you from
+unauthorized access to or unauthorized alteration, disclosure, or destruction of Personal Information
+we  Legitimate Interest: to monitor the usage of Gemini, conduct automated and manual security security threat detection, payment processing, customer support, data analytics, Information
+11/26/24, 8:55 PM
+Privacy Policy | Gemini
+https://www.gemini.com/legal/privacy-policy
+5/15 We process personal data subject to GDPR on one or more of the following legal bases:
+11/26/24, 8:55 PM
+Privacy Policy | Gemini
+https://www.gemini.com/legal/privacy-policy
+12/15
+Legal Obligation: to conduct anti-fraud and identity verification and authentication checks and to","Main Answer:
+Gemini balances AML (Anti-Money Laundering) requirements with data protection by implementing measures that prioritize both compliance with GDPR regulations and the prevention of financial crimes.
+
+Key Points:
+- Gemini takes reasonable measures to protect Personal Information using administrative, technical, and physical safeguards. [1]
+- The company conducts automated and manual security threat detection, payment processing, customer support, and data analytics to monitor Gemini's usage. [2]
+- Anti-fraud and identity verification and authentication checks are carried out to meet both legal obligations and GDPR requirements. [3]
+- The context indicates that Gemini processes personal data under the legal bases of legitimate interest and legal obligation. [4]
+
+[1] 'We take reasonable measures, including administrative, technical, and physical safeguards, to protect your Personal Information from loss, theft, or misuse, and from unauthorized access, disclosure, alteration, and destruction.'
+
+[2] 'Legitimate Interest: to monitor the usage of Gemini, conduct automated and manual security security threat detection, payment processing, customer support, data analytics, Information'
+
+[3] 'Legal Obligation: to conduct anti-fraud and identity verification and authentication checks and to'
+
+[4] 'We process personal data subject to GDPR on one or more of the following legal bases: Legitimate Interest:... Legal Obligation:...'
+
+GDPR References:
+- Article 5 - Principles of Personal Data Processing
+- Article 6 - Lawfulness of Processing
+- Article 9 - Processing of Special Categories of Personal Data
+- Article 32 - Security of Processing
+- Article 33 - Notification of a Personal Data Breach to the Supervisory Authority
+- Article 34 - Communication of a Personal Data Breach to the Data Subject
+- Article 58 - Tasks of the Supervisory Authority
+
+These references are mentioned or relevant to the context provided.","Main Answer:
+Gemini manages AML compliance through specific trade-offs between monitoring capabilities and data minimization. Their approach prioritizes mandatory AML requirements while limiting discretionary data collection. Transaction monitoring receives full implementation but with restricted retention periods. Their framework explicitly documents where data protection requirements constrain AML capabilities beyond regulatory minimums. The system regularly assesses the impact of these trade-offs on both compliance effectiveness and privacy protection.
+
+Key Points:
+• Documented compliance priorities
+• Data retention trade-offs
+• Explicit capability constraints
+• Impact assessment procedures
+
+GDPR Reference: Article 6(1)(c) - Legal obligation","['We take reasonable measures, including administrative, technical, and physical safeguards, to protect\nyour Personal Information from loss, theft, or misuse, and from unauthorized access, disclosure,\nalteration, and destruction. Nevertheless, no security is foolproof, and the Internet is an insecure\nmedium. We cannot guarantee absolute security, but we work hard to protect Gemini and you from\nunauthorized access to or unauthorized alteration, disclosure, or destruction of Personal Information\nwe  Legitimate Interest: to monitor the usage of Gemini, conduct automated and manual security security threat detection, payment processing, customer support, data analytics, Information\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n5/15 We process personal data subject to GDPR on one or more of the following legal bases:\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n12/15\nLegal Obligation: to conduct anti-fraud and identity verification and authentication checks and to']",How does Gemini balance AML requirements with data protection?,"['We take reasonable measures, including administrative, technical, and physical safeguards, to protect\nyour Personal Information from loss, theft, or misuse, and from unauthorized access, disclosure,\nalteration, and destruction. Nevertheless, no security is foolproof, and the Internet is an insecure\nmedium. We cannot guarantee absolute security, but we work hard to protect Gemini and you from\nunauthorized access to or unauthorized alteration, disclosure, or destruction of Personal Information\nwe  Legitimate Interest: to monitor the usage of Gemini, conduct automated and manual security security threat detection, payment processing, customer support, data analytics, Information\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n5/15 We process personal data subject to GDPR on one or more of the following legal bases:\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n12/15\nLegal Obligation: to conduct anti-fraud and identity verification and authentication checks and to']","Main Answer:
+Gemini balances AML (Anti-Money Laundering) requirements with data protection by implementing measures that prioritize both compliance with GDPR regulations and the prevention of financial crimes.
+
+Key Points:
+- Gemini takes reasonable measures to protect Personal Information using administrative, technical, and physical safeguards. [1]
+- The company conducts automated and manual security threat detection, payment processing, customer support, and data analytics to monitor Gemini's usage. [2]
+- Anti-fraud and identity verification and authentication checks are carried out to meet both legal obligations and GDPR requirements. [3]
+- The context indicates that Gemini processes personal data under the legal bases of legitimate interest and legal obligation. [4]
+
+[1] 'We take reasonable measures, including administrative, technical, and physical safeguards, to protect your Personal Information from loss, theft, or misuse, and from unauthorized access, disclosure, alteration, and destruction.'
+
+[2] 'Legitimate Interest: to monitor the usage of Gemini, conduct automated and manual security security threat detection, payment processing, customer support, data analytics, Information'
+
+[3] 'Legal Obligation: to conduct anti-fraud and identity verification and authentication checks and to'
+
+[4] 'We process personal data subject to GDPR on one or more of the following legal bases: Legitimate Interest:... Legal Obligation:...'
+
+GDPR References:
+- Article 5 - Principles of Personal Data Processing
+- Article 6 - Lawfulness of Processing
+- Article 9 - Processing of Special Categories of Personal Data
+- Article 32 - Security of Processing
+- Article 33 - Notification of a Personal Data Breach to the Supervisory Authority
+- Article 34 - Communication of a Personal Data Breach to the Data Subject
+- Article 58 - Tasks of the Supervisory Authority
+
+These references are mentioned or relevant to the context provided.","Main Answer:
+Gemini manages AML compliance through specific trade-offs between monitoring capabilities and data minimization. Their approach prioritizes mandatory AML requirements while limiting discretionary data collection. Transaction monitoring receives full implementation but with restricted retention periods. Their framework explicitly documents where data protection requirements constrain AML capabilities beyond regulatory minimums. The system regularly assesses the impact of these trade-offs on both compliance effectiveness and privacy protection.
+
+Key Points:
+• Documented compliance priorities
+• Data retention trade-offs
+• Explicit capability constraints
+• Impact assessment procedures
+
+GDPR Reference: Article 6(1)(c) - Legal obligation",0.7142857142857143,0.28297466966913354,0.0,0.0,0.909676456454312,0.9999999999999997,gemini
+What automated decisions affect Gemini's digital asset trading?,"security threat detection, payment processing, customer support, data analytics, Information
+11/26/24, 8:55 PM
+Privacy Policy | Gemini
+https://www.gemini.com/legal/privacy-policy
+5/15 United States
+-Digital Assets
+portfolio
+management
+services
+Bitria, Inc.
+600 Third Avenue,
+2nd Floor New York
+NY 10016
+Any Jurisdiction in
+which Gemini
+Derivatives is
+Available
+-Gemini Derivatives
+Gemini Artemis Pte. Ltd.
+18 Robinson #17-01
+18 Robinson Road,
+Singapore 048547
+11/26/24, 8:55 PM
+Privacy Policy | Gemini
+https://www.gemini.com/legal/privacy-policy
+2/15
+Depending on what Gemini products and services you use, we may provide you with an additional
+consumer privacy notice detailing how w Legitimate Interest: to monitor the usage of Gemini, conduct automated and manual security System Status
+Areas of Availability
+API Docs
+Marketplace and Fees
+11/26/24, 8:55 PM
+Privacy Policy | Gemini
+https://www.gemini.com/legal/privacy-policy
+14/15
+View All","Main Answer:
+Gemini, as a digital asset exchange and custodian, uses automated decisions to ensure the security and integrity of its trading platform. These automated decisions primarily focus on security threat detection and system status monitoring.
+
+Key Points:
+- Security Threat Detection: Gemini employs automated systems to identify potential security threats in real-time. This includes monitoring for unusual trading activity, suspicious IP addresses, and other potential security risks. [Article 44 - Profiling]
+- System Status Monitoring: The platform also uses automated systems to monitor system status and availability. This includes tracking API performance, market data, and other system metrics to ensure optimal performance and availability. [Article 42 - Processing of Special Categories of Personal Data]
+- Customer Support: While not directly related to trading, Gemini's automated customer support systems use machine learning algorithms to understand and respond to customer inquiries. This includes identifying common issues and providing automated solutions. [Article 61 - Automated Decision-Making]
+
+GDPR References:
+- Article 44 - Profiling: ""Profiling"" means any form of automated processing of personal data consisting of the use of personal data to evaluate certain personal aspects relating to a natural person, in particular to analyze or predict aspects concerning that natural person's performance at work, economic situation, health, personal preferences, interests, reliability, behavior, location or movements.
+- Article 42 - Processing of Special Categories of Personal Data: ""Special categories of personal data"" are personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, and the processing of genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person's sex life or sexual orientation.
+- Article 61 - Automated Decision-Making: ""Automated decision-making"" means decision-making based on data processing, including profiling, which produces legal effects concerning a data subject or significantly affects a data subject.
+
+These automated decisions are essential to ensure the security and integrity of Gemini's digital asset trading platform, as well as to provide efficient customer support. However, users have the right to contest these decisions and request human intervention, as well as the right to obtain an explanation of the decision-making process. [Article 22 - Right to Object to Automated Decision-Making]","Main Answer:
+Gemini's automated systems affect trading through risk assessment, transaction limits, and fraud prevention measures. Their framework clearly identifies which trading decisions can be opted out of and which are essential for regulatory compliance. The system provides notification when automated decisions affect trading capabilities and maintains specific procedures for requesting human review. Their approach includes alternative trading options where automated restrictions apply.
+
+Key Points:
+• Trading impact criteria
+• Clear opt-out options
+• Review procedures
+• Alternative trading methods
+
+GDPR Reference: Article 22 - Automated decision-making","['security threat detection, payment processing, customer support, data analytics, Information\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n5/15 United States\n-Digital Assets\nportfolio\nmanagement\nservices\nBitria, Inc.\n600 Third Avenue,\n2nd Floor New York\nNY 10016\nAny Jurisdiction in\nwhich Gemini\nDerivatives is\nAvailable\n-Gemini Derivatives\nGemini Artemis Pte. Ltd.\n18 Robinson #17-01\n18 Robinson Road,\nSingapore 048547\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n2/15\nDepending on what Gemini products and services you use, we may provide you with an additional\nconsumer privacy notice detailing how w Legitimate Interest: to monitor the usage of Gemini, conduct automated and manual security System Status\nAreas of Availability\nAPI Docs\nMarketplace and Fees\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n14/15\nView All']",What automated decisions affect Gemini's digital asset trading?,"['security threat detection, payment processing, customer support, data analytics, Information\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n5/15 United States\n-Digital Assets\nportfolio\nmanagement\nservices\nBitria, Inc.\n600 Third Avenue,\n2nd Floor New York\nNY 10016\nAny Jurisdiction in\nwhich Gemini\nDerivatives is\nAvailable\n-Gemini Derivatives\nGemini Artemis Pte. Ltd.\n18 Robinson #17-01\n18 Robinson Road,\nSingapore 048547\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n2/15\nDepending on what Gemini products and services you use, we may provide you with an additional\nconsumer privacy notice detailing how w Legitimate Interest: to monitor the usage of Gemini, conduct automated and manual security System Status\nAreas of Availability\nAPI Docs\nMarketplace and Fees\n11/26/24, 8:55 PM\nPrivacy Policy | Gemini\nhttps://www.gemini.com/legal/privacy-policy\n14/15\nView All']","Main Answer:
+Gemini, as a digital asset exchange and custodian, uses automated decisions to ensure the security and integrity of its trading platform. These automated decisions primarily focus on security threat detection and system status monitoring.
+
+Key Points:
+- Security Threat Detection: Gemini employs automated systems to identify potential security threats in real-time. This includes monitoring for unusual trading activity, suspicious IP addresses, and other potential security risks. [Article 44 - Profiling]
+- System Status Monitoring: The platform also uses automated systems to monitor system status and availability. This includes tracking API performance, market data, and other system metrics to ensure optimal performance and availability. [Article 42 - Processing of Special Categories of Personal Data]
+- Customer Support: While not directly related to trading, Gemini's automated customer support systems use machine learning algorithms to understand and respond to customer inquiries. This includes identifying common issues and providing automated solutions. [Article 61 - Automated Decision-Making]
+
+GDPR References:
+- Article 44 - Profiling: ""Profiling"" means any form of automated processing of personal data consisting of the use of personal data to evaluate certain personal aspects relating to a natural person, in particular to analyze or predict aspects concerning that natural person's performance at work, economic situation, health, personal preferences, interests, reliability, behavior, location or movements.
+- Article 42 - Processing of Special Categories of Personal Data: ""Special categories of personal data"" are personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, and the processing of genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person's sex life or sexual orientation.
+- Article 61 - Automated Decision-Making: ""Automated decision-making"" means decision-making based on data processing, including profiling, which produces legal effects concerning a data subject or significantly affects a data subject.
+
+These automated decisions are essential to ensure the security and integrity of Gemini's digital asset trading platform, as well as to provide efficient customer support. However, users have the right to contest these decisions and request human intervention, as well as the right to obtain an explanation of the decision-making process. [Article 22 - Right to Object to Automated Decision-Making]","Main Answer:
+Gemini's automated systems affect trading through risk assessment, transaction limits, and fraud prevention measures. Their framework clearly identifies which trading decisions can be opted out of and which are essential for regulatory compliance. The system provides notification when automated decisions affect trading capabilities and maintains specific procedures for requesting human review. Their approach includes alternative trading options where automated restrictions apply.
+
+Key Points:
+• Trading impact criteria
+• Clear opt-out options
+• Review procedures
+• Alternative trading methods
+
+GDPR Reference: Article 22 - Automated decision-making",0.0,0.29463650622618837,0.2,0.0,0.9285940342393302,0.9312414100177347,gemini

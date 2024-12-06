@@ -1,0 +1,288 @@
+question,contexts,answer,ground_truth
+"Where can BitPay users exercise their data rights, and why?","order or other legal process or requirement if applicable to BitPay; or when we believe, in our sole discretion, that the disclosure of
+data is necessary to report suspected illegal or fraudulent activity or to investigate violations of our Terms of Use; and
+We may also share certain Shopper data with our Merchants, for example, in cases of suspected fraud or in connection with an
+ongoing investigation.
+Transfers outside the EEA. BitPay is primarily located in the United States, and some of the  Data
+Subject Rights Portal.
+(You can also contact us by email via the contact details below, but you will receive a reply email directing you to
+our Data Subject Rights Portal so it is easier to go straight to our portal).
+Merchants can review and edit their personal data by logging into their account and reviewing their personal data under the Settings tab
+on their Merchant dashboard. If you wish to change information relating to your industry or company website, or if you wish to close
+your ac Contact Information
+Contact DPO. BitPay has appointed a Data Protection Officer. You may contact us with questions or concerns about our privacy policies
+or practices at
+dpo@bitpay.com
+. However, If you wish to submit a data privacy rights request, you may do so by visiting our
+Data
+Subject Rights Portal.
+Complaints. Subject to applicable law, you also have the right to lodge a complaint with your local Data Protection Authority. If you
+believe we maintain your personal data within the scope of  6. Employees of Partners
+11/26/24, 8:46 PM
+Privacy Notice | BitPay
+https://bitpay.com/about/privacy-eu/
+3/5
+We may transfer your personal data to countries that have been found to provide an adequate level of protection of personal data
+We may use specific contracts, including Standard Contractual Clauses. For example, we offer Standard Contractual Clauses to
+meet data transfer requirements in respect of third parties such as service providers
+You can obtain a copy of such contracts or informati","Main Answer:
+BitPay users can exercise their data rights by visiting the Data Subject Rights Portal. This portal is specifically designed to facilitate the process of managing personal data.
+
+Key Points:
+- Users can submit data privacy rights requests through the Data Subject Rights Portal. [Article 15 - Right of Access]
+- Merchants can review and edit their personal data by logging into their account on the Merchant dashboard.
+- Users have the right to lodge a complaint with their local Data Protection Authority if they believe BitPay maintains their personal data in breach of GDPR. [Article 77 - Right to Lodge a Complaint]
+- BitPay transfers personal data to countries that provide adequate protection of personal data or uses specific contracts, such as Standard Contractual Clauses, to meet data transfer requirements. [Article 44 - Protection of Personal Data Transferred to a Third Country or an International Organization]
+
+Additional Information:
+- BitPay may disclose data for legal reasons or to report suspected illegal or fraudulent activity.
+- Users can contact BitPay's Data Protection Officer with questions or concerns about privacy policies and practices.
+- Merchants can review and edit their personal data under the Settings tab on their Merchant dashboard.
+- Users can obtain a copy of the contracts or information about data transfers by contacting BitPay.","Main Answer:
+BitPay's Data Subject Rights Portal operates as a centralized hub designed to meet specific user needs and regulatory requirements. The portal serves users through web interfaces, mobile applications, and support channels, providing access points tailored to different user preferences and needs. Its primary purpose is ensuring transparent and efficient rights exercise while maintaining proper verification and documentation standards. The system operates with specific workflows for different request types, maintaining detailed records of all interactions while ensuring consistent request handling and timely responses across all access points.
+
+Key Points:
+• Multiple access points for user convenience
+• Purpose-driven request handling system
+• Structured workflow management
+• Comprehensive documentation processes
+
+GDPR Reference: Articles 15-21 - Data subject rights"
+When does BitPay require informed consent for marketing?,"Developers
+Company
+Subscribe to BitPay
+By submitting this form, you agree to receive marketing and other communications from BitPay about BitPay products and other company
+updates. You can unsubscribe from these communications at any time. For more information on our privacy practices, please review our
+Privacy Policy.
+Subscribe
+11/26/24, 8:46 PM
+Privacy Notice | BitPay
+https://bitpay.com/about/privacy-eu/
+5/5 Consent.
+For some processing activities, we require your prior consent. This applies for example to some of our direct marketing
+activities which fall under the scope of the GDPR and ePrivacy rules. You may withdraw your consent at any time (see below). Legal obligation.
+In some cases, we have to process your personal data to comply with legal obligations, including those
+applicable to financial services institutions, such as under the Bank Secrecy Act and other anti-money laundering laws.
+11/26/24, 8:46 PM
+Privacy Notice | BitPay
+https://bitpay.com/about/privacy-eu/
+2/5 Marketing
+If you do not wish to receive marketing communications from us or participate in our ad customization programs, you can simply click
+the “unsubscribe” link at the bottom of an email you receive from us or you can send an email to
+marketing@bitpay.com
+.","Main Answer:
+BitPay requires informed consent for marketing activities that fall under the scope of the GDPR and ePrivacy rules.
+
+Key Points:
+- BitPay requires prior consent for some processing activities, specifically those related to direct marketing (5/5 Consent in the context).
+- Users can withdraw their consent at any time (see below in the context).
+- Marketing communications include updates about BitPay products and other company news.
+- To unsubscribe from marketing communications, users can click the ""unsubscribe"" link at the bottom of an email or send an email to marketing@bitpay.com.
+
+GDPR References:
+- Article 6(1)(a) - ""The data subject has given consent to the processing of his or her personal data for one or more specific purposes.""
+- Recital 30 - ""Silence, an indicative action or an other clear affirmative action, should be equivalent to the request to receive marketing communications.""
+- Article 15(d) - ""The data subject shall have the right to obtain from the controller confirmation as to whether or not personal data concerning him or her are being processed, and, where that is the case, access to the personal data and the following information: (...) the purposes of the processing.""
+- Article 12(1) - ""The controller shall take appropriate measures to provide clear and concise information about processing activities, that is, in particular, the identity and the contact details of the controller, the purposes of the processing, the recipients or categories of recipients of the personal data, the retention period for personal data, the existence of the right to request from the controller access to, rectification, erasure, or restriction of processing, the right to object to processing, the right to lodge a complaint with a supervisory authority, where applicable, and, where the processing is based on consent, the existence of the right to withdraw consent at any time, the existence of automated decision-making, including profiling, and, at least in those cases, meaningful information about the logic involved, as well as the significance and the envisaged consequences of such processing for the data subject.""","Main Answer:
+BitPay's informed consent management system activates at specific touchpoints where marketing activities intersect with personal data processing. The system implements explicit consent collection during initial account creation, newsletter subscriptions, and before launching new marketing initiatives or significant changes in processing purposes. Their documentation captures clear records of consent timing, scope, and purpose, including timestamp evidence. The implementation provides real-time preference management tools, enabling users to modify or withdraw consent through multiple channels while maintaining comprehensive audit trails.
+
+Key Points:
+• Explicit consent timing for marketing activities
+• Clear documentation of consent scope and purpose
+• Real-time consent modification options
+• Comprehensive consent records
+
+GDPR Reference: Article 7 - Conditions for consent"
+How does BitPay address its dual role as controller and processor under GDPR?,"Responsibility
+Compliant processing. BitPay complies with applicable United States federal and state regulations and European Economic Area
+(European Union + Norway, Iceland, Liechtenstein) (hereinafter “EEA”) data protection laws, such as the General Data Protection
+Regulation and its implementation acts (hereinafter “GDPR”).
+BitPay as a controller. BitPay is considered the controller for processing personal data as described in this Notice.
+BitPay as a processor. In principle, we control the p order or other legal process or requirement if applicable to BitPay; or when we believe, in our sole discretion, that the disclosure of
+data is necessary to report suspected illegal or fraudulent activity or to investigate violations of our Terms of Use; and
+We may also share certain Shopper data with our Merchants, for example, in cases of suspected fraud or in connection with an
+ongoing investigation.
+Transfers outside the EEA. BitPay is primarily located in the United States, and some of the  Developers
+Company
+Subscribe to BitPay
+By submitting this form, you agree to receive marketing and other communications from BitPay about BitPay products and other company
+updates. You can unsubscribe from these communications at any time. For more information on our privacy practices, please review our
+Privacy Policy.
+Subscribe
+11/26/24, 8:46 PM
+Privacy Notice | BitPay
+https://bitpay.com/about/privacy-eu/
+5/5 Scope
+This EU Privacy Notice (“Notice”) describes the ways BitPay Inc. (“BitPay”, “we”, “us”, “our”) collects, stores, uses and protects personal
+data. BitPay’s services include Merchant processing services, websites, mobile applications, products, and other features, technologies
+or functionalities, including customer support (the “Services”) offered by us. This Notice applies to all processing of personal data on
+the website
+www.bitpay.com
+and all other BitPay sites on which it appears (the “S","Main Answer:
+BitPay acknowledges its dual role as both a controller and a processor under GDPR. As a controller, BitPay processes personal data in accordance with applicable EEA data protection laws, including the GDPR. As a processor, BitPay processes personal data on behalf of its merchants, subject to their instructions and the merchant's own GDPR compliance.
+
+Key Points:
+- BitPay is considered the controller for processing personal data as described in the Notice.
+- As a processor, BitPay processes personal data on behalf of its merchants, subject to their instructions.
+- BitPay complies with GDPR and applicable data protection laws when acting as a controller.
+- BitPay may control the transfer of personal data if required by law or if necessary to report suspected illegal or fraudulent activity.
+- BitPay may share certain shopper data with merchants for suspected fraud or ongoing investigations.
+
+GDPR References:
+- Article 4(7) - Controller: 'the natural or legal person, public authority, agency or other body which, alone or jointly with others, determines the purposes and means of the processing of personal data;'
+- Article 29 - Processing: 'any operation or set of operations which is performed on personal data or on sets of personal data, whether or not by automated means, such as collection, recording, organisation, structuring, storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise making available, alignment or combination, restriction, erasure or destruction.'
+- Article 28 - Processor: 'a natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller.'","Main Answer:
+BitPay's privacy policy establishes clear frameworks for handling both controller and processor responsibilities in different service contexts. As a controller, they maintain comprehensive documentation of processing purposes, implementing risk-based approaches to data protection and security measures. Their processor role is governed by detailed agreements with merchants, establishing clear boundaries of responsibility and specific technical requirements for data handling. The implementation includes separate processing records for each role, with specific security measures and accountability frameworks tailored to different processing scenarios. Their approach includes clearly defined procedures for handling data subject requests in both capacities, with separate workflows for controller versus processor obligations.
+
+Key Points:
+• Distinct documentation frameworks for controller and processor roles
+• Role-specific security measures and accountability processes
+• Clear procedures for handling data subject requests in each capacity
+• Detailed processing records maintained for both roles
+
+GDPR Reference: Article 28 - Processor"
+What technical and organizational security measures does BitPay implement?,"Responsibility
+Compliant processing. BitPay complies with applicable United States federal and state regulations and European Economic Area
+(European Union + Norway, Iceland, Liechtenstein) (hereinafter “EEA”) data protection laws, such as the General Data Protection
+Regulation and its implementation acts (hereinafter “GDPR”).
+BitPay as a controller. BitPay is considered the controller for processing personal data as described in this Notice.
+BitPay as a processor. In principle, we control the p order or other legal process or requirement if applicable to BitPay; or when we believe, in our sole discretion, that the disclosure of
+data is necessary to report suspected illegal or fraudulent activity or to investigate violations of our Terms of Use; and
+We may also share certain Shopper data with our Merchants, for example, in cases of suspected fraud or in connection with an
+ongoing investigation.
+Transfers outside the EEA. BitPay is primarily located in the United States, and some of the  Developers
+Company
+Subscribe to BitPay
+By submitting this form, you agree to receive marketing and other communications from BitPay about BitPay products and other company
+updates. You can unsubscribe from these communications at any time. For more information on our privacy practices, please review our
+Privacy Policy.
+Subscribe
+11/26/24, 8:46 PM
+Privacy Notice | BitPay
+https://bitpay.com/about/privacy-eu/
+5/5 a Merchant and create a BitPay account; and
+Partner employees (employees and other agents of our customers and vendors, including potential and former customers and
+vendors).","Main Answer:
+BitPay, as a controller and processor, implements several technical and organizational security measures to ensure compliance with GDPR and other data protection laws.
+
+Key Points:
+- Data Encryption: BitPay encrypts personal data both during transmission and at rest to protect against unauthorized access (Article 32 - Security of processing).
+- Access Control: BitPay implements strict access control measures to ensure that only authorized personnel have access to personal data (Article 32 - Security of processing).
+- Fraud Detection and Investigation: BitPay uses advanced fraud detection and investigation systems to protect against illegal or fraudulent activity, and may share certain shopper data with merchants in connection with ongoing investigations (Article 6 - Lawfulness of processing).
+- Regular Security Audits: BitPay conducts regular security audits and vulnerability assessments to identify and address potential security threats (Article 25 - Data protection by design and by default).
+
+GDPR References:
+- Article 32 - Security of processing
+- Article 6 - Lawfulness of processing
+- Article 25 - Data protection by design and by default","Main Answer:
+BitPay maintains a comprehensive security framework validated through SOC 2 certification and aligned with GDPR requirements. Their technical infrastructure implements multiple layers of security controls, including advanced encryption protocols for data at rest and in transit, particularly for sensitive payment information. The system includes role-based access control mechanisms with regular authorization reviews and detailed audit logging. Organizational measures incorporate regular security training programs, documented incident response procedures, and systematic security testing protocols. Their approach includes specific measures for cryptocurrency transaction data, implementing enhanced monitoring and segregated storage systems for different data categories.
+
+Key Points:
+• Multi-layered security controls with SOC 2 validation
+• Comprehensive access management and audit systems
+• Regular security training and incident response procedures
+• Enhanced protections for crypto-related personal data
+
+GDPR Reference: Article 32 - Security of processing"
+When does BitPay apply automated fraud prevention?,"Legal obligation.
+In some cases, we have to process your personal data to comply with legal obligations, including those
+applicable to financial services institutions, such as under the Bank Secrecy Act and other anti-money laundering laws.
+11/26/24, 8:46 PM
+Privacy Notice | BitPay
+https://bitpay.com/about/privacy-eu/
+2/5 Responsibility
+Compliant processing. BitPay complies with applicable United States federal and state regulations and European Economic Area
+(European Union + Norway, Iceland, Liechtenstein) (hereinafter “EEA”) data protection laws, such as the General Data Protection
+Regulation and its implementation acts (hereinafter “GDPR”).
+BitPay as a controller. BitPay is considered the controller for processing personal data as described in this Notice.
+BitPay as a processor. In principle, we control the p order or other legal process or requirement if applicable to BitPay; or when we believe, in our sole discretion, that the disclosure of
+data is necessary to report suspected illegal or fraudulent activity or to investigate violations of our Terms of Use; and
+We may also share certain Shopper data with our Merchants, for example, in cases of suspected fraud or in connection with an
+ongoing investigation.
+Transfers outside the EEA. BitPay is primarily located in the United States, and some of the  approach the supervisory authority, so please contact our Data Protection Officer with questions or concerns by sending an email to
+dpo@bitpay.com
+or mail to: BitPay B.V., the representative of BitPay Inc. in the EU:
+BitPay B.V.
+Stadsplateau 7 WTC office 7
+3521 AZ
+11/26/24, 8:46 PM
+Privacy Notice | BitPay
+https://bitpay.com/about/privacy-eu/
+4/5
+Utrecht
+Netherlands
+Phone +44 808 169 7186
+We're here to help
+Support is just a few taps away. Get your questions answered by using our help library.
+Ge","Main Answer:
+BitPay applies automated fraud prevention when it believes, in its sole discretion, that the disclosure of data is necessary to report suspected illegal or fraudulent activity or to investigate violations of its Terms of Use.
+
+Key Points:
+- BitPay processes personal data to comply with legal obligations, including those applicable to financial services institutions and data protection laws.
+- BitPay is considered the controller for processing personal data and may control the process or requirement if applicable to BitPay.
+- BitPay may share certain Shopper data with Merchants in cases of suspected fraud or ongoing investigation.
+- Automated fraud prevention is implemented when BitPay believes it is necessary to report suspected illegal or fraudulent activity or investigate violations of its Terms of Use.
+
+GDPR References:
+- Article 6 - Lawfulness of Processing: BitPay processes personal data to comply with legal obligations.
+- Article 28 - Processing by the Data Processor: BitPay processes personal data as a processor when it shares data with Merchants.
+- Article 44 - Transfers of Personal Data to a Third Country or an International Organization: BitPay, being primarily located in the United States, may transfer personal data outside the EEA.
+- Article 32 - Security of Processing: BitPay implements appropriate technical and organizational measures to ensure a level of security appropriate to the risk.","Main Answer:
+BitPay activates automated fraud prevention during critical transaction phases and high-risk user interactions. The system triggers automated checks during initial account creation, suspicious transaction patterns, and unusual platform behavior detection periods. Their framework implements real-time monitoring during transaction processing, with specific triggers for enhanced verification during high-risk activities. The approach includes defined thresholds for human review timing, maintaining detailed documentation of automated decision points while ensuring prompt manual intervention when required.
+
+Key Points:
+• Critical transaction monitoring periods
+• Risk-based activation timing
+• Real-time verification triggers
+• Scheduled human review intervals
+
+GDPR Reference: Article 22 - Automated individual decision-making"
+Where does BitPay conduct merchant due diligence?,"order or other legal process or requirement if applicable to BitPay; or when we believe, in our sole discretion, that the disclosure of
+data is necessary to report suspected illegal or fraudulent activity or to investigate violations of our Terms of Use; and
+We may also share certain Shopper data with our Merchants, for example, in cases of suspected fraud or in connection with an
+ongoing investigation.
+Transfers outside the EEA. BitPay is primarily located in the United States, and some of the  a Merchant and create a BitPay account; and
+Partner employees (employees and other agents of our customers and vendors, including potential and former customers and
+vendors). Data
+Subject Rights Portal.
+(You can also contact us by email via the contact details below, but you will receive a reply email directing you to
+our Data Subject Rights Portal so it is easier to go straight to our portal).
+Merchants can review and edit their personal data by logging into their account and reviewing their personal data under the Settings tab
+on their Merchant dashboard. If you wish to change information relating to your industry or company website, or if you wish to close
+your ac Responsibility
+Compliant processing. BitPay complies with applicable United States federal and state regulations and European Economic Area
+(European Union + Norway, Iceland, Liechtenstein) (hereinafter “EEA”) data protection laws, such as the General Data Protection
+Regulation and its implementation acts (hereinafter “GDPR”).
+BitPay as a controller. BitPay is considered the controller for processing personal data as described in this Notice.
+BitPay as a processor. In principle, we control the p","Main Answer:
+BitPay conducts merchant due diligence during the account creation process.
+
+Key Points:
+- When a merchant creates a BitPay account, BitPay performs due diligence checks to ensure compliance with its policies and applicable laws.
+- This process includes verifying the merchant's identity and industry, as well as assessing potential risks.
+- BitPay may also review the merchant's website and business practices to ensure they align with BitPay's Terms of Use and anti-money laundering (AML) and know-your-customer (KYC) policies.
+- In cases of suspected fraud or ongoing investigations, BitPay may share certain shopper data with merchants.
+
+GDPR References:
+- Article 6 - Lawfulness of Processing: BitPay processes personal data of merchants for the performance of a contract (Article 6(1)(b)).
+- Article 5(1)(c) - Processing is necessary for compliance with a legal obligation to which the controller is subject.
+- Article 6(1)(f) - Processing is necessary for the purposes of the legitimate interests pursued by the controller or by a third party, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject.
+- Article 13 - Information to be Provided to the Data Subject: BitPay informs merchants about the processing of their personal data and their data subject rights.
+- Article 15 - Right of Access by the Data Subject: Merchants have the right to access their personal data and receive a copy of it.
+- Article 16 - Right to Rectification: Merchants have the right to rectify inaccurate personal data concerning them.
+- Article 17 - Right to Erasure (Right to be Forgotten): Merchants have the right to erasure of their personal data, subject to certain conditions.
+- Article 18 - Right to Restriction of Processing: Merchants have the right to restrict the processing of their personal data, subject to certain conditions.
+- Article 21 - Right to Object: Merchants have the right to object to the processing of their personal data, including profiling related to direct marketing.
+- Article 32 - Security of Processing: BitPay implements appropriate technical and organizational measures to ensure a level of security appropriate to the risk.
+- Article 33 - Communication of a Personal Data Breach to the Data Subject: In case of a data breach, BitPay will notify affected merchants without undue delay.
+- Article 34 - Data Protection Impact Assessment: BitPay conducts a data protection impact assessment when processing personal data that is likely to result in a high risk to the rights and freedoms of natural persons.
+- Article 40 - Cooperation with the Supervisory Authority: BitPay cooperates with the supervisory authority in the event of a data breach or upon request for information or assistance.","Main Answer:
+BitPay executes merchant due diligence across multiple jurisdictional checkpoints and verification environments. The process operates through dedicated verification platforms, third-party service integrations, and internal compliance systems, with specific protocols for different merchant categories and locations. Their framework implements risk-based verification procedures across various regulatory jurisdictions, maintaining enhanced security measures for document processing and storage locations. The system operates through specialized verification channels for international merchants, incorporating appropriate safeguards for cross-border information flows.
+
+Key Points:
+• Multiple verification checkpoint locations
+• Jurisdiction-specific processing environments
+• Secure document storage locations
+• Cross-border verification channels
+
+GDPR Reference: Article 5 - Principles relating to processing of personal data"
