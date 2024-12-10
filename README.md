@@ -26,11 +26,7 @@ Key Features:
 
 
 Project Organization
-├── README.md          <- The top-level README describing the project aims
-├── code
-│   ├── project-3      <- All relevant code for data pre-processing and each Neo4J algorithm
-│   ├── customer-rec-notebooks      <- Initial notebooks for customer recommendation system
-├── slides             <- Presentation slide deck
+
        
 
        
@@ -38,17 +34,17 @@ Project Organization
 
 
     PolicyPulse/
-├── README.md               <- The top-level README describing the project aims
-│
-├── production-ready/       <- All production code for grading
-│   │
-│   ├── QA/                <- Production ready code for QA system
-│   │   └── [QA system implementation files]
-│   │
-│   ├── Summary/           <- Production ready code for Summary system
-│   │   └── [Summary generation implementation files]
-│   │
-│   ├── frontend/          <- Frontend web interface code
-│   │   └── [Frontend implementation files]
-│   │
-│   └── slides/            <- Final presentation slide deck
+    ├── README.md               <- The top-level README describing the project aims
+    │
+    ├── production-ready/       <- All production code for grading
+    │   │
+    │   ├── QA/                <- Production ready code for QA system
+    │   │   └── [QA system implementation files]
+    │   │
+    │   ├── Summary/           <- Production ready code for Summary system
+    │   │   └── [Summary generation implementation files]
+    │   │
+    │   ├── frontend/          <- Frontend web interface code
+    │   │   └── [Frontend implementation files]
+    │   │    slides/           <- Final presentation slide deck
+        
