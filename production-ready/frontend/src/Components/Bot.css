@@ -1,0 +1,5 @@
+/* Hide the username and icon in the header */
+.chatbot-header .header-icon,
+.chatbot-header .username {
+  display: none;
+}

@@ -1,0 +1,34 @@
+.home-container {
+    display: flex;
+    flex-direction: column; /* Stack header above content */
+    height: 100vh; /* Full viewport height */
+}
+
+.content {
+    display: grid; /* Set the display to grid */
+    height: 91vh;
+    width: 100vw;
+    overflow-y: hidden;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+}
+
+.left-box {
+    padding: 20px; /* Padding around the content */
+    border-right: 1px solid #d3d3d3; /* Light border on the right */
+    background-color: white;
+    display: flex;
+    flex-direction: column; /* Stack child components vertically */
+    justify-content: flex-start; /* Align items at the start */
+}
+
+.right-box {
+    padding: 20px; /* Padding around the content */
+    background-color: white;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+h2 {
+    margin-top: 0; /* Remove margin on top for consistent spacing */
+}

@@ -1,0 +1,8 @@
+aws ecr get-login-password --region us-east-1 | sudo docker login --username AWS --password-stdin 763104351884.dkr.ecr.us-east-1.amazonaws.com
+aws ecr describe-repositories --repository-names $REPOSITORY_NAME || \
+aws ecr create-repository --repository-name $REPOSITORY_NAME
+docker buildx create --use
+docker buildx build --platform linux/amd64 -t $REPOSITORY_NAME .
+docker tag $REPOSITORY_NAME:latest $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$REPOSITORY_NAME:$IMAGE_TAG
+docker push $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$REPOSITORY_NAME:$IMAGE_TAG
+aws s3 cp model.tar.gz s3://capstoneragmodel/inference/model.tar.gz

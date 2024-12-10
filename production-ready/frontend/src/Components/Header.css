@@ -1,0 +1,23 @@
+.header {
+    background: linear-gradient(135deg, #002A80, #0044cc); /* Add a gradient for more depth */
+    color: #FFB300;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for a pop-out effect */
+    border-bottom: 3px solid #FFB300; /* Accent border at the bottom */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.header:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.header-title {
+    font-size: 2.5rem; /* Make the title more prominent */
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add subtle text shadow for depth */
+}

@@ -1,0 +1,79 @@
+# Use the official UBuntu image
+FROM ubuntu:20.04
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=TRUE
+ENV PATH="/opt/ml/code:${PATH}"
+ENV PYTHONPATH="/opt/ml/code"
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install system dependencies for Python packages and Tesseract OCR
+RUN apt-get update -y && \
+    apt-get install -y --no-install-recommends \
+    build-essential \
+    g++ \
+    gcc \
+    python3.10 \
+    python3-pip \
+    python3-setuptools \
+    wget \
+    curl \
+    tar \
+    gzip \
+    libtesseract-dev \
+    tesseract-ocr \
+    libsndfile1 \
+    libx11-6 \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    && apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Install NVIDIA CuSparse (for CUDA 12 support)
+RUN pip3 install nvidia-cusparse-cu12
+
+# Upgrade pip and setuptools
+RUN python3 -m pip install --upgrade pip setuptools
+
+# Install PyTorch first (CPU or GPU version depending on your requirements)
+RUN pip3 install torch torchvision torchaudio
+
+# Install the required Python dependencies
+RUN pip3 install \
+    transformers==4.41.2 \
+    bitsandbytes \
+    scikit-learn \
+    accelerate \
+    langchain \
+    unstructured \
+    langchain-community \
+    beautifulsoup4 \
+    qdrant-client \
+    langchainhub \
+    nltk \
+    xformers \
+    pdfminer.six \
+    multi-model-server \
+    sagemaker-inference \
+    'unstructured[local-inference]' \
+    boto3 \
+    langchain_openai \
+    pymupdf \
+    pyMuPDF \
+    PyPDF2
+
+# Copy entrypoint script to the image
+#COPY dockerd-entrypoint.py /usr/local/bin/dockerd-entrypoint.py
+#RUN chmod +x /usr/local/bin/dockerd-entrypoint.py
+
+# Set up directories for SageMaker
+#RUN mkdir -p /opt/ml/code /opt/ml/input /opt/ml/model /opt/ml/output
+
+# Set the entry point to start running inference
+#COPY inference.py /opt/ml/code/inference.py
+#RUN chmod +x /opt/ml/code/inference.py
+
+# Set the default command to use inference.py when the container is started
+#ENTRYPOINT ["python3", "/opt/ml/code/inference.py"]
+

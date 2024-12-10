@@ -1,0 +1,61 @@
+.upload-container {
+    width: 35vw; /* Increase maximum width for a more spacious layout */
+    margin: 10px auto; /* Center the container with more top margin */
+    padding: 10px; /* Increased padding for a more spacious feel */
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f7ff 100%); /* Light gradient background */
+    border: 1px solid #b0d0e0; /* Softer border color */
+    border-radius: 15px; /* Slightly more rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+    text-align: center; /* Center text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.upload-container:hover {
+    transform: translateY(-8px); /* More noticeable lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to create a 3D popping effect */
+}
+
+.upload-title {
+    font-size: 2rem; /* Larger title font for better visibility */
+    margin-bottom: 25px; /* Space below the title */
+    font-weight: bold; /* Bold title for emphasis */
+    color: #003DA5; /* UC Berkeley Blue */
+}
+
+.upload-input {
+    display: block; /* Ensure it takes full width */
+    margin: 0 auto 25px; /* Center and space out */
+    padding: 15px; /* Increased padding for better touch area */
+    font-size: 1.1rem; /* Slightly larger font size */
+    width: 90%; /* Full width */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth border color and shadow change */
+}
+
+.upload-input:focus {
+    border-color: #003DA5; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 61, 165, 0.5); /* Light blue shadow on focus */
+    outline: none; /* Remove default outline */
+}
+
+.upload-button {
+    background-color: #003DA5; /* UC Berkeley Blue */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 10px; /* More rounded corners */
+    padding: 12px 20px; /* Increased button padding */
+    font-size: 1.1rem; /* Slightly larger font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth background and transform change */
+}
+
+.upload-button:hover {
+    background-color: #002A80; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.upload-message {
+    margin-top: 20px; /* Space above the message */
+    font-size: 1rem; /* Font size */
+    color: #333; /* Darker text for message */
+    font-style: italic; /* Italic for a different style */
+}

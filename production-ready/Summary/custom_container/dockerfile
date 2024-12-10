@@ -1,0 +1,60 @@
+# Use the official UBuntu image
+FROM 763104351884.dkr.ecr.us-east-1.amazonaws.com/pytorch-inference:2.4.0-gpu-py311-cu124-ubuntu22.04-sagemaker
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=TRUE
+ENV PATH="/opt/ml/code:${PATH}"
+ENV PYTHONPATH="/opt/ml/code"
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install system dependencies for Python packages and Tesseract OCR
+RUN apt-get update -y && \
+    apt-get install -y --no-install-recommends \
+    sqlite3 \
+    build-essential \
+    libtesseract-dev \
+    tesseract-ocr \
+    && apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Install the required Python dependencies
+RUN pip3 install \
+    transformers==4.41.2 \
+    bitsandbytes \
+    scikit-learn \
+    cohere \
+    accelerate \
+    langchain \
+    unstructured \
+    langchain-community \
+    beautifulsoup4 \
+    qdrant-client \
+    langchainhub \
+    nltk \
+    xformers \
+    pdfminer.six \
+    multi-model-server \
+    sagemaker-inference \
+    pytesseract \
+    'unstructured[local-inference]' \
+    boto3 \
+    langchain_openai \
+    sentence-transformers \
+    pymupdf \
+    pyMuPDF \
+    PyPDF2
+
+# Copy entrypoint script to the image
+#COPY dockerd-entrypoint.py /usr/local/bin/dockerd-entrypoint.py
+#RUN chmod +x /usr/local/bin/dockerd-entrypoint.py
+
+# Set up directories for SageMaker
+#RUN mkdir -p /opt/ml/code /opt/ml/input /opt/ml/model /opt/ml/output
+
+# Set the entry point to start running inference
+#COPY inference.py /opt/ml/code/inference.py
+#RUN chmod +x /opt/ml/code/inference.py
+
+# Set the default command to use inference.py when the container is started
+#ENTRYPOINT ["python3", "/opt/ml/code/inference.py"]
+
