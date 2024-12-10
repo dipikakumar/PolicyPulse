@@ -27,10 +27,18 @@ Key Features:
 
 
 
-    Project Organization
-    ├── README.md          <- The top-level README describing the project aims
-    ├── production-ready
-    │   ├── QA       <- Production ready code for QA system 
-    │   ├── Summary  <- Production ready code for Summary system
-        ├── frontend <- frontend code 
-        ├── slides   <- Final presentation slide deck
+    PolicyPulse/
+├── README.md               <- The top-level README describing the project aims
+│
+├── production-ready/       <- All production code for grading
+│   │
+│   ├── QA/                <- Production ready code for QA system
+│   │   └── [QA system implementation files]
+│   │
+│   ├── Summary/           <- Production ready code for Summary system
+│   │   └── [Summary generation implementation files]
+│   │
+│   ├── frontend/          <- Frontend web interface code
+│   │   └── [Frontend implementation files]
+│   │
+│   └── slides/            <- Final presentation slide deck
