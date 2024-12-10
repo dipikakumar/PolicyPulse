@@ -22,16 +22,17 @@ Key Features:
   
    * Provides accurate, contextual responses with source references
   
+2. Dynamic Summary Generation:
+   * Automatically generates concise summaries of lengthy policy documents
+
+   * Helps fintech startups quickly understand their regulatory obligations
+  
+   * Enables law firms to efficiently process and analyze new and lengthy policy documents
+  
 
 
 
 Project Organization
-
-       
-
-       
-
-
 
     PolicyPulse/
     ├── README.md              <- The top-level README describing the project aims
