@@ -15,7 +15,9 @@ PolicyPulse is an advanced AI-powered system designed specifically for fintech s
 Key Features:
     1. Intelligent QA System:
        * Instantly answers complex queries about regulatory requirements and compliance policies
+       
        * Helps legal teams and compliance officers quickly find specific policy information
+       
 
        
 
