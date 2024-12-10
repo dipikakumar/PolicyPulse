@@ -37,7 +37,7 @@ Project Organization
     PolicyPulse/
     ├── README.md              <- The top-level README describing the project aims
     │
-    ├── production-ready/      <- All production code for grading
+    ├── production-ready/      <- All production ready code 
     │   │
     │   ├── QA/                <- Production ready code for QA system
     │   │   └── [QA system implementation files]
