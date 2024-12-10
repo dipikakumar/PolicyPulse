@@ -21,6 +21,16 @@ Key Features:
    * Reduces the time spent searching through lengthy regulatory documents
   
    * Provides accurate, contextual responses with source references
+  
+
+
+
+Project Organization
+├── README.md          <- The top-level README describing the project aims
+├── code
+│   ├── project-3      <- All relevant code for data pre-processing and each Neo4J algorithm
+│   ├── customer-rec-notebooks      <- Initial notebooks for customer recommendation system
+├── slides             <- Presentation slide deck
        
 
        
