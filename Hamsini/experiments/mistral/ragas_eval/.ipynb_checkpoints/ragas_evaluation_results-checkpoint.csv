@@ -1,0 +1,136 @@
+question,contexts,answer
+What types of personal data does Revolut collect for financial services?,"Type of personal data
+Details
+Information you give us
+We collect information you provide when you:
+✓
+fill in any forms
+✓
+correspond with us
+✓
+respond to any of our surveys
+✓
+register to use the Revolut app
+✓
+register, or approve a registration for, a child to use the Revolut <18 app
+✓
+open an account or use any of our services
+✓
+give us access to your other financial accounts (for example, through
+Open Banking)
+✓
+take part in online discussions or promotions
+✓
+speak with a member of our social m using GPS technology.
+Information from others
+We collect personal data from third parties or other people, such as credit
+reference agencies, financial or credit institutions, official registers and
+databases, as well as joint account holders, fraud prevention agencies and
+partners who help us to provide our services.
+This includes your credit record, information about late payments,
+information to help us check your identity, information about your spouse
+and family (if applicable in the contex ✓
+information you provide when you register or approve your children to use
+Revolut <18
+✓
+records of our discussions, if you contact us or we contact you (including
+records of phone calls)
+✓
+your image in photo or video form, and facial scan data extracted from
+your photo or video (known as ‘biometric data’), to verify your identity during
+onboarding as part of our Know-Your-Customer (KYC) checks, to
+authenticate you as an authorised user of our services, or to detect and
+prevent fraud
+✓
+informa Protecting against fraud
+We use your personal data to check your address and identity,
+protect against fraud, keep to financial crime laws and to
+confirm that you’re eligible to use our services. We also use it
+to help us better understand your financial circumstances and
+-
+Legitimate interests (to develop
+and improve how we deal with
+financial crime and meet our legal
+responsibilities)
+-
+Substantial public interest
+8
+manage fraud risks related to your Revolut account.
+-
+Consent (where required ","Main Answer:
+Revolut collects various types of personal data for providing financial services. The personal data can be broadly categorized into two groups: information you provide and information from others.
+
+Key Points:
+• Information you provide: This includes details such as filling in forms, correspondences, responding to surveys, registering to use the Revolut app or Revolut <18 app, opening an account or using any of their services, giving access to other financial accounts, taking part in online discussions or promotions, and speaking with a member of their social media using GPS technology.
+• Information from others: Revolut collects personal data from third parties or other people, such as credit reference agencies, financial or credit institutions, official registers and databases, joint account holders, fraud prevention agencies, and partners who help them provide their services. This includes your credit record, information about late payments, information to help them check your identity, information about your spouse and family (if applicable), records of their discussions, and your image in photo or video form, and facial scan data extracted from your photo or video for identity verification.
+• Special categories of personal data: Revolut also collects biometric data, such as facial scans, for identity verification during onboarding and to authenticate users. [Article 9 - Processing of special categories of personal data]
+
+GDPR References:
+• Article 6 - Lawfulness of processing
+• Article 9 - Processing of special categories of personal data
+• Article 13 - Information to be provided where data is collected from the data subject
+• Article 14 - Information to be provided where data is not collected from the data subject
+• Article 26 - Joint controllers
+• Article 44 - Transfers of personal data to third countries or international organizations
+• Article 58 - Supervisory authority
+
+Revolut uses this personal data to check your address and identity, protect against fraud, keep to financial crime laws, confirm that you're eligible to use their services, and help them better understand your financial circumstances. They may also use it for developing and improving how they deal with financial crime and meeting their legal responsibilities. [Article 6(1)(c) - Processing necessary for compliance with a legal obligation] [Article 6(1)(f) - Processing necessary for the purposes of the legitimate interests pursued by the controller]"
+What rights do customers have under GDPR regarding their Revolut data?,"equivalent to the United Kingdom or EEA, we will make sure that your personal data is sufficiently
+protected. For example, we’ll make sure that a contract with strict data protection safeguards is in
+place before we transfer your personal data. In some cases, you may be entitled to ask us for a copy
+of this contract.
+If you would like more information, please contact us by sending an email to
+dpo@revolut.com
+. data to you or another company
+If we can, and are allowed to do so under regulatory
+requirements, we’ll provide your personal data in a structured,
+commonly used, machine-readable format.
+You can withdraw your permission
+If you’ve given us the consent we need to use your personal
+data, you can withdraw it at any time by changing your privacy
+settings in the Revolut app or sending an email
+to
+dpo@revolut.com
+.
+(Please note, it will have been lawful for us to use the personal
+data up to the point  accounts and transfer money. However, we won’t provide any
+customer-level information. It will not be possible to identify
+any individual Revolut customer.
+-
+Legitimate interests (to conduct
+research and analysis, including to
+produce statistical research and
+reports)
+-
+Legal obligations ✓
+you gave us consent (permission) to use your personal data
+and you have now withdrawn that consent
+✓
+you have objected to us using your personal data
+✓
+we have used your personal data unlawfully
+✓
+the law requires us to delete your personal data
+Just to let you know, we may not be able to agree to your
+request. As a regulated financial services provider, we must
+keep certain customer personal data even when you ask us to
+14
+delete it (we've explained this in more detail below). If you've
+close","Main Answer:
+Customers in the United Kingdom or European Economic Area (EEA) have several rights regarding their personal data under the General Data Protection Regulation (GDPR) with Revolut. These rights include:
+
+Key Points:
+- Request for a copy of the contract: Customers can ask for a copy of the contract that outlines the strict data protection safeguards in place before their personal data is transferred (Article 13 - Information to be provided to the data subject and the right of access).
+- Data portability: Revolut can provide customers' personal data in a structured, commonly used, machine-readable format if possible and allowed under regulatory requirements (Article 20 - The right to data portability).
+- Withdrawal of consent: Customers can withdraw their consent for Revolut to use their personal data at any time by changing their privacy settings in the Revolut app or sending an email to dpo@revolut.com (Article 7 - Conditions for consent).
+- Access to personal data: Customers have the right to access their personal data, obtain confirmation as to whether or not their data is being processed, and receive a copy of the personal data undergoing processing (Article 15 - Right of access by the data subject).
+
+Additionally, under certain circumstances, customers may have the right to:
+- Object to the processing of their personal data (Article 21 - The right to object to processing).
+- Request rectification of inaccurate personal data (Article 16 - The right to rectification).
+- Request erasure of their personal data (Article 17 - The right to erasure).
+- Restrict the processing of their personal data (Article 18 - Right to restriction of processing).
+
+However, as a regulated financial services provider, Revolut may not be able to agree to all data deletion requests due to legal obligations and the need to keep certain customer personal data (Article 5(e) - Processing is necessary for compliance with a legal obligation).
+
+Please note that these rights may be subject to certain conditions and exceptions. For more information, please contact Revolut's Data Protection Officer at dpo@revolut.com."
