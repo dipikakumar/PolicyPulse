@@ -1,0 +1,289 @@
+question,contexts,answer,ground_truth
+When does Stripe share data with Financial Partners?,"Sharing of Personal Data among our affiliates.
+11/26/24, 8:51 PM
+Privacy Policy
+https://stripe.com/privacy
+15/29 transaction. As a service provider or data processor, we share Personal Data to enable transactions as
+directed by Business Users. For instance, when you choose a payment method for your transaction, be it a
+credit card, debit card, Buy Now Pay Later, or direct debit, your payment method provider may receive
+your Transaction Data from transactions facilitated by Stripe. The Business User you choose to do
+business with also receives Transaction Data and might share the data with others. Please re How?
+All financial companies need to share customers' personal information to run their everyday
+business. In the section below, we list the reasons financial companies can share their
+customers' personal information; the reasons Stripe chooses to share; and whether you can
+limit this sharing.
+Reasons we can share your personal information
+Does
+Stripe
+Share?
+Can you limit
+this sharing
+For our everyday business purposes – such as to process your
+transactions, maintain your account(s), respond to  No
+We don’t
+share
+11/26/24, 8:51 PM
+Privacy Policy
+https://stripe.com/privacy
+23/29
+For nonaffiliates to market to you if you are a Link user
+Yes
+Yes
+For nonaffiliates to market to you if you are a Financial Connections
+user
+No
+We don’t
+share
+To limit our
+sharing
+Login to your Link account at
+app.link.com/settings
+and toggle off data sharing from
+the Messaging menu.
+Please note: If you are a new customer, we can begin sharing your information 30 days
+from the date we sent this notice. When you a","
+Main Answer:
+Stripe shares data with Financial Partners for everyday business purposes, such as processing transactions, maintaining accounts, and responding to customer inquiries. This sharing is necessary for the smooth operation of financial companies. However, the company does not share data with non-affiliates for marketing purposes if you are a Financial Connections user.
+
+Key Points:
+• Stripe's data sharing is primarily directed by Business Users to enable transactions and facilitate various payment methods.
+• The sharing of personal information is a common practice among financial companies to manage daily operations.
+• Users have control over some aspects of data sharing, especially for marketing purposes, through their Link accounts.
+• New customers are subject to a 30-day notice period before their information is shared.
+
+GDPR References:
+Article 6 - Lawfulness of Processing
+Article 13 - Information to be provided where Personal Data are collected from the Data Subject","Main Answer:
+Stripe shares personal data with Financial Partners during specific operational scenarios related to payment processing and financial services. Their framework includes sharing for payment method processing, fraud prevention, and regulatory compliance purposes. The system initiates sharing when users conduct transactions, during account verification processes, and for mandatory regulatory reporting. Their approach includes clear timing protocols for different types of sharing activities and maintains specific documentation of sharing necessity and purpose.
+
+Key Points:
+• Clear timing protocols for partner data sharing
+• Purpose-specific sharing mechanisms
+• Documented necessity for each sharing type
+• Regular review of sharing requirements
+
+GDPR Reference: Article 28 - Processor obligations"
+Where does Stripe store and process personal data?,"FACTS
+WHAT DOES STRIPE DO WITH YOUR PERSONAL INFORMATION? contact us
+immediately.
+We retain your Personal Data for as long as we continue to provide the Services to you or our Business
+Users, or for a period in which we reasonably foresee continuing to provide the Services. Even after we
+stop providing Services directly to you or to a Business User that you're doing business with, and even
+after you close your Stripe account or complete a transaction with a Business User, we may continue to
+retain your Personal Data to:
+In cases where we keep your Pers latter uses Stripe Identity, our identity verification Service, to verify the identity of the End Customer.
+11/26/24, 8:51 PM
+Privacy Policy
+https://stripe.com/privacy
+7/29
+policy for more information, including your rights to stop their usage of your Personal Data for marketing
+purposes. acquirers, payout providers, and card networks that we partner with to provide the Services.
+Depending on the context, “you” might be an End Customer, End User, Representative, or Visitor:
+In this Policy, “Transaction Data” refers to data collected and used by Stripe to facilitate transactions you
+request. Some Transaction Data is Personal Data and may include: your name, email address, contact
+number, billing and shipping address, payment method information (like credit or debit card number, ba","
+Main Answer:
+Stripe stores and processes personal data in various locations, depending on the context and nature of the data. They retain personal data for as long as they provide services to their users or for a period in which they reasonably expect to continue providing services.
+
+Key Points:
+• Stripe may store personal data even after an individual stops using their services or closes their account, especially if they foresee a future need to provide services to that individual.
+• The data storage and retention are subject to the terms outlined in their Privacy Policy, which users can refer to for more details.
+• Stripe's services involve partnering with various entities, including acquirers, payout providers, and card networks, which may influence the data storage and processing locations.
+• The context of the data collection and the user's role (End Customer, End User, Representative, or Visitor) also play a part in determining how and where personal data is handled.
+
+GDPR References:
+Article 5 - Principles relating to processing of personal data
+Article 6 - Lawfulness of processing
+Article 13 - Information to be provided where personal data are collected from the data subject","Main Answer:
+Stripe maintains primary processing facilities in the United States and Ireland, with additional regional centers based on service requirements. Their system routes data processing based on customer location and regulatory obligations. The framework maintains clear documentation of data flows between processing sites. Their approach implements specific security measures for each location and cross-border transfers.
+
+Key Points:
+• Primary processing locations
+• Location-based routing
+• Clear data flows
+• Location-specific security
+
+GDPR Reference: Article 44 - General principle for transfers"
+How does Stripe implement GDPR requirements for consent management?,"applications to initiate or expand the use of our Services;
+Creation and management of Stripe Checkout accounts;
+Accounting, auditing, and billing activities; and
+Detection, monitoring, and prevention of fraud and unauthorized payment transactions;
+11/26/24, 8:51 PM
+Privacy Policy
+https://stripe.com/privacy
+14/29
+d. Consent
+. We may rely on consent or explicit consent to collect and process Personal Data regarding our
+interactions with you and the provision of our Services such as Link, Financia India
+. In this Policy, “applicable law” includes the Digital Personal Data Protection Act (DPDPA) once the
+DPDPA is enacted. Further, the term “data controller” includes “data fiduciaries,” and the term “data subject”
+includes “data principal,” both as defined in the DPDPA.
+In some cases, and as permitted under the DPDPA, we may rely on “legitimate use” as a legal basis.
+For example, we do so when you voluntarily provide your Personal Data to us. “Consent Managers” as
+defined under the DPDPA ma below for more information.
+We will verify your request by asking you to send it from the email address associated with your
+account or requiring you to provide information necessary to verify your identity, including name,
+address, transaction history, photo identification, and other information associated with your account.
+11/26/24, 8:51 PM
+Privacy Policy
+https://stripe.com/privacy
+21/29
+Stripe, Inc.’s privacy practices, as described in this Privacy Policy, comply with the APEC Cross Border
+P latter uses Stripe Identity, our identity verification Service, to verify the identity of the End Customer.
+11/26/24, 8:51 PM
+Privacy Policy
+https://stripe.com/privacy
+7/29
+policy for more information, including your rights to stop their usage of your Personal Data for marketing
+purposes.","
+Main Answer:
+Stripe implements GDPR requirements for consent management by adhering to the principles of transparency and user control. They ensure that consent is obtained for processing personal data and provide users with the ability to manage their consent preferences.
+
+Key Points:
+• Consent Basis: Stripe may rely on consent or explicit consent as a legal basis for processing personal data, particularly for interactions and service provisions. This aligns with GDPR requirements, ensuring that users actively agree to the collection and use of their data.
+• Verification of Consent: To verify consent requests, Stripe employs robust methods. They may ask users to send requests from the email associated with their account or provide additional information, such as name, address, transaction history, and photo identification, to ensure the authenticity of the consent.
+• Consent Management Tools: Stripe provides tools or mechanisms for users to manage their consent preferences. This includes the ability to grant, withdraw, or modify consent for specific data processing activities, giving users control over their personal data.
+• Compliance with Applicable Laws: Stripe's privacy practices, as outlined in their Privacy Policy, comply with various data protection regulations, including the APEC Cross Border Privacy Rules (CBPR) system and the Digital Personal Data Protection Act (DPDPA). This demonstrates their commitment to data privacy and consent management across different jurisdictions.
+
+GDPR References:
+- Article 6(1)(a) - Lawfulness of Processing
+- Article 7 - Conditions for Consent
+- Article 13 - Information to be Provided Where Personal Data Are Collected from the Data Subject
+- Article 22 - Automated Individual Decision-Making, Including Profiling","Main Answer:
+Stripe operates a comprehensive consent management system tailored to different services and jurisdictional requirements. Their framework includes specific consent mechanisms for marketing, optional services, and data sharing activities. The system maintains detailed records of consent including scope, timestamp, and withdrawal options. Their approach implements separate consent protocols for different processing activities, with particular attention to financial services requirements. The framework ensures regular validation of consent status and maintains clear withdrawal procedures.
+
+Key Points:
+• Service-specific consent mechanisms
+• Detailed consent records management
+• Multiple withdrawal channels
+• Regular consent validation procedures
+
+GDPR Reference: Article 7 - Conditions for consent"
+What safeguards does Stripe implement for international data transfers?,"6. International Data Transfers
+As a global business, it's sometimes necessary for us to transfer your Personal Data to countries other
+than your own, including the United States. These countries might have data protection regulations that
+are different from those in your country. When transferring data across borders, we take measures to
+comply with applicable data protection laws related to such transfer. In certain situations, we may be
+required to disclose Personal Data in response to lawful 7. Updates and notifications
+We may change this Policy from time to time to reflect new services, changes in our privacy practices or
+relevant laws. The “Last updated” legend at the top of this Policy indicates when this Policy was last
+revised. Any changes are effective the latter of when we post the revised Policy on the Services or
+otherwise provide notice of the update as required by law.
+We may provide you with disclosures and alerts regarding the Policy or Personal Data collected by postin 5. Security and Retention
+We make reasonable efforts to provide a level of security appropriate to the risk associated with the
+processing of your Personal Data. We maintain organizational, technical, and administrative measures
+designed to protect the Personal Data covered by this Policy from unauthorized access, destruction, loss,
+alteration, or misuse.
+Learn More
+. Unfortunately, no data transmission or storage system can be
+guaranteed to be 100% secure.
+We encourage you to assist us in prote property of Stripe, you, and others, including against malicious or fraudulent activity; and to respond to
+valid legal requests from courts, law enforcement agencies, regulatory agencies, and other public and
+government authorities, which may include authorities outside your country of residence.","
+Main Answer:
+Stripe, as a global business, acknowledges the potential differences in data protection regulations across various countries. To ensure compliance with applicable data protection laws when transferring personal data internationally, they commit to taking appropriate measures.
+
+Key Points:
+• When transferring personal data across borders, Stripe prioritizes compliance with relevant data protection laws, demonstrating a commitment to international data privacy standards.
+• The company may disclose personal data in certain situations, but only when required by law, ensuring a balance between data sharing and legal obligations.
+• Stripe's approach to international data transfers is proactive, aiming to safeguard personal data regardless of geographical boundaries.
+
+GDPR References:
+Article 44 - General principle for transfers
+Article 45 - Transfers on the basis of an adequacy decision
+Article 46 - Transfers subject to appropriate safeguards","Main Answer:
+Stripe implements safeguards through Standard Contractual Clauses, binding corporate rules, and additional technical measures based on transfer destinations. Their system maintains enhanced security protocols for data movements between jurisdictions. The framework includes regular transfer impact assessments and specific mitigation measures for high-risk destinations. Their approach ensures appropriate protection levels for all international transfers.
+
+Key Points:
+• Transfer mechanism documentation
+• Enhanced security protocols
+• Regular impact assessments
+• Risk-based mitigation
+
+GDPR Reference: Article 46 - Transfers subject to appropriate safeguards"
+Why does Stripe implement different processing approaches for various user categories?,"1.2 End Customers
+Stripe provides various Business Services to our Business Users, which include in-person or online
+checkout payment processing or processing payouts for those Business Users. When acting as a service
+provider—also referred to as a data processor—for a Business User, we process End Customer Personal
+Data in accordance with our agreement with the Business User and the Business User's lawful instructions.
+This happens, for example, when we process a payment for a Business User bec Personalization
+. We use the data we collect from cookies and similar technologies about you to measure
+user engagement with the content on the Sites, improve relevancy and navigation, customize your user
+experience (such as language preference and region-specific content), and curate content about Stripe
+and our Services that's tailored to you. For instance, as not all of our Services are available globally, we may
+customize our responses based on your region. FACTS
+WHAT DOES STRIPE DO WITH YOUR PERSONAL INFORMATION? latter uses Stripe Identity, our identity verification Service, to verify the identity of the End Customer.
+11/26/24, 8:51 PM
+Privacy Policy
+https://stripe.com/privacy
+7/29
+policy for more information, including your rights to stop their usage of your Personal Data for marketing
+purposes.","
+Main Answer:
+Stripe employs distinct processing methods for different user categories to adhere to legal requirements and ensure data protection. As a service provider or data processor for Business Users, Stripe processes End Customer Personal Data according to the agreements and instructions provided by the Business User. This tailored approach is essential to meet the specific needs of each user category while maintaining compliance with data protection regulations.
+
+Key Points:
+• The processing of End Customer Personal Data is governed by the agreement between Stripe and the Business User, ensuring a clear framework for data handling.
+• Stripe acts as a data processor for Business Users, which means it processes data on their behalf and under their instructions, adhering to the principles of data processing.
+• The company uses cookies and similar technologies to enhance user experience, customize content, and measure engagement, but it also respects users' rights to control their data for marketing purposes.
+• Stripe Identity is an identity verification service that helps verify End Customer identities, demonstrating the company's commitment to security and compliance.
+
+GDPR References:
+Article 28 - Processor
+Article 6 - Lawfulness of Processing
+Article 12 - Transparent Information, Communication and Modalities for the Exercise of the Rights of the Data Subject","Main Answer:
+Stripe develops distinct processing approaches based on complex relationships between user categories and regulatory requirements. Their framework addresses specific obligations for End Users, End Customers, Representatives, and Visitors, each with unique processing needs and legal bases. The system implements different protection levels and processing protocols based on the nature of relationship and service type. Their approach includes detailed documentation of processing decisions and regular assessment of processing necessity for each category.
+
+Key Points:
+• Category-specific processing protocols
+• Relationship-based protection measures
+• Regular assessment of processing necessity
+• Documented decision frameworks
+
+GDPR Reference: Article 25 - Data protection by design and by default"
+How does Stripe manage automated decision-making in payment processing?,"1.2 End Customers
+Stripe provides various Business Services to our Business Users, which include in-person or online
+checkout payment processing or processing payouts for those Business Users. When acting as a service
+provider—also referred to as a data processor—for a Business User, we process End Customer Personal
+Data in accordance with our agreement with the Business User and the Business User's lawful instructions.
+This happens, for example, when we process a payment for a Business User bec latter uses Stripe Identity, our identity verification Service, to verify the identity of the End Customer.
+11/26/24, 8:51 PM
+Privacy Policy
+https://stripe.com/privacy
+7/29
+policy for more information, including your rights to stop their usage of your Personal Data for marketing
+purposes. Paying Stripe.
+When you purchase goods or services directly from Stripe, we receive your Transaction
+Data. For instance, when you make a payment to Stripe Climate, we collect information about the
+transaction, as well as your contact and payment method details. applications to initiate or expand the use of our Services;
+Creation and management of Stripe Checkout accounts;
+Accounting, auditing, and billing activities; and
+Detection, monitoring, and prevention of fraud and unauthorized payment transactions;
+11/26/24, 8:51 PM
+Privacy Policy
+https://stripe.com/privacy
+14/29
+d. Consent
+. We may rely on consent or explicit consent to collect and process Personal Data regarding our
+interactions with you and the provision of our Services such as Link, Financia","
+Main Answer:
+Stripe, as a data processor for its Business Users, adheres to specific guidelines for automated decision-making in payment processing. This involves processing End Customer Personal Data according to the Business User's agreement and lawful instructions. When a Business User uses Stripe's services, such as Stripe Identity, for identity verification, Stripe ensures that the payment processing is in line with the agreed-upon terms.
+
+Key Points:
+• Stripe's role as a data processor is to follow the instructions of its Business Users, ensuring that payment processing is compliant with the agreed-upon terms and conditions.
+• The company's services, like Stripe Identity, are used for identity verification, and the data collected during this process is handled according to the specific agreement with the Business User.
+• Stripe collects Transaction Data when users purchase goods or services directly from them, including contact and payment method details.
+• The company may rely on consent or explicit consent to collect and process Personal Data regarding its interactions and service provisions.
+
+GDPR References:
+Article 28 - Processor
+Article 6 - Lawfulness of Processing","Main Answer:
+Stripe implements sophisticated mechanisms for automated decision-making in their payment processing systems. Their framework includes specific safeguards for automated decisions affecting transaction approval and fraud prevention. The system maintains human oversight capabilities and clear notification procedures for automated processing activities. Their approach includes regular algorithm assessments, documentation of decision logic, and specific procedures for contesting automated decisions. The framework balances processing efficiency with user protection requirements.
+
+Key Points:
+• Comprehensive automated processing safeguards
+• Human oversight mechanisms
+• Regular algorithm assessments
+• Clear contestation procedures
+
+GDPR Reference: Article 22 - Automated individual decision-making, including profiling"

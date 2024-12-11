@@ -1,0 +1,92 @@
+question,contexts,answer,ground_truth
+For how long does Plaid retain user financial data?,"WHAT DOES PLAID DO WITH YOUR PERSONAL INFORMATION? Depending on the Plaid service you or the developer of your app use, and the manner in which the data is financial accounts from apps, or delete data from Plaid’s systems. You can also use Plaid Portal to view and Data from the electronic device you use to connect your financial account through Plaid or to otherwise","
+Main Answer:
+Plaid retains user financial data for an unspecified period, depending on the specific service and the manner in short, the data retention period is context-dependent.
+
+Key Points:
+• The duration of data retention is not explicitly stated and varies based on the Plaid service and the user's actions.
+• Users have control over their data and can access, modify, or delete it using the Plaid Portal.
+• Data is collected from electronic devices used to connect financial accounts through Plaid.
+
+GDPR References:
+Article 5 - Principles relating to processing of personal data
+Article 12 - Transparent information, communication and modalities for the exercise of the rights of the data subject
+Article 13 - Information to be provided where personal data are collected from the data subject","Main Answer:
+Plaid retains financial data based on specific timeframes: active connection data for service duration plus 30 days, historical transaction data for 24 months, and verification data according to regulatory requirements. Their system implements automatic deletion when retention periods expire. The framework maintains clear documentation of retention requirements and deletion triggers. Their approach includes regular review of retention necessity.
+
+Key Points:
+• Specific retention periods
+• Automatic deletion protocols
+• Clear retention criteria
+• Regular necessity reviews
+
+GDPR Reference: Article 5(1)(e) - Storage limitation"
+Where does Plaid process collected financial information?,"and routing numbers to Plaid and the apps and services you choose. We collect identifiers, financial data, accounts to Plaid and the apps and services you choose. We collect identifiers, financial data, commercial Data from the electronic device you use to connect your financial account through Plaid or to otherwise manage their Plaid Accounts. We collect identifiers, financial data, commercial data, location data, and","
+Main Answer:
+Plaid processes financial information through the electronic device users employ to connect their financial accounts or manage their Plaid accounts.
+
+Key Points:
+• Plaid's data collection includes identifiers, financial data, commercial data, and location data.
+• Users' electronic devices are integral to the data collection process, either for connecting financial accounts or managing Plaid accounts.
+• The context implies that Plaid's data processing occurs on the user's device, potentially through a dedicated application or interface.
+
+GDPR References:
+Article 4 - Definitions
+Article 6 - Lawfulness of Processing
+Article 12 - Transparent Information, Communication and Modalities for the Exercise of the Rights of the Data Subject","Main Answer:
+Plaid maintains processing operations in specific locations based on service regions and regulatory requirements. Their system routes processing according to customer location and applicable regulations. The framework maintains clear documentation of data flows between processing sites. Their approach implements specific security measures for each processing location.
+
+Key Points:
+• Processing locations
+• Regulatory-based routing
+• Clear data flows
+• Location security measures
+
+GDPR Reference: Article 32 - Security of processing"
+What GDPR rights can users exercise through Plaid Portal?,"“Contacting Plaid” section below to exercise any of your data protection rights. You may be required to WHAT DOES PLAID DO WITH YOUR PERSONAL INFORMATION? does not cover data we collect through our websites or when you interact with Plaid outside of using our (https://plaid.com/legal/data-protection-request-form)
+We will consider requests and provide our response within a reasonable period of time (and within any time","
+Main Answer:
+Users can exercise their GDPR rights through the Plaid Portal by submitting a data protection request form. This form allows individuals to assert their data protection rights and request Plaid to take specific actions regarding their personal information.
+
+Key Points:
+• The ""Contacting Plaid"" section provides the means to exercise data protection rights, but it does not specify which rights are covered.
+• Users may need to provide additional information or verification to complete their requests.
+• Plaid will consider the requests and respond within a reasonable time frame, which is in line with GDPR requirements.
+• The context mentions a data protection request form, suggesting that users can submit formal requests regarding their personal data.
+
+GDPR References:
+Article 12 - Transparent information, communication and modalities for the exercise of the rights of the data subject
+Article 15 - Right of access by the data subject
+Article 20 - Right to data portability","Main Answer:
+Plaid provides comprehensive user rights management through their Portal platform in compliance with GDPR requirements. Their framework enables users to view connected accounts, manage data sharing permissions, and exercise data subject rights. The system maintains clear procedures for accessing personal data, requesting deletions, and managing consent preferences. Their approach includes specific tools for viewing and managing financial account connections with detailed audit trails of data sharing activities.
+
+Key Points:
+• Centralized rights management platform
+• Clear access and deletion procedures
+• Comprehensive connection visibility
+• Detailed audit trail maintenance
+
+GDPR Reference: Articles 15-21 - Data subject rights"
+How does Plaid implement GDPR requirements for international transfers?,"For individuals in the European Economic Area (“EEA”) or the United Kingdom (“UK”), Plaid only processes we require your data to comply with our legal obligations under applicable law, to safeguard Plaid's legal that you provide to Plaid, like bank statements or pay stubs. number and email address, and creating a password. Once you’ve signed up for Plaid Portal, you’ll be","
+Main Answer:
+Plaid adheres to GDPR regulations for international data transfers by ensuring that personal data is processed and transferred securely and in compliance with applicable laws. They collect and process data from individuals in the EEA and UK, including sensitive financial information, to meet their legal obligations and protect their legal rights.
+
+Key Points:
+• Plaid is committed to handling personal data from EEA and UK individuals with care, especially when transferring data internationally.
+• They process data to comply with legal obligations and protect their legal rights, which may involve sharing data with law enforcement or regulatory bodies.
+• The company collects essential information during the Plaid Portal registration process, such as name, email, and password, to set up user accounts.
+• Users provide additional sensitive data, like bank statements, to access Plaid's services, which are processed securely.
+
+GDPR References:
+Article 44 - General principle for transfers
+Article 45 - Transfers on the basis of an adequacy decision
+Article 46 - Transfers subject to appropriate safeguards","Main Answer:
+Plaid implements transfer safeguards through Standard Contractual Clauses and additional technical measures based on destination requirements. Their system maintains enhanced security protocols for cross-border data movements. The framework includes regular transfer impact assessments and specific mitigation measures. Their approach ensures appropriate protection levels for all international transfers.
+
+Key Points:
+• Transfer mechanism documentation
+• Enhanced security protocols
+• Regular impact assessments
+• Risk-based mitigation
+
+GDPR Reference: Article 46 - Transfers subject to appropriate safeguards"
