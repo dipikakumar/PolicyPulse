@@ -48,4 +48,8 @@ Project Organization
     │   ├── frontend/          <- Frontend web interface code
     │   │   └── [Frontend implementation files]
     │   │    slides/           <- Final presentation slide deck
+    │──Hamsini/                <- Models, EDA' and other experiments 
+    │──Sreeram/                <- Experiments
+    │──Dipika/                 <- Experiments 
+    │──Kirti/                  <- Experiments
         
