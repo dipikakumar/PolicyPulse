@@ -1,0 +1,342 @@
+question,contexts,answer,ground_truth
+When does Remitly require additional verification information?,"SERVICES
+Parts of our Service use Google Maps services, including the Google
+Maps
+API(s). Use of these features is subject to the
+Google Maps Additional
+Terms of Use
+and the
+Google Privacy Policy
+. By using this Site and the
+Service you also agree to the Google Terms (as amended from time to
+time).
+Our Site and App includes links to other websites whose privacy
+practices may differ from those of Remitly. For example, in order to
+verify your identity, Remitly uses the services of Onfido. Onfido w ABOUT YOU?
+We use automated processes to check that your access to our
+services and
+your use of our services meet our required standard, including
+verifying
+your identity, and to help prevent fraud or other illegal activities.
+These processes may make an automated decision to reject your
+proposed
+transaction, to block a suspicious attempt to login to your account, or
+to close your account. If you feel that an automated process may have
+impacted you, please contact our Privacy team at
+DPO@Remitly Payment
+Information
+To comply with our legal obligations. Necessary
+for one or more of the legitimate interests
+Rates & fees
+Providers
+Help
+↓
+↓
+English
+↓
+11/26/24, 8:52 PM
+Remitly Netherlands Privacy Policy
+https://www.remitly.com/nl/en/home/policy#who-are-we
+13/15
+Types of
+Personal Data
+Our Lawful Basis for Processing
+namely to collect payment for your use of our
+Services. Data Deletion/Erasure
+You may request to erase your personal data, subject to applicable
+law.
+If you close your account, we will mark your account in our database
+as
+Rates & fees
+Providers
+Help
+↓
+↓
+English
+↓
+11/26/24, 8:52 PM
+Remitly Netherlands Privacy Policy
+https://www.remitly.com/nl/en/home/policy#who-are-we
+7/15
+""Closed,"" but will keep certain account information for a period of
+time as described below. This is necessary to deter fraud, by ensuring
+that persons who try to commit fraud will ","
+Main Answer:
+Remitly requires additional verification information when using automated processes to check access to and usage of their services. This includes verifying user identity and preventing fraud or illegal activities. These automated processes can make decisions to reject transactions, block suspicious login attempts, or close accounts.
+
+Key Points:
+• Remitly employs automated systems to ensure the security and integrity of its services, which may trigger requests for further verification.
+• The verification process is essential for identity confirmation and fraud prevention.
+• Automated decisions can lead to transaction rejections, login blocks, or account closures.
+• Users have the right to contact Remitly's Privacy team if they believe an automated process has adversely affected them.
+
+GDPR References:
+Article 6 - Lawfulness of Processing
+Article 13 - Information to be provided where personal data are collected from the data subject","Main Answer:
+Remitly requires additional verification during specific trigger events: transactions exceeding regional thresholds, unusual patterns detection, first-time high-value transfers, and regulatory compliance requirements. Their system implements risk-based verification with clear thresholds for each trigger type. The framework maintains specific documentation of verification requirements and processing timeframes. Their approach includes clear communication of additional verification needs.
+
+Key Points:
+• Trigger-based verification
+• Clear threshold criteria
+• Specific requirements
+• Communication procedures
+
+GDPR Reference: Article 6(1)(c) - Legal obligation"
+How does Remitly implement GDPR requirements across different jurisdictions?,"Remitly
+Entity
+Registered
+Address
+Data
+Protection
+Authority
+Data Protection
+Officer (DPO)
+For EEA
+residents
+Remitly
+Europe
+Ltd
+7TH FLOOR
+PENROSE
+TWO,
+PENROSE
+DOCK,
+CORK,
+IRELAND,
+T23 YY09
+Data Protection
+Commission
+(DPC)
+DPO@remitly.com
+For UK
+residents
+Remitly
+U.K. Ltd
+90
+WHITFIELD
+STREET,
+LONDON
+W1T 4EZ,
+UNITED
+KINGDOM
+Information
+Commissioner's
+Office (ICO)
+DPO@remitly.com
+Rates & fees
+Providers
+Help
+↓
+↓
+English
+↓
+11/26/24, 8:52 PM
+Remitly Netherlands Privacy Policy
+https://www.remitly.com/nl WHO ARE WE?
+Any personal data provided to or gathered by our Services is
+controlled
+by the applicable Remitly affiliate based upon your country of
+residence. See the table in the ""Our Relationship with You"" section of
+this Policy to determine which entity controls the collection and use of
+your personal data. ABOUT THIS POLICY
+This Privacy Policy (""Policy"") applies to the websites located at
+remitly.com, the Remitly mobile applications and through any other
+programs (including Remitly Research programs), websites, or
+applications owned and operated by Remitly that direct you to this
+Policy.
+This Policy, together with our DATA?
+We collect personal data about you from various sources. For
+example, we
+collect and obtain information:
+Directly from you
+We collect personal data you provide, such as when you use our
+Service,
+Rates & fees
+Providers
+Help
+↓
+↓
+English
+↓
+11/26/24, 8:52 PM
+Remitly Netherlands Privacy Policy
+https://www.remitly.com/nl/en/home/policy#who-are-we
+3/15
+create a profile, contact us (including via chat), respond to a survey,
+interact with us at events, participate in a sweepstakes, contest, or
+othe","
+Main Answer:
+Remitly, a financial services company, ensures GDPR compliance across various jurisdictions by implementing specific measures and adhering to the regulation's principles. They have different entities and data protection officers (DPOs) for EEA and UK residents, demonstrating their commitment to local data protection laws.
+
+Key Points:
+• Remitly's approach is tailored to the user's country of residence, with different entities and DPOs for EEA and UK residents, ensuring compliance with local data protection regulations.
+• The company's privacy policy applies to its websites, mobile applications, and other programs, covering a wide range of data collection activities.
+• Personal data is collected directly from users when they interact with Remitly's services, such as creating profiles, contacting support, or participating in surveys and events.
+• The policy emphasizes that personal data is controlled by the relevant Remitly affiliate, as determined by the user's country of residence, ensuring transparency and accountability.
+
+GDPR References:
+Article 4 - Definitions
+Article 24 - Responsibility of the controller
+Article 30 - Records of processing activities","Main Answer:
+Remitly maintains specific GDPR compliance measures while operating across multiple jurisdictions. Their system implements distinct protocols for EU/UK customer data with clear processing purposes. The framework includes specific procedures for handling cross-border transfers and data subject rights. Their approach ensures consistent protection standards while meeting various regional requirements.
+
+Key Points:
+• Specific compliance measures
+• Clear processing protocols
+• Cross-border procedures
+• Consistent standards
+
+GDPR Reference: Article 44 - General principle for transfers"
+What automated decision-making processes affect Remitly money transfers?,"ABOUT YOU?
+We use automated processes to check that your access to our
+services and
+your use of our services meet our required standard, including
+verifying
+your identity, and to help prevent fraud or other illegal activities.
+These processes may make an automated decision to reject your
+proposed
+transaction, to block a suspicious attempt to login to your account, or
+to close your account. If you feel that an automated process may have
+impacted you, please contact our Privacy team at
+DPO@Remitly Automated Individual Decision-Making, Including Profiling
+In some jurisdictions, you have the right not to be subject to a
+decision based solely on automated processing of your personal data,
+including profiling, which produces legal or similarly significant
+effects on you, save for the exceptions applicable under relevant data
+protection laws. We may reject your request, as permitted by
+applicable
+law, including when providing the information would result in a
+disclosure of a trade secret or wo DO WE MAKE AUTOMATED DECISIONS Rates & fees
+Providers
+Help
+↓
+↓
+English
+↓
+11/26/24, 8:52 PM
+Remitly Netherlands Privacy Policy
+https://www.remitly.com/nl/en/home/policy#who-are-we
+2/15
+to
+provide to participate in promotions or competitions.
+Recipient Information: Including your recipient's full name, postal
+address, phone number, depending on the disbursement method
+selected
+certain financial institution or financial account details such as bank
+account or mobile wallet account. If there is a dispute about whether
+money has b","
+Main Answer:
+Remitly employs automated decision-making processes to ensure the security and integrity of its money transfer services. These processes are designed to verify user identity, prevent fraud, and maintain the required standard of service. The automated systems can make decisions to reject transactions, block suspicious login attempts, or even close user accounts if they detect potential risks.
+
+Key Points:
+• Remitly's automated processes are primarily focused on security measures, such as identity verification and fraud prevention.
+• These systems can automatically reject transactions, block login attempts, or close accounts if they identify potential issues.
+• Users have the right to contact Remitly's Privacy team if they believe an automated decision has impacted them unfairly.
+• The company reserves the right to reject requests for information if it would reveal trade secrets or similar sensitive data.
+
+GDPR References:
+Article 22 - Automated individual decision-making, including profiling.
+Article 15 - Right of access by the data subject.","Main Answer:
+Remitly employs sophisticated automated systems for transaction monitoring and risk assessment in their money transfer services. Their framework includes specific procedures for automated decisions affecting transaction approval and fraud prevention. The system maintains human oversight capabilities and clear notification procedures for automated processing activities. Their approach includes regular algorithm assessments and specific procedures for contesting automated decisions, particularly in cases affecting transfer completion or account access.
+
+Key Points:
+• Comprehensive automated monitoring systems
+• Human oversight mechanisms
+• Regular algorithm assessments
+• Clear contestation procedures
+
+GDPR Reference: Article 22 - Automated individual decision-making"
+How does Remitly process biometric data for identity verification?,"SERVICES
+Parts of our Service use Google Maps services, including the Google
+Maps
+API(s). Use of these features is subject to the
+Google Maps Additional
+Terms of Use
+and the
+Google Privacy Policy
+. By using this Site and the
+Service you also agree to the Google Terms (as amended from time to
+time).
+Our Site and App includes links to other websites whose privacy
+practices may differ from those of Remitly. For example, in order to
+verify your identity, Remitly uses the services of Onfido. Onfido w WHY DO WE PROCESS SENSITIVE PERSONAL DATA?
+We may ask you to specifically consent to the collection, use and
+storage of your biometric data during the verification process, where
+privacy regulations require it in your jurisdiction. If you do not
+consent, we offer alternate methods to verify your identity which may
+take longer. We will not disclose or share any biometric data to anyone
+other than our identity verification providers, or when required by
+applicable laws and regulations, or pursuant DATA?
+We collect personal data about you from various sources. For
+example, we
+collect and obtain information:
+Directly from you
+We collect personal data you provide, such as when you use our
+Service,
+Rates & fees
+Providers
+Help
+↓
+↓
+English
+↓
+11/26/24, 8:52 PM
+Remitly Netherlands Privacy Policy
+https://www.remitly.com/nl/en/home/policy#who-are-we
+3/15
+create a profile, contact us (including via chat), respond to a survey,
+interact with us at events, participate in a sweepstakes, contest, or
+othe ABOUT YOU?
+We use automated processes to check that your access to our
+services and
+your use of our services meet our required standard, including
+verifying
+your identity, and to help prevent fraud or other illegal activities.
+These processes may make an automated decision to reject your
+proposed
+transaction, to block a suspicious attempt to login to your account, or
+to close your account. If you feel that an automated process may have
+impacted you, please contact our Privacy team at
+DPO@Remitly","
+Main Answer:
+Remitly, a money transfer service, processes biometric data for identity verification by seeking specific consent from users for the collection, use, and storage of their biometric information during the verification process. This practice is in accordance with privacy regulations in the user's jurisdiction. If a user does not consent, Remitly offers alternative methods for identity verification, though these may take longer.
+
+Key Points:
+• Remitly uses biometric data for identity verification to ensure compliance with privacy regulations and to prevent fraud.
+• Users are asked to provide consent for the collection and use of their biometric data, and they have the option to decline.
+• Alternative methods for identity verification are available for those who do not wish to provide biometric data, but these alternatives may be more time-consuming.
+• Remitly ensures the privacy and security of biometric data, only sharing it with identity verification providers or when legally required.
+
+GDPR References:
+Article 6 - Lawfulness of Processing
+Article 9 - Processing of Special Categories of Personal Data
+Article 13 - Information to be provided where Personal Data are collected from the Data Subject","Main Answer:
+Remitly processes biometric data exclusively for identity verification with strict purpose limitation. Their system uses facial biometrics during document verification with specific retention timeframes, typically 24 hours post-verification. The framework maintains clear procedures for immediate deletion after verification completion. Their approach includes explicit user notification before biometric collection and specific security measures during processing.
+
+Key Points:
+• Strict purpose limitation
+• Defined retention periods
+• Clear deletion procedures
+• User notification protocols
+
+GDPR Reference: Article 9 - Processing of special categories of personal data"
+When does Revolut share data with third-party providers?,"WHO DO WE SHARE YOUR PERSONAL DATA WITH? WHO DO WE SHARE YOUR PERSONAL DATA Third Party Partners
+We may share your personal data with third parties that we have
+partnered with to jointly create and offer a product, service, or joint
+promotion. We may also share your personal data with our banking or
+distribution partners in the event we suspect you are violating our
+terms or engaging in fraudulent behavior as it relates to our business.
+Their use of your information is not governed by this privacy policy,
+but by their own respective privacy policies.
+Social Media Platfo HOW LONG DO WE RETAIN YOUR DATA?","
+Main Answer:
+Revolut may share your personal data with third-party providers in two specific scenarios:
+
+Key Points:
+• Revolut's data sharing with third parties is primarily for joint ventures and promotional activities.
+• Data sharing with banking and distribution partners is a security measure to address potential violations or fraudulent activities.
+• The use of shared data by these third parties is governed by their respective privacy policies, not Revolut's.
+
+GDPR References:
+Article 6 - Lawfulness of Processing
+Article 13 - Information to be provided where personal data are collected from the data subject",No ground truth available

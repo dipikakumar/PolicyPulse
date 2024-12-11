@@ -1,0 +1,159 @@
+question,contexts,answer,ground_truth
+How does Circle protect customer financial data??,"in
+11/26/24, 8:49 PM
+Circle | Privacy Policy
+https://www.circle.com/legal/privacy-policy
+11/22
+Data Protection, Circle Internet Financial, LLC is the controller of your personal data.
+Circle Internet Financial Limited is Circle’s representative establishment in the United To administer and protect the Circle Services (including troubleshooting, data Circle discloses personal information to third parties for its targeted advertising and in
+11/26/24, 8:49 PM
+Circle | Privacy Policy
+https://www.circle.com/legal/privacy-policy
+3/22
+Identity and Contact Data from verification or compliance services providers; and","
+Main Answer:
+Circle Internet Financial, LLC, as the controller of personal data, has implemented measures to protect customer financial data. They use the information to administer and protect their services, including troubleshooting, data analysis, testing, research, and monitoring.
+
+Key Points:
+• Circle Internet Financial, LLC is the designated data controller, responsible for determining the purposes and means of processing personal data.
+• The company collects and processes various types of personal data, including Identity and Contact Data, to provide and improve its services.
+• Data protection and privacy are ensured through the implementation of security measures, including encryption and access controls.
+• Circle may disclose personal information to third parties for specific purposes, such as targeted advertising and compliance with legal obligations.
+
+GDPR References:
+Article 4 - Definitions
+Article 24 - Responsibility of the controller
+Article 32 - Security of processing",No ground truth available
+When does Circle require informed consent?,"in
+11/26/24, 8:49 PM
+Circle | Privacy Policy
+https://www.circle.com/legal/privacy-policy
+13/22
+(d) you have objected to our use of your data but we need to verify whether we (b) Necessary to comply with a legal obligation.
+(c) Necessary for our legitimate interests to safeguard the Circle Services. in
+11/26/24, 8:49 PM
+Circle | Privacy Policy
+https://www.circle.com/legal/privacy-policy
+19/22 in
+11/26/24, 8:49 PM
+Circle | Privacy Policy
+https://www.circle.com/legal/privacy-policy
+15/22
+business purpose, sold, or shared and the third parties to whom we’ve disclosed,","
+Main Answer:
+Circle requires informed consent when processing personal data for specific purposes, especially when it is not necessary for their legitimate interests or legal obligations. This is evident in the context, where they mention the need for consent in certain scenarios.
+
+Key Points:
+• Circle's privacy policy outlines various situations where they may need to obtain informed consent from users.
+• Informed consent is required when Circle needs to verify the user's objection to data processing.
+• Consent is essential when Circle intends to process personal data for a business purpose, sale, or sharing with third parties.
+• The context suggests that Circle takes user consent seriously, ensuring it is obtained for specific data processing activities.
+
+GDPR References:
+Article 6 - Lawfulness of Processing
+Article 7 - Conditions for Consent","Main Answer:
+Circle activates consent requirements during service initialization, new feature activation, marketing communication opt-ins, and third-party data sharing. Their framework implements separate consent collection for each processing purpose. The system maintains clear records of consent timing and scope, with specific withdrawal procedures for each type of consent. Their approach ensures regular validation of consent status and updates.
+
+Key Points:
+• Purpose-specific consent timing
+• Clear consent records
+• Specific withdrawal procedures
+• Regular consent validation
+
+GDPR Reference: Article 7 - Conditions for consent"
+How does Circle handle third-party data sharing?,"- We will share your information with other third
+parties if you specifically authorize us to do so. For example, you may Request to
+transfer your data from Circle to a third-party under your applicable legal rights. in
+11/26/24, 8:49 PM
+Circle | Privacy Policy
+https://www.circle.com/legal/privacy-policy
+16/22
+“sharing” of personal information. Please note that Circle is not a data broker and does - A list of affiliates and partners that act as sub-processors for
+Circle who may process your personal data is available here.  By agreeing to this
+Privacy Policy, you consent to such sub-processors collecting and processing your The Circle Services may include links to third-party websites, plug-ins and
+applications. Clicking on those links or enabling those connections may allow third
+parties to collect or share data about you. We are not responsible for the data
+collection and processing practices of the third party and use of any third party
+websites is subject to their privacy policies. When you leave our website, we
+encourage you to read the privacy notice of every website you visit.","
+Main Answer:
+Circle ensures a transparent and user-controlled approach to third-party data sharing. They will only share your information with other third parties if you explicitly authorize them to do so. This includes instances where you may want to transfer your data to a third-party under your legal rights.
+
+Key Points:
+• User Authorization: Circle requires specific user authorization for any third-party data sharing, ensuring that users have control over their personal information.
+• Data Transfer Rights: Users have the right to request data transfers to third parties, and Circle will facilitate this under the appropriate legal framework.
+• Sub-processors: Circle discloses the use of sub-processors, who are affiliates and partners, for data processing. By agreeing to the Privacy Policy, users consent to this arrangement.
+• Third-Party Links and Connections: Circle's services may include links to external websites, plugins, and applications. Users are advised that interacting with these may allow third-party data collection, and Circle is not responsible for their practices.
+
+GDPR References:
+Article 6 - Lawfulness of Processing
+Article 13 - Information to be provided where personal data are collected from the data subject
+Article 20 - Right to data portability","Main Answer:
+Circle operates a structured framework for sharing data with essential service providers in their financial ecosystem. Their approach includes specific protocols for different categories of partners, including banking partners and verification services. The system implements detailed contractual requirements and security measures for each partner type. Their framework includes regular compliance assessments and monitoring of third-party data handling. The approach maintains enhanced controls for partners processing sensitive financial data, particularly for stablecoin operations.
+
+Key Points:
+• Structured sharing protocols for different service provider categories
+• Detailed contractual requirements and security measures
+• Regular compliance monitoring and assessments
+• Enhanced controls for financial data processors
+
+GDPR Reference: Article 28 - Processor"
+How does Circle maintain GDPR compliance while processing stablecoin transactions?,"in
+11/26/24, 8:49 PM
+Circle | Privacy Policy
+https://www.circle.com/legal/privacy-policy
+3/22
+Identity and Contact Data from verification or compliance services providers; and in
+11/26/24, 8:49 PM
+Circle | Privacy Policy
+https://www.circle.com/legal/privacy-policy
+20/22
+RESOURCES
+PRODUCT
+SUPPORT
+Digital assets are subject to a number of risks, including price volatility. Transacting in digital assets could
+result in signi�cant losses and may not be suitable for some consumers. Digital asset markets and
+exchanges are not regulated with the same controls or customer protections available with other forms of
+�nancial products and are subject to an evolving regulatory env When you register for Circle Services, we may receive information about your criminal
+convictions when we perform certain verification or compliance checks. We carry out
+these checks in order to detect or prevent any unlawful or fraudulent acts and to Circle conducts business throughout the world. Personal data may be stored and
+processed in any country where we do business or our service providers do business.
+We may transfer your personal data to other countries, which may have different data
+protection laws. When transferring data across borders, we take measures to comply","
+Main Answer:
+Circle, a global company, ensures GDPR compliance when processing stablecoin transactions by implementing several measures to protect personal data. They conduct verification and compliance checks, which may include accessing criminal conviction data, to prevent fraudulent activities. Circle is aware of the risks associated with digital assets, such as price volatility and the lack of uniform regulations in this space.
+
+Key Points:
+• Circle performs verification and compliance checks, which may involve accessing information about criminal convictions, to ensure the prevention of unlawful activities.
+• The company operates globally and understands the challenges of data protection when transferring personal data across borders to countries with different legal frameworks.
+• Digital assets, including stablecoins, are recognized by Circle as a volatile and less regulated area of finance, which may pose risks to consumers.
+• Circle aims to adhere to GDPR standards when processing personal data during stablecoin transactions.
+
+GDPR References:
+Article 44 - Transfers on the basis of an adequacy decision
+Article 45 - Transfers subject to appropriate safeguards
+Article 46 - Transfers subject to appropriate safeguards
+Article 49 - Derogations for specific situations","Main Answer:
+Circle implements comprehensive measures for stablecoin operations through data minimization in blockchain transactions and off-chain storage of personal data with deletion capabilities. Their system includes specific procedures for handling data subject rights while maintaining transaction validity. The framework addresses technical limitations through alternative compliance measures and clear user communication. Their approach ensures personal data protection while preserving blockchain functionality.
+
+Key Points:
+• Specific compliance measures
+• Clear technical documentation
+• Defined rights procedures
+• Alternative compliance options
+
+GDPR Reference: Article 17 - Right to erasure"
+What automated decisions affect Bilt cardholder rewards?,"security and fraud detection. card number) To manage our relationship with you which will include:
+(a) Notifying you about changes to our terms or Privacy Policy; and particularly around marketing and advertising. We have established the following","
+Main Answer:
+The context does not explicitly mention any automated decisions related to Bilt cardholder rewards. However, it does highlight the use of personal data for security and fraud detection, which could potentially impact rewards.
+
+Key Points:
+• The company collects and processes personal data, including card numbers, for security and fraud detection purposes.
+• Automated systems may be in place to monitor and analyze cardholder transactions for any suspicious activities.
+• While not directly stated, it is possible that these systems could trigger certain actions or decisions regarding rewards, such as freezing rewards or initiating investigations.
+• The company's privacy policy and terms may outline the rights and responsibilities of cardholders regarding data usage and the impact on their rewards.
+
+GDPR References:
+Article 6 - Lawfulness of Processing
+Article 22 - Automated Individual Decision-making, including Profiling",No ground truth available

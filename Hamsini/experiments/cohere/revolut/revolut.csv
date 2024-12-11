@@ -1,0 +1,348 @@
+question,contexts,answer,ground_truth
+When does Revolut share data with third-party providers?,"18
+Other third parties
+We may share your personal data with other third parties where necessary to facilitate you receiving
+payments to your Revolut account.
+For legal reasons
+We also share your personal data with other ﬁnancial institutions, ﬁnancial services companies,
+insurance providers, government authorities, law enforcement authorities, tax authorities, companies
+and fraud prevention agencies to check your identity, investigate or protect against suspected fraud,
+keep to tax laws, anti-mo 11. Do you share my personal data with anyone else?
+Revolut group companies
+We share your personal data within the Revolut group of companies to:
+-
+provide you with the best service
+-
+protect you, other customers and our systems from fraud or harmful behaviour
+-
+facilitate you quickly signing up to use other Revolut products or services
+-
+improve existing, or develop new, products or services
+-
+send you information about Revolut products and services we think you’ll be interested in
+hearing abou From time to time, we may work with other partners to offer you co-branded services or promotional
+offers, and we’ll share some of your personal data with those partners. We will always make sure you
+understand how we and our partners process your personal data for these purposes.
+Credit reference agencies
+As set out in the
+Do you run credit checks on me?
+section above, if you apply for a credit product, we'll
+share your personal data with credit reference agencies to check whether you are likel spam communications (in line with Revolut’s Community
+Standards)
+- in connection with legal claims
+- to help detect or prevent crime
+You can ﬁnd out more in the
+Do you share my personal data
+with anyone else?
+section below.
+Sometimes, we’re legally required to ask you to provide
+information about other people. For example, we might ask
+you to explain:
+- your relationship with a joint account holder or somebody
+who pays money into your Revolut account
+- how somebody got the money in the ﬁrst plac","
+Main Answer:
+Revolut shares data with third-party providers in several scenarios, primarily to ensure legal compliance, enhance user experience, and maintain the integrity of its services.
+
+Key Points:
+• Data sharing with third parties is necessary for facilitating payments to the user's Revolut account.
+• Revolut shares personal data with various entities, including financial institutions, financial services companies, insurance providers, and government/law enforcement authorities, for legal and security purposes, such as identity verification, fraud protection, and compliance with tax laws.
+• The company may also collaborate with partners to offer co-branded services or promotions, and in such cases, personal data is shared to enable these joint ventures.
+• Credit reference agencies are involved when users apply for credit products, and Revolut shares data to assess creditworthiness.
+
+GDPR References:
+Article 6 - Lawfulness of Processing
+Article 9 - Processing of Special Categories of Personal Data
+Article 13 - Information to be Provided Where Personal Data are Collected from the Data Subject","Main Answer:
+Revolut implements specific timing protocols for sharing data with third-party providers based on service requirements and customer authorizations. Their framework includes clear schedules for sharing during payment processing, identity verification, and authorized Open Banking services. The system maintains specific timing requirements for different service types and sharing purposes. Their approach includes documented sharing schedules with enhanced protocols for time-sensitive financial operations.
+
+Key Points:
+• Service-based sharing schedules
+• Authorization-dependent timing
+• Clear documentation of sharing periods
+• Enhanced timing protocols for sensitive data
+
+GDPR Reference: Article 6(1)(a) - Consent"
+Where does Revolut process customer verification data?,"with third party ﬁnancial institutions (when you create a linked account by
+activating Open Banking in the Revolut app). If you apply for our credit
+products, when you allow us, we may use this information for credit checks. Checking your identity
+Whenever you sign up with Revolut, we’ll use your personal
+data to check your identity or the identity of joint account
+holders (as part of our KYC process).
+This may include facial scan data extracted from any photo or
+video you submit (known as ‘biometric data’).
+-
+Legal obligations
+-
+Substantial public interest
+-
+Consent (where required by law) contact information from your contacts list. The Revolut app will regularly
+collect this information in order to stay up to date (but only if you have given
+us permission)
+Information about your
+location
+If you turn location services on in the Revolut app, we track your location
+using GPS technology.
+Information from others
+We collect personal data from third parties or other people, such as credit
+reference agencies, ﬁnancial or credit institutions, oﬃcial registers and
+databases, as well as jo Do you run credit checks on me?
+We, and our lending partners, use credit reference agencies (or other providers of credit information in
+some countries) to run credit checks if you apply (or tell us you want to apply) for a credit product
+through Revolut.
+If you give us access to other accounts you hold with other ﬁnancial institutions, through Open
+Banking, where you agree, we’ll use available information to carry out credit checks on you.
+We’ll also share your personal data with credit referen","
+Main Answer:
+Revolut processes customer verification data as part of its Know Your Customer (KYC) process when a customer signs up for an account. This process involves checking the identity of the customer and any joint account holders.
+
+Key Points:
+• Revolut's KYC process includes identity verification using personal data, which may include facial scan data from photos or videos (biometric data).
+• The company collects personal data from various sources, including third-party financial institutions, credit reference agencies, and official registers, to facilitate this verification process.
+• When customers activate Open Banking and link accounts, Revolut may use this information for credit checks with the customer's consent.
+• Location data is also collected if the customer enables location services in the Revolut app.
+
+GDPR References:
+Article 6 - Lawfulness of Processing
+Article 13 - Information to be provided where personal data are collected from the data subject","Main Answer:
+Revolut maintains primary verification processing centers in Dublin for EU customers, London for UK customers, and Lithuania for backup operations. Their system implements distinct security measures at each processing location based on local requirements. The framework maintains clear documentation of data flows between processing sites and implements additional safeguards for cross-border transfers. Their approach ensures verification data remains within approved jurisdictions with appropriate security controls.
+
+Key Points:
+• Defined processing locations
+• Location-specific security
+• Clear data flow documentation
+• Cross-border safeguards
+
+GDPR Reference: Article 32 - Security of processing"
+What rights do customers have under GDPR regarding their Revolut data?,"equivalent to the United Kingdom or EEA, we will make sure that your personal data is suﬃciently
+protected. For example, we’ll make sure that a contract with strict data protection safeguards is in
+place before we transfer your personal data. In some cases, you may be entitled to ask us for a copy
+of this contract.
+If you would like more information, please contact us by sending an email to
+dpo@revolut.com
+. 20
+We have detailed information security and data protection policies which our employees are required
+to follow when they handle your personal data. Our employees receive data protection and
+information security training. Personal data is stored on secure computer systems with access
+management controls in place to limit physical, system and information access to only authorised
+employees.
+Revolut has strict policies in place that control how we share your personal data with other
+companies. Be use your personal data
+You can ask us to suspend using your personal data if:
+✓
+you want us to investigate whether it’s accurate
+✓
+our use of your personal data is unlawful but you don’t want
+us to delete it
+✓
+we no longer need your personal data, but you want us to
+continue holding it for you in connection with a legal claim
+✓
+you have objected to us using your personal data (see
+above), but we need to check whether we have an overriding
+reason to use it
+You can ask us to transfer personal
+data accounts and transfer money. However, we won’t provide any
+customer-level information. It will not be possible to identify
+any individual Revolut customer.
+-
+Legitimate interests (to conduct
+research and analysis, including to
+produce statistical research and
+reports)
+-
+Legal obligations","
+Main Answer:
+
+
+Key Points:
+• Customers can ask Revolut to temporarily stop using their personal data under specific circumstances, such as when they want to verify the data's accuracy or when Revolut's use of the data is unlawful but deletion is not desired.
+• Data subjects have the right to data portability, meaning they can request the transfer of their personal data to another service provider or to themselves.
+• Revolut has strict policies governing data sharing with other companies, ensuring that personal data is only shared with appropriate safeguards in place.
+• Employees handling personal data receive training in data protection and information security, and access to such data is restricted to authorized personnel.
+
+GDPR References:
+- Article 12 - Transparent information, communication and modalities for the exercise of the rights of the data subject
+- Article 15 - Right of access by the data subject
+- Article 18 - Right to restriction of processing
+- Article 20 - Right to data portability","Main Answer:
+Revolut implements comprehensive mechanisms for customers to exercise their GDPR rights across all financial services. Their framework includes specific procedures for handling access requests, data portability, and erasure rights. The system maintains clear protocols for responding to rights requests within regulatory timeframes. Their approach includes dedicated channels for rights exercise, with specific considerations for financial data and regulatory obligations. The framework ensures consistent rights fulfillment while balancing regulatory requirements.
+
+Key Points:
+• Structured rights exercise procedures
+• Clear response timeframes and protocols
+• Dedicated rights management channels
+• Balance between rights and obligations
+
+GDPR Reference: Articles 15-21 - Data subject rights"
+What safeguards protect Revolut customer financial data?,"8
+manage fraud risks related to your Revolut account.
+-
+Consent (where required by law)
+-
+Legal obligations 20
+We have detailed information security and data protection policies which our employees are required
+to follow when they handle your personal data. Our employees receive data protection and
+information security training. Personal data is stored on secure computer systems with access
+management controls in place to limit physical, system and information access to only authorised
+employees.
+Revolut has strict policies in place that control how we share your personal data with other
+companies. Be accounts and transfer money. However, we won’t provide any
+customer-level information. It will not be possible to identify
+any individual Revolut customer.
+-
+Legitimate interests (to conduct
+research and analysis, including to
+produce statistical research and
+reports)
+-
+Legal obligations equivalent to the United Kingdom or EEA, we will make sure that your personal data is suﬃciently
+protected. For example, we’ll make sure that a contract with strict data protection safeguards is in
+place before we transfer your personal data. In some cases, you may be entitled to ask us for a copy
+of this contract.
+If you would like more information, please contact us by sending an email to
+dpo@revolut.com
+.","
+Main Answer:
+Revolut employs a comprehensive set of safeguards to protect customer financial data, ensuring compliance with GDPR regulations. These measures include:
+- Detailed Information Security Policies: Revolut has implemented robust information security policies that govern how employees handle personal data. This includes training on data protection and information security, ensuring that employees are aware of their responsibilities and the importance of safeguarding customer information.
+- Secure Data Storage: Personal data is stored on secure computer systems with access management controls. These controls restrict physical, system, and information access to authorised employees only, minimising the risk of unauthorised access or data breaches.
+- Strict Data Sharing Policies: Revolut has strict policies in place to control the sharing of personal data with other companies. While they may share anonymised data for research and analysis, they do not provide customer-level information, ensuring that individual customers cannot be identified.
+- Legal Obligations and Contracts: When transferring personal data, Revolut ensures it meets the legal obligations of the United Kingdom or EEA. This includes having contracts with strict data protection safeguards in place, which can be requested by customers in some cases.
+
+Key Points:
+• Revolut prioritises data security with comprehensive information security policies and employee training.
+• Secure storage systems with access controls prevent unauthorised access to personal data.
+• Strict data sharing policies ensure customer anonymity, allowing only anonymised data to be shared for research.
+• Legal contracts with data protection safeguards are in place for data transfers, adhering to UK/EEA obligations.
+
+GDPR References:
+- Article 5 - Principles relating to processing of personal data
+- Article 6 - Lawfulness of processing
+- Article 28 - Processor
+- Article 32 - Security of processing","Main Answer:
+Revolut protects financial data through comprehensive security measures including encryption standards for data at rest and in transit, multi-factor authentication for access control, and continuous transaction monitoring. Their framework implements role-based access restrictions and regular security assessments. The system maintains specific incident response procedures with defined recovery protocols and notification requirements. Their approach includes regular testing and updates of security measures.
+
+Key Points:
+• Comprehensive security controls
+• Access restriction protocols
+• Continuous monitoring systems
+• Incident response procedures
+
+GDPR Reference: Article 32 - Security of processing"
+Why does Revolut implement different processing standards?,"language version is authoritative.
+If you have concerns about how we use your personal data, you can contact
+dpo@revolut.com
+. We may carry out additional credit checks on you from time to time to make sure that your ﬁnancial
+wellbeing hasn’t changed over the course of the year. If you are a vulnerable customer, we may
+contact you directly when you apply for a credit product. This is to make sure that we are offering you
+an appropriate credit product.
+The personal data we share with, and receive from, credit reference agencies (or other providers of
+credit information) when you apply for or use a Revolut credit product  between 6 and 17. We have a separate Revolut <18 Privacy
+Notice that explains how we process Revolut <18 users’
+personal data. The Revolut <18 Privacy Notice is speciﬁcally
+designed to be understood by children and teenagers.
+-
+Keeping to contracts and
+agreements between you and us
+-
+Legitimate interests (we need to
+be eﬃcient about how we meet
+our obligations and we want to
+provide you with good products
+and services)
+-
+Legal obligations Do you run credit checks on me?
+We, and our lending partners, use credit reference agencies (or other providers of credit information in
+some countries) to run credit checks if you apply (or tell us you want to apply) for a credit product
+through Revolut.
+If you give us access to other accounts you hold with other ﬁnancial institutions, through Open
+Banking, where you agree, we’ll use available information to carry out credit checks on you.
+We’ll also share your personal data with credit referen","
+Main Answer:
+Revolut implements different processing standards to ensure compliance with legal obligations and to cater to the specific needs of different user groups, particularly those under 18 years old. This is done to maintain the integrity of their data processing practices and provide appropriate services to all users.
+
+Key Points:
+• Revolut has a dedicated Revolut <18 Privacy Notice, which is designed to be easily understood by children and teenagers, ensuring transparency and clarity regarding their data processing.
+• The company's processing standards are influenced by legal obligations, such as credit checks, which are necessary for certain financial products and services.
+• They also consider legitimate interests, aiming to efficiently meet their obligations and provide good products and services to users.
+• Different processing standards are applied to users under 18, as they may require additional protections and considerations regarding their personal data.
+
+GDPR References:
+Article 6 - Lawfulness of Processing
+Article 13 - Information to be provided where personal data are collected from the data subject","Main Answer:
+Revolut develops distinct processing standards based on service types and regulatory requirements. Their framework addresses varying levels of risk and sensitivity across different financial services. The system implements enhanced standards for regulated banking activities and specialized services. Their approach includes detailed documentation of processing decisions and regular assessment of standards effectiveness, with specific procedures for different categories of financial services.
+
+Key Points:
+• Risk-based processing standards
+• Service-specific protocols
+• Regular standards assessment
+• Documented processing frameworks
+
+GDPR Reference: Article 24 - Responsibility of the controller"
+How does Revolut manage informed consent for enhanced services?,"10. How do I exercise my rights?
+To exercise any of your rights set out in the previous section, you can contact us through the Revolut
+app or send us an email at
+dpo@revolut.com
+.
+For security reasons, we can't deal with your request if we’re not sure of your identity, so we may ask
+you for proof of ID.
+If a third party exercises one of these rights on your behalf, we may need to ask for proof that they’ve
+been authorised to act on your behalf.
+When you exercise one of your rights, or update yo 8
+manage fraud risks related to your Revolut account.
+-
+Consent (where required by law)
+-
+Legal obligations use your personal data
+You can ask us to suspend using your personal data if:
+✓
+you want us to investigate whether it’s accurate
+✓
+our use of your personal data is unlawful but you don’t want
+us to delete it
+✓
+we no longer need your personal data, but you want us to
+continue holding it for you in connection with a legal claim
+✓
+you have objected to us using your personal data (see
+above), but we need to check whether we have an overriding
+reason to use it
+You can ask us to transfer personal
+data 3
+These notices:
+-
+give you more detail about how Revolut collects, uses and protects your personal data when
+you use speciﬁc Revolut products or services
+-
+will be provided to you through the Revolut app when you start using relevant Revolut
+products or services
+-
+can be accessed at any time through the Revolut website (see
+here
+)
+Sometimes, we may also provide you with ‘just in time’ privacy explanations in the Revolut app. When
+you use a new Revolut product or service for the ﬁrst time:
+-
+the","
+Main Answer:
+Revolut ensures informed consent for enhanced services by providing detailed notices and privacy explanations to users. These notices are accessible through the Revolut app and website, offering transparency regarding the collection, usage, and protection of personal data for specific products or services. Additionally, Revolut may provide 'just in time' privacy explanations when users access new products or services for the first time.
+
+Key Points:
+• Revolut offers comprehensive notices and privacy explanations to inform users about data handling for enhanced services.
+• These notices are available through the app and website, ensuring easy access to privacy information.
+• 'Just in time' explanations are provided when users engage with new products or services, ensuring timely awareness.
+• The company takes a proactive approach to consent, aiming to provide users with all necessary information.
+
+GDPR References:
+Article 6 - Lawfulness of Processing
+Article 13 - Information to be provided where personal data are collected from the data subject","Main Answer:
+Revolut obtains informed consent through specific service activation points, with clear purpose documentation and real-time preference management. Their system maintains separate consent records for distinct processing purposes, particularly for enhanced service features. The framework enables immediate consent withdrawal through user-accessible controls. Their approach includes clear documentation of processing purposes and regular consent validity reviews.
+
+Key Points:
+• Purpose-specific consent collection
+• Real-time preference management
+• Clear withdrawal procedures
+• Regular consent reviews
+
+GDPR Reference: Article 7 - Conditions for consent"
