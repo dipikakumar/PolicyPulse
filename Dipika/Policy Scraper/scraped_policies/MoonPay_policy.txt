@@ -1,0 +1,218 @@
+Global Privacy Policy
+Effective Date: 3rd May 2024
+MoonPay (defined below under “Our relationship to you”) is committed to protecting the privacy of visitors to our websites and our customers. This Privacy Policy describes how we handle your personal data when you access our services, which include our content on the websites located at
+moonpay.com
+,
+buy.moonpay.com
+,
+sell.moonpay.com
+or any other websites, pages, features, or content we own or operate (collectively, the "Site(s)"), or any MoonPay API or third party applications relying on such an API, and related services (referred to collectively hereinafter as "Services").
+If you have any questions about this Policy, please send them to
+[email protected]
+Changes to this privacy policy
+We may modify this Privacy Policy from time to time. Please check the date at the top of this notice to see when it was last updated.
+Our Relationship to you
+MoonPay operates internationally through different entities (together “MoonPay”, “we”, “us”, “our”) in order to provide Services to our customers. The following table describes which entity (or entities) you are contracting with:
+Where you reside, Your Operating Entity, and Contact Address
+United States
+For Ramps Services (as defined in our Terms of Use):MoonPay USA LLC (Delaware registration number 7915104)
+For Site Services, NFT Services, and Wallet Services (each as defined in our Terms of Use):HyperMint USA LLC
+Contact Address:8 The Green, Suite B, Dover, DE 19901
+United Kingdom
+Operating Entity:MoonPay (UK) Ltd
+Contact Address:20-22 Wenlock Road, London, England, N1 7GU
+Ireland and Belgium
+Operating Entity:MoonPay Technology Services Ltd
+Contact Address:One Molesworth Street, Dublin 2, Ireland, D02 RF29
+Rest of the world
+Operating Entity:MP Technology Services Ltd (Company Number: 207216)
+Contact Address:Suite 108, Premier Building, Victoria, Mahe, The Republic of Seychelles
+The MoonPay entity you contract with decides how your personal information is processed in relation to the Services provided to you (typically referred to as a “data controller”).
+MoonPay entities may share your personal information with each other and use it in accordance with this Privacy Policy. For example, even if you reside in the United States your information may be shared with MoonPay PTE Limited which provides support functions for our Services including technical infrastructure and customer support.
+Personal Information we collect
+Personal information means any data which relates to a living individual who can be identified from that data, or from that data and other information which is in the possession of, or is likely to come into the possession of, MoonPay (or its representatives or service providers). In addition to factual information, it includes any expression of opinion about an individual and any indication of the intentions of MoonPay or any other person in respect of an individual. The definition of personal information depends on the relevant law applicable for your physical location.
+Information you provide to us
+This includes information you provide to us in order to establish an account and access our Services. This information is either required by law (e.g. to verify your identity), necessary to provide the requested services (e.g. you will need to provide your bank account number if you would like to link that account to MoonPay), or is relevant for our legitimate interests described in greater detail below.
+The nature of the Services you are requesting will determine the kind of personal information we might ask for, but may include:
+Identification Information: Full name, date of birth, nationality, gender, signature, utility bills, photographs, phone number, home address, and/or email.
+Formal Identification Information: Government issued identity document such as Passport, Driver's License, National Identity Card, State ID Card, Tax ID number, passport number, driver's license details, national identity card details, visa information, and/or any other information deemed necessary to comply with our legal obligations under financial or anti-money laundering laws.
+Institutional Information: Employer Identification number (or comparable number issued by a government), proof of legal formation (e.g. Articles of Incorporation), personal identification information for all material beneficial owners.
+Financial Information: Bank account information, payment card primary account number (PAN), transaction history, trading data, and/or tax identification.
+Transaction Information: Information about the transactions you make on our Services, such as the name of the recipient, your name, the amount, and/or timestamp.
+Employment Information: Office location, job title, and/or description of role.
+Correspondence: Survey responses, information provided to our support team or user research team.
+Information we collect automatically or generate about you
+This includes information we collect automatically, such as whenever you interact with the Sites or use the Services. This information helps us address customer support issues, improve the performance of our Sites and applications, provide you with a streamlined and personalized experience, and protect your account from fraud by detecting unauthorized access. Information collected automatically includes:
+Online Identifiers: Geo location/tracking details, operating system, browser name and version, and/or personal IP addresses.
+Usage Data: Authentication data, security questions, click-stream data, public social networking posts, and other data collected via cookies and similar technologies. Please read our
+Cookie Policy
+for more information.
+Information collected from third parties
+This includes information we may obtain about you from third party sources. The main types of third parties we receive your personal information from are:
+Public Databases, Credit Bureaus, ID Verification Partners, and Affiliate Partners in order to verify your identity in accordance with applicable law. ID verification partners such as Experian use a combination of government records and publicly available information about you to verify your identity. Such information may include your name, address, job role, public employment profile, credit history, status on any sanction’s lists maintained by public authorities, and other relevant data.
+Blockchain Data to ensure parties using our Services are not engaged in illegal or prohibited activity and to analyze transaction trends for research and development purposes.
+Marketing Partners & Resellers so that we can better understand which of our Services may be of interest to you.
+Anonymized and aggregated data
+In addition to the categories of personal information described above, MoonPay will also process anonymized information and data that is not processed by reference to a specific individual. Types of data we may anonymize include transaction data, click-stream data, performance metrics and fraud indicators.
+Job Applicants
+If you apply for a job posting, we collect information necessary to process your application or to retain you as an employee. This may include, among other things, your name, contact information (email address and phone number), CV/Resume, and national identifier (e.g., Social Security Number). Providing this information is required for employment. We have a legitimate interest in using your information to evaluate candidates for job openings. We also use information about job applicants in anticipation of a contract of employment. In some contexts, we are also required by law to collect information about applicants.
+How we use your personal information
+We may use your information in the following ways and for the following purposes:
+1) To maintain legal and regulatory compliance
+MoonPay needs to process your personal information in order to comply with anti-money laundering and security laws. In addition, when you seek to link a bank account to your MoonPay account, we may require you to provide additional information which we may use in collaboration with service providers acting on our behalf to verify your identity or address, and/or to manage risk as required under applicable law. We also process your personal information in order to help detect, prevent, and mitigate fraud and abuse of our Services and to protect you against account compromise or funds loss. If you do not provide personal information required by law, we will have to close your account.
+2) To provide MoonPay's Services
+We process your personal information to provide Services to you. For example, when you want to store funds on our platform, we require certain information such as your identification, contact and payment information. Third parties that we use such as identity verification services may also access and/or collect your personal information when providing identity verification and/or fraud prevention services. In addition, we may need to collect fees based on your use of our Services. We collect information about your account usage and closely monitor your interactions with our Services. The consequences of not processing your personal information for such purposes is the termination of your account.
+3) To provide communications and customer services
+According to your preferences and in compliance with applicable law, we may send you marketing communications to inform you about events, to deliver targeted marketing and to share promotional offers. If you are a new customer, we will contact you by electronic means for marketing purposes only if you have consented to such communication. If you do not want us to send you marketing communications, please go to your account settings to opt-out or submit a request via
+[email protected]
+We may send you service updates regarding administrative or account-related information, security issues, or other transaction-related information. These communications are important to share developments relating to your account that may affect how you can use our Services. You cannot opt-out of receiving critical service communications.
+We also process your personal information when you contact us to resolve any questions, disputes, collect fees, or to troubleshoot problems. Without processing your personal information for such purposes, we cannot respond to your requests and ensure your uninterrupted use of the Services.
+4) In our legitimate business interests
+Sometimes the processing of your personal information is necessary for our legitimate business interests, such as:
+recruitment and hiring;
+quality control and staff training;
+to enhance security, monitor and verify identity or service access, and to combat spam or other malware or security risks;
+research and development purposes;
+to enhance your experience of our Services and Sites; or
+to facilitate corporate acquisitions, mergers, or transactions.
+Legal bases for processing your information
+For individuals located in the European Economic Area, United Kingdom or Switzerland at the time their personal data is collected, we rely on legal bases for processing your information under the relevant data protection legislation. These bases mean we will only process your data where we are legally required to, where processing is necessary to perform any contracts we entered with you (or to take steps at your request prior to entering into a contract with you), for our legitimate interests to operate our business, to protect MoonPay's or your property rights, or where we have obtained your consent to do so. We will not use your personal information for purposes other than those purposes we have disclosed to you, without your permission.
+Disclosing your personal information to third parties
+We allow your personal information to be accessed only by those who require access to perform their work and share it only with third parties who have a legitimate purpose for accessing it. MoonPay will never sell or rent your personal information to third parties without your explicit consent. We will only share your personal information with the following types of third parties:
+Identity verification services to prevent fraud. This allows MoonPay to confirm your identity by comparing the information you provide us to public records and other third party databases.
+Financial institutions which we partner with to process payments you have authorized.
+Service providers and professional advisors under contract who help with parts of our business operations. Our contracts require these service providers to only use your information in connection with the services they perform for us and prohibit them from sharing your information with anyone else.
+Companies or other third parties in connection with business transfers or bankruptcy proceedings.
+Companies or other entities that purchase MoonPay assets.
+Law enforcement, regulators, or any other third parties when we are compelled to do so by applicable law or if we have a good faith belief that such use is reasonably necessary, including to: protect the rights, property, or safety of MoonPay, MoonPay customers, third party, or the public; comply with legal obligations or requests; enforce our terms and other agreements; or detect or otherwise address security, fraud, or technical issues.
+Third-party sites and services
+If you authorize one or more third-party applications to access your MoonPay Services, then information you have provided to MoonPay may be shared with those third parties. A connection you authorize or enable between your MoonPay account and a non-MoonPay account, payment instrument, or platform is considered an “account connection.” Unless you provide further permissions, MoonPay will not authorize these third parties to use this information for any purpose other than to facilitate your transactions using MoonPay Services. Please note that third parties you interact with, should have their own privacy policies and MoonPay is not responsible for their operations or their use of data they collect.
+Examples of account connections include:
+Merchants: If you use your MoonPay account to conduct a transaction with a third party merchant, the merchant may provide data about you and your transaction to us.
+Your financial services providers: For example, if you send us funds from your bank account, your bank will provide us with identifying information in addition to information about your account in order to complete the transaction.
+How we protect and store personal information
+MoonPay implements and maintains reasonable measures to protect your information. Customer files are protected with safeguards according to the sensitivity of the relevant information. Reasonable controls (such as restricted access) are placed on our computer systems. Physical access to areas where personal information is gathered, processed or stored is limited to authorized employees.
+We may store and process all or part of your personal and transactional information, including certain payment information, such as your encrypted bank account and/or routing numbers, in the US and elsewhere in the world where our facilities or service providers are located. We protect your personal information by maintaining physical, electronic, and procedural safeguards in compliance with the applicable laws and regulations.
+As a condition of employment, MoonPay’s employees are required to follow all applicable laws and regulations, including in relation to data protection law. Access to sensitive personal information is limited to those employees who need to it to perform their roles. Unauthorized use or disclosure of confidential customer information by a MoonPay employee is prohibited and may result in disciplinary measures.
+When you contact a MoonPay employee about your file, you may be asked for some personal details. This type of safeguard is designed to ensure that only you, or someone authorized by you, has access to your file. You also play a vital role in protecting your own personal information. When registering with our Services, choose a password of sufficient length and complexity, don’t reveal it to any third-parties and immediately notify us if you become aware of any unauthorized access to or use of your account.
+Retention of personal information
+How long we hold your personal information for will vary. The retention period will be determined by the following criteria:
+the purpose for which we are using your personal information – we will need to keep the information for as long as is necessary for that purpose; and
+legal obligations – laws or regulation may set a minimum period for which we have to keep your personal information.
+If you have further questions about our data retention practices, please contact us at
+[email protected]
+If we anonymize your personal information so that it can no longer be associated with you, it will no longer be considered personal information, and we can use it without further notice to you.
+Children's personal information
+We do not knowingly request to collect personal information from any person under the age of 18. If a user submitting personal information is suspected of being younger than 18 years of age, MoonPay will require the user to close his or her account and will not allow the user to continue using our Services. We will also take steps to delete the information as soon as possible. Please notify us if you know of any individuals under the age of 18 using our Services so we can take action to prevent access to our Services.
+Cross border transfers
+MoonPay is an international business with operations in countries including the UK, the EU and the US. This means we may transfer to locations outside of your country. When we transfer your personal information to another country, we will ensure that any transfer of your personal information is compliant with applicable data protection law.
+Data transferred out of the EU or UK
+When we transfer your personal information outside of the United Kingdom (UK) or the European Economic Area (EEA), we will ensure that it is protected in a manner that is consistent with how your personal information will be protected by us in the UK and EEA respectively. This can be done in a number of ways, for instance:
+the country that we send the data to might be approved by the UK Government or European Commission (as applicable); or
+the recipient might have signed up to a contract based on “model contractual clauses” approved by the UK Government or European Commission (as applicable), obliging them to protect your personal information.
+In other circumstances the law may permit us to transfer your personal information outside the UK or EEA. In all cases, however, we will ensure that any transfer of your personal information is compliant with data protection law. You can obtain more details of the protection given to your personal information when it is transferred outside the UK and EEA (including a copy of the standard data protection clauses which we have entered into with recipients of your personal information) by contacting us as described below.
+Your privacy rights
+Depending on applicable law of where you reside, you may be able to assert certain rights related to your personal information. These rights include:
+the right to obtain information regarding the processing of your personal information and access to the personal information which we hold about you;
+the right to withdraw your consent to the processing of your personal information at any time. Please note, however, that we may still be entitled to process your personal information if we have another legitimate reason for doing so. For example, we may need to retain personal information to comply with a legal obligation;
+in some circumstances, the right to receive some personal information in a structured, commonly used and machine-readable format and/or request that we transmit those data to a third party where this is technically feasible. Please note that this right only applies to personal information which you have provided directly to MoonPay;
+the right to request that we rectify your personal information if it is inaccurate or incomplete;
+the right to request that we erase your personal information in certain circumstances. Please note that there may be circumstances where you ask us to erase your personal information, but we are legally entitled to retain it;
+the right to object to, or request that we restrict, our processing of your personal information in certain circumstances. Again, there may be circumstances where you object to, or ask us to restrict, our processing of your personal information but we are legally entitled to refuse that request; and
+the right to lodge a complaint with the relevant data protection regulator if you think that any of your rights have been infringed by us.
+You can exercise your rights by contacting us using the details listed below. Further information about your rights may be obtained by contacting the supervisory data protection authority located in your jurisdiction.
+How to contact us
+If you have questions or concerns regarding this Privacy Policy, or if you have a complaint, please contact us at
+[email protected]
+, or by writing to us at the MoonPay entity addresses provided above.
+If you reside in the EU, you can file a complaint with the International Centre for Dispute Resolution by phone at +1.212.484.4181, or through your relevant data protection authority.
+In the UK, the data protection authority is the
+Information Commissioner's Office
+.
+In Singapore, the data protection authority is the
+Personal Data Protection Commission
+US consumer privacy notice
+This Consumer Privacy Notice applies to you if you are an individual who resides in the United States and uses MoonPay’s services for your own personal, family or household purposes.
+Facts: What does MoonPay do with your personal information?
+Why? Financial companies choose how they share your personal information. Federal law gives consumers the right to limit some but not all sharing. Federal law also requires us to tell you how we collect, share, and protect your personal information. Please read this notice carefully to understand what we do.
+What? The types of personal information we collect and share depend on how you use our services. This information can include, but is not limited to:When you are no longer our customer, we continue to share your information as described in this notice.
+Social Security number, passport number, or driver’s license number
+Bank account information, trading data, or transaction history
+Identification information such as your name, date of birth, nationality, or signature
+How? All financial companies need to share customers' personal information to run their everyday business. In the section below, we list the reasons financial companies can share their customers' personal information; the reasons MoonPay chooses to share; and whether you can limit this sharing.
+Reasons MoonPay Shares Your Personal Information
+For our everyday business purposes – such as to process your transactions, maintain your account(s), respond to court orders and legal investigations, or report to credit bureaus
+Does MoonPay share?Yes
+Can you limit sharing?No
+For our marketing purposes – to offer our products and services to you
+Does MoonPay share?Yes
+Can you limit sharing?No
+For joint marketing with other financial companies
+Does MoonPay share?Yes
+Can you limit sharing?Yes
+For our affiliates’ everyday business purposes – information about your transactions and experiences
+Does MoonPay share?Yes
+Can you limit sharing?Yes
+For our affiliates’ everyday business purposes – information about your creditworthiness
+Does MoonPay share?Yes
+Can you limit sharing?Yes
+For our affiliates to market to you
+Does MoonPay share?Yes
+Can you limit sharing?Yes
+For our non-affiliates to market to you
+Does MoonPay share?Yes
+Can you limit sharing?Yes
+Questions?
+Call MoonPay's customer service line at +1 833 610-0735 or visit
+our help center
+for more information.
+What we do
+How does MoonPay protect my personal information?
+To protect your personal information from unauthorized access and use, MoonPay uses security measures that comply with federal law. These measures include computer safeguards and secured files and buildings.
+How does MoonPay collect my personal information?
+MoonPay collects your personal information when you:
+Create an account with MoonPay.
+Place or complete an order with MoonPay.
+Use your debit or credit card or any other permissible payment method to purchase or sell digital currency.
+Additionally, MoonPay also collects your personal information from others, such as affiliates or other companies.
+Why can’t I limit all sharing?
+Federal law gives you the right to limit only:
+Sharing for affiliates’ everyday business purposes—information about your creditworthiness.
+Affiliates from using your information to market to you.
+Sharing for non-affiliates to market to you.
+State laws and individual companies may give you additional rights to limit sharing. This section suggests that there are specific aspects of sharing that you cannot limit due to federal regulations, but there may be more options under state law or company-specific policies.
+Definitions
+Affiliates: Companies related by common ownership or control. They can be both financial and nonfinancial companies.
+Nonaffiliates: Companies not related by common ownership or control. They can also be financial and nonfinancial companies.
+Joint Marketing: A formal agreement between nonaffiliated financial companies that together market financial products or services to you.
+California Privacy Rights
+Pursuant to the California Consumer Privacy Act of 2018 (“CCPA”), California residents have certain rights in relation to their personal information, subject to limited exceptions. Any terms defined in the CCPA have the same meaning when used in this California Privacy Rights section.
+Depending on which services you use, you may have different rights and choices for managing your personal data. For example, the CCPA does not apply to personal data collected, processed, or disclosed by a financial institution according to federal laws, such as the Gramm-Leach-Bliley Act. Please see the Consumer Privacy Notice below for additional information.
+Collection and Disclosure of Personal Information
+Over the past 12 months we may have collected and disclosed the following categories of personal information from or about consumers. We use this information for the purposes described in the “HOW WE USE YOUR PERSONAL INFORMATION” section of this Privacy Policy.
+Identifiers, such as phone number, name, date of birth, IP address, driver’s license number, passport number, or other similar identifiers. This information is collected directly from the consumer or device.
+Geolocation data, including GPS location information and approximate location derived from your IP address. This information is collected directly from the consumer or device.
+Internet or other electronic network activity information, including your browser type and version, time zone settings, operating system or platform, or website visit information. This information is collected directly from a device.
+Biometric information, such as a live photo. This information is collected directly from the consumer or device.
+Commercial information, including payment card information and transaction verification information. This information is collected directly from the consumer or device.
+Audio, electronic, visual, thermal, olfactory, or similar information. This information is collected directly from the consumer.
+Other information that is described in subdivision (e) of Section 1798.80, such as nationality and gender (this information is being collected in the consumer context rather than the employer context). This information is collected directly from the user.
+We may disclose each category of personal information listed to each entity listed in the “DISCLOSING YOUR INFORMATION TO THIRD PARTIES” section above. MoonPay does not sell your personal information in its ordinary course of business and will never sell your personal information to third parties without your explicit consent.
+Rights under the CCPA
+If you are a California resident and the CCPA does not recognize an exemption that applies to you or your personal information, you have the right to:
+Request we disclose to you free of charge the following information covering the 12 months preceding your request:
+the categories of personal information about you that we collected;
+the categories of sources from which the personal information was collected;
+the purpose for collecting personal information about you;
+the categories of third parties to whom we disclosed personal information about you and the categories of personal information that was disclosed (if applicable) and the purpose for disclosing the personal information about you; and
+the specific pieces of personal information we collected about you;
+Request we delete personal information we collected from you, unless CCPA recognizes an exemption; and
+Be free from unlawful discrimination for exercising your rights including providing a different level or quality of services or deny goods or services to you when you exercise your rights under the CCPA.
+We aim to fulfill all verified requests within 45 days pursuant to the CCPA. If necessary, extensions for an additional 45 days will be accompanied by an explanation for the delay.
+How to exercise your rights
+You can exercise your rights by contacting us via our
+Support Portal
+so that we may consider your request.
+If you are a California resident, you may designate an authorized agent to make a request to access or a request to delete on your behalf. We will respond to your authorized agent's request if they submit proof that they are registered with the California Secretary of State to be able to act on your behalf, or submit evidence you have provided them with power of attorney pursuant to California Probate Code section 4000 to 4465. We may deny requests from authorized agents who do not submit proof that they have been authorized by you to act on their behalf, or are unable to verify their identity.
+Vermont Privacy Rights
+Vermont residents have certain rights in relation to their personal information, subject to limited exceptions. Under Vermont law, we will not share information we collect about Vermont residents with companies outside of our corporate family, unless the law allows. For example, we may share information with your consent, to service your accounts or under joint marketing agreements with other financial institutions with which we have joint marketing agreements. We will not share information about your creditworthiness within our corporate family except with your consent, but we may share information about our transactions or experiences with you within our corporate family without your consent.
